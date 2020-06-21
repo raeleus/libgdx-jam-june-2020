@@ -1,0 +1,27 @@
+
+zaida-logo.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+white
+  rotate: false
+  xy: 1, 180
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+zaida-logo
+  rotate: false
+  xy: 1, 183
+  size: 562, 561
+  orig: 562, 561
+  offset: 0, 0
+  index: -1
+zaida-name
+  rotate: true
+  xy: 565, 1
+  size: 743, 101
+  orig: 752, 113
+  offset: 3, 8
+  index: -1

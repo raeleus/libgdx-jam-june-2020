@@ -20,7 +20,7 @@ import com.ray3k.template.*;
 
 import static com.ray3k.template.Core.*;
 
-public class LibgdxScreen extends JamScreen {
+public class ZaidaScreen extends JamScreen {
     private Stage stage;
     private Array<SkeletonDrawable> skeletonDrawables;
     private final static Color BG_COLOR = new Color(Color.WHITE);
@@ -33,11 +33,11 @@ public class LibgdxScreen extends JamScreen {
         skeletonDrawables = new Array<>();
         sounds = new ObjectSet<>();
     
-        assetManager.load("libgdx-logo/libgdx.json-animation", AnimationStateData.class, new AnimationStateDataParameter("libgdx-logo/libgdx.json", "libgdx-logo/libgdx-logo.atlas"));
+        assetManager.load("zaida-logo/zaida.json-animation", AnimationStateData.class, new AnimationStateDataParameter("zaida-logo/zaida.json", "zaida-logo/zaida-logo.atlas"));
         assetManager.finishLoading();
         
-        Skeleton skeleton = new Skeleton(assetManager.get("libgdx-logo/libgdx.json", SkeletonData.class));
-        AnimationState animationState = new AnimationState(assetManager.get("libgdx-logo/libgdx.json-animation", AnimationStateData.class));
+        Skeleton skeleton = new Skeleton(assetManager.get("zaida-logo/zaida.json", SkeletonData.class));
+        AnimationState animationState = new AnimationState(assetManager.get("zaida-logo/zaida.json-animation", AnimationStateData.class));
         SkeletonDrawable skeletonDrawable = new SkeletonDrawable(skeletonRenderer, skeleton, animationState);
         skeletonDrawable.setMinWidth(1024);
         skeletonDrawable.setMinHeight(576);
@@ -61,7 +61,7 @@ public class LibgdxScreen extends JamScreen {
             @Override
             public void complete(AnimationState.TrackEntry entry) {
                 if (entry.getAnimation().getName().equals("animation")) {
-                    core.transition(new ZaidaScreen());
+                    core.transition(new LogoScreen());
                 }
             }
     
@@ -120,6 +120,6 @@ public class LibgdxScreen extends JamScreen {
             sound.stop();
         }
         
-        assetManager.unload("libgdx-logo/libgdx.json-animation");
+        assetManager.unload("zaida-logo/zaida.json-animation");
     }
 }

@@ -2,6 +2,5 @@ sfx/click.mp3
 sfx/easy.mp3
 sfx/oh shit.mp3
 sfx/shatter.mp3
-sfx/swoosh.mp3
-sfx/tv.mp3
 sfx/valve.mp3
+sfx/woosh.mp3

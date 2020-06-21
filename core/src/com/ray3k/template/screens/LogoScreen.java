@@ -15,9 +15,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectSet;
 import com.badlogic.gdx.utils.Scaling;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.utils.SkeletonDrawable;
+import com.ray3k.template.AnimationStateDataLoader.*;
 import com.ray3k.template.Core;
 import com.ray3k.template.JamScreen;
 
@@ -37,16 +39,19 @@ public class LogoScreen extends JamScreen {
         skeletonDrawables = new Array<>();
         sounds = new ObjectSet<>();
     
-        Skeleton skeleton = new Skeleton(assetManager.get("spine/ray3k.json", SkeletonData.class));
-        AnimationState animationState = new AnimationState(assetManager.get("spine/ray3k.json-animation", AnimationStateData.class));
+        assetManager.load("ray3k-logo/ray3k.json-animation", AnimationStateData.class, new AnimationStateDataParameter("ray3k-logo/ray3k.json", "ray3k-logo/ray3k-logo.atlas"));
+        assetManager.finishLoading();
+    
+        Skeleton skeleton = new Skeleton(assetManager.get("ray3k-logo/ray3k.json", SkeletonData.class));
+        AnimationState animationState = new AnimationState(assetManager.get("ray3k-logo/ray3k.json-animation", AnimationStateData.class));
         SkeletonDrawable skeletonDrawable = new SkeletonDrawable(skeletonRenderer, skeleton, animationState);
-        skeletonDrawable.setMinWidth(525);
-        skeletonDrawable.setMinHeight(150);
+        skeletonDrawable.setMinWidth(1024);
+        skeletonDrawable.setMinHeight(576);
         skeletonDrawable.getAnimationState().setAnimation(0, "stand", false);
         skeletonDrawable.getAnimationState().apply(skeletonDrawable.getSkeleton());
         skeletonDrawables.add(skeletonDrawable);
         
-        stage = new Stage(new ScreenViewport(), batch);
+        stage = new Stage(new FitViewport(1024, 576), batch);
         Gdx.input.setInputProcessor(stage);
         
         Table root = new Table();

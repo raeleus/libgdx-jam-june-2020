@@ -121,5 +121,7 @@ public class LibgdxScreen extends JamScreen {
         for (Sound sound : sounds) {
             sound.stop();
         }
+        
+        assetManager.unload("libgdx-logo/libgdx.json-animation");
     }
 }

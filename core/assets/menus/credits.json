@@ -95,7 +95,7 @@
 			}
 		],
 		"name": null,
-		"background": null,
+		"background": "bg-10",
 		"color": null,
 		"padLeft": 0,
 		"padRight": 0,
@@ -108,7 +108,7 @@
 		"visible": true
 	}
 ],
-"backgroundColor": "black",
+"backgroundColor": null,
 "skinPath": "skin.json",
 "packageString": "com.mygdx.game",
 "classString": "Core"

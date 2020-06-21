@@ -1,1 +1,1 @@
-skin/shimmer-ui.json
+skin/libgdx vs ray3k.json

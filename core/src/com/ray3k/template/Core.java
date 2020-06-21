@@ -56,7 +56,7 @@ public class Core extends JamGame {
         };
         
         setScreen(new LoadScreen(() -> {
-            skin = assetManager.get("skin/shimmer-ui.json");
+            skin = assetManager.get("skin/libgdx vs ray3k.json");
         }));
         defaultTransition = Transitions.colorFade(Color.BLACK);
         defaultTransitionDuration = .5f;

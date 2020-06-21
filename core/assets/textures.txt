@@ -1,1 +1,1 @@
-textures/textures.atlas
+textures/texture-atlas.atlas

@@ -33,7 +33,6 @@ public class GameScreen extends JamScreen {
     public static GameScreen gameScreen;
     public static final Color BG_COLOR = new Color();
     public Stage stage;
-    public Skin skin;
     public ShapeDrawer shapeDrawer;
     public EntityController entityController;
     private EarthquakeEffect vfxEffect;
@@ -72,7 +71,6 @@ public class GameScreen extends JamScreen {
             }
         });
         
-        skin = assetManager.get("skin/shimmer-ui.json");
         shapeDrawer = new ShapeDrawer(batch, skin.getRegion("white"));
         shapeDrawer.setPixelSize(.5f);
         

@@ -1,0 +1,131 @@
+{
+"com.badlogic.gdx.graphics.g2d.BitmapFont": {
+	"font": {
+		"file": "font.fnt"
+	}
+},
+"com.badlogic.gdx.graphics.Color": {
+	"white": {
+		"r": 1,
+		"g": 1,
+		"b": 1,
+		"a": 1
+	}
+},
+"com.ray3k.tenpatch.TenPatchDrawable": {
+	"bg-10": {
+		"region": "bg",
+		"horizontalStretchAreas": [ 0, 212 ],
+		"verticalStretchAreas": [ 0, 199 ],
+		"tiling": true,
+		"minWidth": 213,
+		"minHeight": 200,
+		"rightWidth": 0,
+		"leftWidth": 0,
+		"bottomHeight": 0,
+		"topHeight": 0,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 10,
+		"frameDuration": 0.03,
+		"regions": [],
+		"playMode": 2
+	},
+	"button-normal-over-10": {
+		"region": "button-normal-over",
+		"horizontalStretchAreas": [ 16, 297 ],
+		"verticalStretchAreas": [ 16, 88 ],
+		"tiling": false,
+		"minWidth": 314,
+		"minHeight": 105,
+		"rightWidth": 18,
+		"leftWidth": 18,
+		"bottomHeight": 18,
+		"topHeight": 18,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.03,
+		"regions": [],
+		"playMode": 2
+	},
+	"button-normal-10": {
+		"region": "button-normal",
+		"horizontalStretchAreas": [ 16, 297 ],
+		"verticalStretchAreas": [ 16, 88 ],
+		"tiling": false,
+		"minWidth": 314,
+		"minHeight": 105,
+		"rightWidth": 18,
+		"leftWidth": 18,
+		"bottomHeight": 18,
+		"topHeight": 18,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.03,
+		"regions": [],
+		"playMode": 2
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle": {
+	"default": {
+		"imageUp": "button-normal-10",
+		"imageOver": "button-normal-over-10"
+	},
+	"play": {
+		"imageUp": "button-play",
+		"imageOver": "button-play-over"
+	},
+	"credits": {
+		"imageUp": "button-credits",
+		"imageOver": "button-credits-over"
+	},
+	"options": {
+		"imageUp": "button-options",
+		"imageOver": "button-options-over"
+	},
+	"multiplayer": {
+		"imageUp": "button-multiplayer",
+		"imageOver": "button-multiplayer-over"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle": {
+	"default": {
+		"font": "font"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle": {
+	"default": {
+		"hScrollKnob": "scrollbar-knob",
+		"vScrollKnob": "scrollbar-knob"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle": {
+	"default-horizontal": {
+		"background": "slider",
+		"knob": "slider-knob"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle": {
+	"default": {
+		"font": "font",
+		"up": "button-normal-10",
+		"over": "button-normal-over-10"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle": {
+	"default": {
+		"label": "default"
+	}
+},
+"com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle": {
+	"default": {
+		"background": "bg-10",
+		"titleFont": "font"
+	}
+}
+}

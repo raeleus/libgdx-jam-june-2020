@@ -1,0 +1,111 @@
+
+libgdx vs ray3k.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 1, 37
+  size: 213, 200
+  orig: 213, 200
+  offset: 0, 0
+  index: -1
+button-credits
+  rotate: false
+  xy: 1, 1145
+  size: 479, 177
+  orig: 479, 177
+  offset: 0, 0
+  index: -1
+button-credits-over
+  rotate: false
+  xy: 678, 1458
+  size: 479, 177
+  orig: 479, 177
+  offset: 0, 0
+  index: -1
+button-multiplayer
+  rotate: false
+  xy: 1, 966
+  size: 437, 177
+  orig: 437, 177
+  offset: 0, 0
+  index: -1
+button-multiplayer-over
+  rotate: false
+  xy: 1, 787
+  size: 437, 177
+  orig: 437, 177
+  offset: 0, 0
+  index: -1
+button-normal
+  rotate: false
+  xy: 1185, 1675
+  size: 314, 105
+  orig: 314, 105
+  offset: 0, 0
+  index: -1
+button-normal-over
+  rotate: false
+  xy: 678, 1351
+  size: 314, 105
+  orig: 314, 105
+  offset: 0, 0
+  index: -1
+button-options
+  rotate: false
+  xy: 1, 513
+  size: 307, 272
+  orig: 307, 272
+  offset: 0, 0
+  index: -1
+button-options-over
+  rotate: false
+  xy: 1, 239
+  size: 307, 272
+  orig: 307, 272
+  offset: 0, 0
+  index: -1
+button-play
+  rotate: false
+  xy: 1, 1553
+  size: 675, 227
+  orig: 675, 227
+  offset: 0, 0
+  index: -1
+button-play-over
+  rotate: false
+  xy: 1, 1324
+  size: 675, 227
+  orig: 675, 227
+  offset: 0, 0
+  index: -1
+font
+  rotate: false
+  xy: 678, 1637
+  size: 505, 143
+  orig: 505, 143
+  offset: 0, 0
+  index: -1
+scrollbar-knob
+  rotate: false
+  xy: 1159, 1620
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+slider
+  rotate: false
+  xy: 1501, 1723
+  size: 281, 57
+  orig: 281, 57
+  offset: 0, 0
+  index: -1
+slider-knob
+  rotate: false
+  xy: 482, 1265
+  size: 15, 57
+  orig: 15, 57
+  offset: 0, 0
+  index: -1

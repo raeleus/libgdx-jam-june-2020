@@ -1,0 +1,260 @@
+{
+"skeleton": {
+	"hash": "n1TVyc2U5VqDG74STQvLnedBa6I",
+	"spine": "3.8.95",
+	"x": -0.68,
+	"y": -1.21,
+	"width": 1098.14,
+	"height": 667.23,
+	"images": "../output/libgdx logo/",
+	"audio": "../output/libgdx logo/"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "crane", "parent": "root", "length": 236.52, "rotation": -177.67, "x": 969.01, "y": 173.16 },
+	{ "name": "crane-arm", "parent": "crane", "length": 533.57, "rotation": -51.09, "x": -28.91, "y": -68.27 },
+	{ "name": "crane-line", "parent": "crane-arm", "length": 255.57, "rotation": 139.22, "x": 529.27, "y": 29.7 },
+	{
+		"name": "crane-winch",
+		"parent": "crane-line",
+		"length": 48.09,
+		"rotation": -90.82,
+		"x": 261.6,
+		"y": -1.85,
+		"transform": "onlyTranslation"
+	},
+	{ "name": "libgdx-x", "parent": "crane-winch", "length": 55.65, "rotation": 90.11, "x": 57.89, "y": -2.19 },
+	{ "name": "libgdx-x-part2", "parent": "root", "length": 42.6, "rotation": -37.79, "x": 642.69, "y": 272.78 },
+	{ "name": "libgdx-x-part3", "parent": "root", "length": 33.26, "rotation": 38.29, "x": 663.99, "y": 293.39 },
+	{ "name": "libgdx-x-part1", "parent": "root", "length": 48.27, "rotation": -175.1, "x": 629.64, "y": 272.78 }
+],
+"slots": [
+	{ "name": "white", "bone": "root" },
+	{ "name": "libgdx", "bone": "root", "color": "ffffff3d" },
+	{ "name": "libgdx-l", "bone": "root", "attachment": "libgdx-l" },
+	{ "name": "libgdx-i", "bone": "root", "attachment": "libgdx-i" },
+	{ "name": "libgdx-b", "bone": "root", "attachment": "libgdx-b" },
+	{ "name": "libgdx-g", "bone": "root", "attachment": "libgdx-g" },
+	{ "name": "libgdx-d", "bone": "root", "attachment": "libgdx-d" },
+	{ "name": "crane-line", "bone": "crane-line", "attachment": "crane-line" },
+	{ "name": "crane-arm", "bone": "crane-arm", "attachment": "crane-arm" },
+	{ "name": "crane", "bone": "crane", "attachment": "crane" },
+	{ "name": "libgdx-x", "bone": "libgdx-x", "attachment": "libgdx-x" },
+	{ "name": "crane-winch", "bone": "crane-winch", "attachment": "crane-winch" },
+	{ "name": "libgdx-x-part1", "bone": "libgdx-x-part1", "attachment": "libgdx-x-part1" },
+	{ "name": "libgdx-x-part2", "bone": "libgdx-x-part2", "attachment": "libgdx-x-part2" },
+	{ "name": "libgdx-x-part3", "bone": "libgdx-x-part3", "attachment": "libgdx-x-part3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"crane": {
+				"crane": { "x": 78.14, "y": -11.79, "rotation": 177.67, "width": 414, "height": 184 }
+			},
+			"crane-arm": {
+				"crane-arm": { "x": 264, "y": 2.35, "rotation": -131.24, "width": 421, "height": 453 }
+			},
+			"crane-line": {
+				"crane-line": { "x": 128.86, "y": 0.57, "rotation": 89.54, "width": 7, "height": 263 }
+			},
+			"crane-winch": {
+				"crane-winch": { "x": 23.36, "y": 0.33, "rotation": 90.11, "width": 46, "height": 81 }
+			},
+			"libgdx": {
+				"libgdx": { "x": 512, "y": 288, "rotation": -0.12, "width": 300, "height": 51 }
+			},
+			"libgdx-b": {
+				"libgdx-b": { "x": 426.08, "y": 287.16, "width": 39, "height": 51 }
+			},
+			"libgdx-d": {
+				"libgdx-d": { "x": 553.38, "y": 287.54, "width": 64, "height": 51 }
+			},
+			"libgdx-g": {
+				"libgdx-g": { "x": 483.84, "y": 287.92, "width": 64, "height": 51 }
+			},
+			"libgdx-i": {
+				"libgdx-i": { "x": 391.88, "y": 288.68, "width": 15, "height": 51 }
+			},
+			"libgdx-l": {
+				"libgdx-l": { "x": 369.33, "y": 288.75, "width": 15, "height": 51 }
+			},
+			"libgdx-x": {
+				"libgdx-x": { "x": 2.95, "y": 2.34, "rotation": 0.71, "width": 78, "height": 51 }
+			},
+			"libgdx-x-part1": {
+				"libgdx-x-part1": { "x": 13.58, "y": 1.19, "rotation": 175.1, "width": 38, "height": 50 }
+			},
+			"libgdx-x-part2": {
+				"libgdx-x-part2": { "x": 13.1, "y": 7.19, "rotation": 37.79, "width": 43, "height": 43 }
+			},
+			"libgdx-x-part3": {
+				"libgdx-x-part3": { "x": 4.24, "y": -2.38, "rotation": -38.29, "width": 28, "height": 19 }
+			}
+		}
+	}
+],
+"events": {
+	"easy": { "audio": "easy.mp3" },
+	"oh shit": { "audio": "oh shit.mp3" },
+	"shatter": { "audio": "shatter.mp3" }
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"libgdx-x": {
+				"attachment": [
+					{ "time": 2.9667, "name": null }
+				]
+			},
+			"libgdx-x-part1": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 2.9667, "name": "libgdx-x-part1" }
+				]
+			},
+			"libgdx-x-part2": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 2.9667, "name": "libgdx-x-part2" }
+				]
+			},
+			"libgdx-x-part3": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 2.9667, "name": "libgdx-x-part3" }
+				]
+			}
+		},
+		"bones": {
+			"crane-arm": {
+				"rotate": [
+					{ "angle": -23.98, "curve": "stepped" },
+					{ "time": 0.6667, "angle": -23.98 },
+					{ "time": 1.6667, "angle": -2.4 }
+				]
+			},
+			"crane-line": {
+				"rotate": [
+					{ "angle": 21.02, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 21.02 },
+					{ "time": 1.6667 }
+				],
+				"scale": [
+					{ "x": 0.306, "curve": "stepped" },
+					{ "time": 1.6667, "x": 0.306 },
+					{ "time": 2.6667, "x": 0.795, "y": 1.012 }
+				]
+			},
+			"libgdx-x": {
+				"translate": [
+					{ "time": 2.6667 },
+					{ "time": 2.9667, "x": 87.04, "y": 1.24 }
+				]
+			},
+			"libgdx-x-part1": {
+				"rotate": [
+					{ "time": 2.9667 },
+					{ "time": 3.2, "angle": 82.24 }
+				],
+				"translate": [
+					{ "y": -97.62, "curve": "stepped" },
+					{ "time": 0.6667, "y": -97.62 },
+					{ "time": 2.9667, "x": -3.7, "y": -82 },
+					{ "time": 3.2, "x": -53.55, "y": -133.44, "curve": "stepped" },
+					{ "time": 6.9333, "x": -53.55, "y": -133.44 }
+				]
+			},
+			"libgdx-x-part2": {
+				"rotate": [
+					{ "time": 2.9667 },
+					{ "time": 3.2, "angle": 37.33 }
+				],
+				"translate": [
+					{ "y": -97.62, "curve": "stepped" },
+					{ "time": 0.6667, "y": -97.62 },
+					{ "time": 2.9667, "x": -9.04, "y": -85.7 },
+					{ "time": 3.2, "x": 28.78, "y": -138.18 }
+				]
+			},
+			"libgdx-x-part3": {
+				"rotate": [
+					{ "time": 2.9667 },
+					{ "time": 3.2, "angle": -48.27 }
+				],
+				"translate": [
+					{ "y": -97.62, "curve": "stepped" },
+					{ "time": 0.6667, "y": -97.62 },
+					{ "time": 2.9667, "x": -13.15, "y": -90.63 },
+					{ "time": 3.2, "x": -37.55, "y": -181.35 }
+				]
+			},
+			"crane": {
+				"translate": [
+					{ "y": -97.62 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.8, "name": "easy" },
+			{ "time": 1.6, "name": "easy" },
+			{ "time": 2.4333, "name": "oh shit" },
+			{ "time": 2.9667, "name": "shatter" }
+		]
+	},
+	"stand": {
+		"slots": {
+			"libgdx-x-part1": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"libgdx-x-part2": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"libgdx-x-part3": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"crane-arm": {
+				"rotate": [
+					{ "angle": -23.98 }
+				]
+			},
+			"crane-line": {
+				"rotate": [
+					{ "angle": 21.02 }
+				],
+				"scale": [
+					{ "x": 0.306 }
+				]
+			},
+			"libgdx-x-part1": {
+				"translate": [
+					{ "y": -97.62 }
+				]
+			},
+			"libgdx-x-part2": {
+				"translate": [
+					{ "y": -97.62 }
+				]
+			},
+			"libgdx-x-part3": {
+				"translate": [
+					{ "y": -97.62 }
+				]
+			},
+			"crane": {
+				"translate": [
+					{ "y": -97.62 }
+				]
+			}
+		}
+	}
+}
+}

@@ -17,6 +17,7 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.utils.SkeletonDrawable;
 import com.ray3k.template.*;
+import com.ray3k.template.AnimationStateDataLoader.*;
 
 import static com.ray3k.template.Core.*;
 
@@ -32,12 +33,15 @@ public class LibgdxScreen extends JamScreen {
 
         skeletonDrawables = new Array<>();
         sounds = new ObjectSet<>();
+    
+        assetManager.load("libgdx-logo/libgdx.json-animation", AnimationStateData.class, new AnimationStateDataParameter("libgdx-logo/libgdx.json", "libgdx-logo/libgdx-logo.atlas"));
+        assetManager.finishLoading();
         
-        Skeleton skeleton = new Skeleton(assetManager.get("spine/libgdx.json", SkeletonData.class));
-        AnimationState animationState = new AnimationState(assetManager.get("spine/libgdx.json-animation", AnimationStateData.class));
+        Skeleton skeleton = new Skeleton(assetManager.get("libgdx-logo/libgdx.json", SkeletonData.class));
+        AnimationState animationState = new AnimationState(assetManager.get("libgdx-logo/libgdx.json-animation", AnimationStateData.class));
         SkeletonDrawable skeletonDrawable = new SkeletonDrawable(skeletonRenderer, skeleton, animationState);
-        skeletonDrawable.setMinWidth(350);
-        skeletonDrawable.setMinHeight(250);
+        skeletonDrawable.setMinWidth(1024);
+        skeletonDrawable.setMinHeight(576);
         skeletonDrawable.getAnimationState().setAnimation(0, "stand", false);
         skeletonDrawable.getAnimationState().apply(skeletonDrawable.getSkeleton());
         skeletonDrawables.add(skeletonDrawable);

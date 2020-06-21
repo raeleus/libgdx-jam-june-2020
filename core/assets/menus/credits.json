@@ -11,7 +11,7 @@
 						"clazz": "com.badlogic.gdx.scenes.scene2d.ui.Label",
 						"name": "default"
 					},
-					"text": "This game was made by Raeleus.\\nCopyright Raymond \"Raeleus\" Buckley © 2020\\n\\nMusic by Devynn LaShure, Echo Blue Music\\nhttps://www.echobluemusic.com",
+					"text": "UI and game design by Raeleus.\\nArtwork by ZaidaZadkiel.\\nAdditional artwork by Raeleus.\\nCopyright Raymond \"Raeleus\" Buckley © 2020\\n\\nMusic by Devynn LaShure, Echo Blue Music\\nhttps://www.echobluemusic.com",
 					"textAlignment": 1,
 					"ellipsis": false,
 					"ellipsisString": "...",

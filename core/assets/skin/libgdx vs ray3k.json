@@ -2,6 +2,9 @@
 "com.badlogic.gdx.graphics.g2d.BitmapFont": {
 	"font": {
 		"file": "font.fnt"
+	},
+	"font-small": {
+		"file": "font-small.fnt"
 	}
 },
 "com.badlogic.gdx.graphics.Color": {
@@ -69,6 +72,44 @@
 		"frameDuration": 0.03,
 		"regions": [],
 		"playMode": 2
+	},
+	"button-small-over-10": {
+		"region": "button-small-over",
+		"horizontalStretchAreas": [ 7, 79 ],
+		"verticalStretchAreas": [ 8, 18 ],
+		"tiling": false,
+		"minWidth": 87,
+		"minHeight": 27,
+		"rightWidth": 7,
+		"leftWidth": 7,
+		"bottomHeight": 8,
+		"topHeight": 8,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.03,
+		"regions": [],
+		"playMode": 2
+	},
+	"button-small-10": {
+		"region": "button-small",
+		"horizontalStretchAreas": [ 7, 79 ],
+		"verticalStretchAreas": [ 8, 18 ],
+		"tiling": false,
+		"minWidth": 88,
+		"minHeight": 27,
+		"rightWidth": 7,
+		"leftWidth": 7,
+		"bottomHeight": 8,
+		"topHeight": 8,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.03,
+		"regions": [],
+		"playMode": 2
 	}
 },
 "com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle": {
@@ -115,6 +156,11 @@
 		"font": "font",
 		"up": "button-normal-10",
 		"over": "button-normal-over-10"
+	},
+	"small": {
+		"font": "font-small",
+		"up": "button-small-10",
+		"over": "button-small-over-10"
 	}
 },
 "com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle": {

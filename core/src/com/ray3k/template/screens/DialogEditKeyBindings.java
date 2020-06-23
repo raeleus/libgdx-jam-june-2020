@@ -107,21 +107,24 @@ public class DialogEditKeyBindings extends Dialog {
         setFillParent(true);
         Table root = getContentTable();
     
+        root.pad(20);
         Table table = new Table();
-        ScrollPane scrollPane = new ScrollPane(table, skin);
+        var scrollPane = new ScrollPane(table, skin);
+        scrollPane.setName("scroll");
+        scrollPane.setFadeScrollBars(false);
         root.add(scrollPane).grow();
         
         refreshTable(table);
         
         getButtonTable().pad(5);
         getButtonTable().defaults().uniform().fill().space(10);
-        TextButton textButton = new TextButton("OK", skin);
+        TextButton textButton = new TextButton("OK", skin, "small");
         button(textButton);
         focusables.add(textButton);
         textButton.addListener(sndChangeListener);
         textButton.addListener(mouseEnterListener);
         
-        textButton = new TextButton("Defaults", skin);
+        textButton = new TextButton("Defaults", skin, "small");
         getButtonTable().add(textButton);
         focusables.add(textButton);
         textButton.addListener(sndChangeListener);
@@ -146,7 +149,7 @@ public class DialogEditKeyBindings extends Dialog {
         for (Binding binding : JamScreen.getBindings()) {
             String codeName = JamScreen.getBindingCodeName(binding);
             
-            TextButton textButton = new TextButton(binding.toString() + " : " + codeName, skin);
+            TextButton textButton = new TextButton(binding.toString() + " : " + codeName, skin, "small");
             table.add(textButton);
             table.row();
             focusables.add(textButton);
@@ -490,5 +493,12 @@ public class DialogEditKeyBindings extends Dialog {
         public abstract void controllerAxisSelected(Controller controller, int axisCode, int value);
         public abstract void controllerPovSelected(Controller controller, int axisCode, int value);
         public abstract void cancelled();
+    }
+    
+    @Override
+    public Dialog show(Stage stage, Action action) {
+        var dialog = super.show(stage, action);
+        stage.setScrollFocus(stage.getRoot().findActor("scroll"));
+        return dialog;
     }
 }

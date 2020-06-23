@@ -1,1 +1,2 @@
 textures/texture-atlas.atlas
+textures/textures.atlas

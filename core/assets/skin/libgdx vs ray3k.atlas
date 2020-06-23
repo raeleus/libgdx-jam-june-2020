@@ -6,106 +6,134 @@ filter: Linear,Linear
 repeat: none
 bg
   rotate: false
-  xy: 1, 37
+  xy: 1, 1
   size: 213, 200
   orig: 213, 200
   offset: 0, 0
   index: -1
 button-credits
   rotate: false
-  xy: 1, 1145
+  xy: 678, 1657
   size: 479, 177
   orig: 479, 177
   offset: 0, 0
   index: -1
 button-credits-over
   rotate: false
-  xy: 678, 1458
+  xy: 1, 1144
   size: 479, 177
   orig: 479, 177
   offset: 0, 0
   index: -1
 button-multiplayer
   rotate: false
-  xy: 1, 966
+  xy: 678, 1478
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-multiplayer-over
   rotate: false
-  xy: 1, 787
+  xy: 1, 965
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-normal
   rotate: false
-  xy: 1185, 1675
+  xy: 1, 858
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
   index: -1
 button-normal-over
   rotate: false
-  xy: 678, 1351
+  xy: 1, 751
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
   index: -1
 button-options
   rotate: false
-  xy: 1, 513
+  xy: 1, 477
   size: 307, 272
   orig: 307, 272
   offset: 0, 0
   index: -1
 button-options-over
   rotate: false
-  xy: 1, 239
+  xy: 1, 203
   size: 307, 272
   orig: 307, 272
   offset: 0, 0
   index: -1
 button-play
   rotate: false
-  xy: 1, 1553
+  xy: 1, 1697
   size: 675, 227
   orig: 675, 227
   offset: 0, 0
   index: -1
 button-play-over
   rotate: false
-  xy: 1, 1324
+  xy: 1, 1468
   size: 675, 227
   orig: 675, 227
   offset: 0, 0
   index: -1
+button-small
+  rotate: false
+  xy: 508, 1439
+  size: 88, 27
+  orig: 88, 27
+  offset: 0, 0
+  index: -1
+button-small-over
+  rotate: false
+  xy: 317, 936
+  size: 87, 27
+  orig: 87, 27
+  offset: 0, 0
+  index: -1
 font
   rotate: false
-  xy: 678, 1637
+  xy: 1, 1323
   size: 505, 143
   orig: 505, 143
   offset: 0, 0
   index: -1
+font-small
+  rotate: false
+  xy: 678, 1836
+  size: 506, 88
+  orig: 506, 88
+  offset: 0, 0
+  index: -1
 scrollbar-knob
   rotate: false
-  xy: 1159, 1620
+  xy: 482, 1306
   size: 15, 15
   orig: 15, 15
   offset: 0, 0
   index: -1
 slider
   rotate: false
-  xy: 1501, 1723
+  xy: 1186, 1867
   size: 281, 57
   orig: 281, 57
   offset: 0, 0
   index: -1
 slider-knob
   rotate: false
-  xy: 482, 1265
+  xy: 1159, 1777
   size: 15, 57
   orig: 15, 57
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 678, 1475
+  size: 1, 1
+  orig: 1, 1
   offset: 0, 0
   index: -1

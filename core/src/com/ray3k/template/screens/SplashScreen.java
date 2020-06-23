@@ -2,6 +2,7 @@ package com.ray3k.template.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -31,6 +32,14 @@ public class SplashScreen extends JamScreen {
             public void clicked(InputEvent event, float x, float y) {
                 Gdx.input.setInputProcessor(null);
                 core.transition(new LibgdxScreen());
+            }
+        });
+    
+        stage.addListener(new ClickListener(Input.Buttons.RIGHT) {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                Gdx.input.setInputProcessor(null);
+                core.transition(new GameScreen());
             }
         });
     }

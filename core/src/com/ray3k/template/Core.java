@@ -2,6 +2,7 @@ package com.ray3k.template;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.assets.loaders.SkinLoader.SkinParameter;
 import com.badlogic.gdx.audio.Music;
@@ -19,14 +20,14 @@ import com.ray3k.template.screens.*;
 import com.ray3k.template.transitions.*;
 
 public class Core extends JamGame {
-    public static final String PROJECT_NAME = "Template Game";
+    public static final String PROJECT_NAME = "LIBGDX VS RAY3K";
     public static Core core;
     public static Skin skin;
     public static SkeletonRenderer skeletonRenderer;
     public static ChangeListener sndChangeListener;
     public static CrossPlatformWorker crossPlatformWorker;
     public enum Binding {
-        LEFT, RIGHT, UP, DOWN, SHOOT, SPECIAL, SHIELD;
+        P1_LEFT, P1_RIGHT, P1_UP, P1_DOWN, P1_JUMP, P1_ATTACK, P1_SHIELD, P1_SPECIAL, P2_LEFT, P2_RIGHT, P2_UP, P2_DOWN, P2_JUMP, P2_ATTACK, P2_SHIELD, P2_SPECIAL;
     }
     public static float bgm;
     public static float sfx;
@@ -103,12 +104,21 @@ public class Core extends JamGame {
     }
     
     public void setDefaultBindings() {
-        JamScreen.addKeyBinding(Binding.LEFT, Input.Keys.LEFT);
-        JamScreen.addKeyBinding(Binding.RIGHT, Input.Keys.RIGHT);
-        JamScreen.addKeyBinding(Binding.UP, Input.Keys.UP);
-        JamScreen.addKeyBinding(Binding.DOWN, Input.Keys.DOWN);
-        JamScreen.addKeyBinding(Binding.SHOOT, Input.Keys.Z);
-        JamScreen.addKeyBinding(Binding.SHIELD, Input.Keys.X);
-        JamScreen.addKeyBinding(Binding.SPECIAL, Input.Keys.C);
+        JamScreen.addKeyBinding(Binding.P1_LEFT, Keys.A);
+        JamScreen.addKeyBinding(Binding.P1_RIGHT, Keys.D);
+        JamScreen.addKeyBinding(Binding.P1_UP, Keys.W);
+        JamScreen.addKeyBinding(Binding.P1_DOWN, Keys.S);
+        JamScreen.addKeyBinding(Binding.P1_JUMP, Keys.G);
+        JamScreen.addKeyBinding(Binding.P1_SHIELD, Keys.H);
+        JamScreen.addKeyBinding(Binding.P1_ATTACK, Keys.F);
+        JamScreen.addKeyBinding(Binding.P1_SPECIAL, Keys.T);
+        JamScreen.addKeyBinding(Binding.P2_LEFT, Keys.LEFT);
+        JamScreen.addKeyBinding(Binding.P2_RIGHT, Keys.RIGHT);
+        JamScreen.addKeyBinding(Binding.P2_UP, Keys.UP);
+        JamScreen.addKeyBinding(Binding.P2_DOWN, Keys.DOWN);
+        JamScreen.addKeyBinding(Binding.P2_JUMP, Keys.NUMPAD_5);
+        JamScreen.addKeyBinding(Binding.P2_SHIELD, Keys.NUMPAD_6);
+        JamScreen.addKeyBinding(Binding.P2_ATTACK, Keys.NUMPAD_4);
+        JamScreen.addKeyBinding(Binding.P2_SPECIAL, Keys.NUMPAD_8);
     }
 }

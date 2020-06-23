@@ -3,22 +3,16 @@ package com.ray3k.template.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputMultiplexer;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.controllers.Controllers;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.crashinvaders.vfx.VfxManager;
 import com.crashinvaders.vfx.effects.EarthquakeEffect;
-import com.ray3k.template.Core;
 import com.ray3k.template.Core.Binding;
 import com.ray3k.template.JamScreen;
 import com.ray3k.template.entities.BallTestEntity;
@@ -27,7 +21,6 @@ import com.ray3k.template.screens.DialogPause.PauseListener;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 import static com.ray3k.template.Core.*;
-import static com.ray3k.template.JamGame.*;
 
 public class GameScreen extends JamScreen {
     public static GameScreen gameScreen;
@@ -102,10 +95,10 @@ public class GameScreen extends JamScreen {
         }
         stage.act(delta);
     
-        if (isBindingJustPressed(Binding.LEFT)) {
+        if (isBindingJustPressed(Binding.P1_LEFT)) {
             System.out.println("left");
         }
-        if (isBindingJustPressed(Binding.UP)) {
+        if (isBindingJustPressed(Binding.P1_UP)) {
             System.out.println("up");
         }
     }
@@ -121,7 +114,7 @@ public class GameScreen extends JamScreen {
         batch.begin();
         viewport.apply();
         batch.setProjectionMatrix(camera.combined);
-        shapeDrawer.setColor(isBindingPressed(Binding.LEFT) && isBindingPressed(Binding.UP) ? Color.ORANGE : Color.GREEN);
+        shapeDrawer.setColor(isBindingPressed(Binding.P1_LEFT) && isBindingPressed(Binding.P1_UP) ? Color.ORANGE : Color.GREEN);
         shapeDrawer.filledRectangle(0, 0, viewport.getWorldWidth(), viewport.getWorldHeight());
         shapeDrawer.setColor(Color.BLUE);
         shapeDrawer.setDefaultLineWidth(10);

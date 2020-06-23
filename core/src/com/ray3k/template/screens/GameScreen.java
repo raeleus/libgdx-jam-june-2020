@@ -69,6 +69,8 @@ public class GameScreen extends JamScreen {
         viewport = new FitViewport(1024, 576, camera);
         
         entityController = new EntityController();
+        var player = new PerformerEntity();
+        entityController.add(player);
     }
     
     @Override

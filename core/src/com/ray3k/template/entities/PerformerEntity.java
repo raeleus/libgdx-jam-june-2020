@@ -26,11 +26,11 @@ public class PerformerEntity extends Entity {
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
         skeleton.setSkin(skinName.skin);
-        animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
         moveSet = skinName.moveSet;
-        currentMove = moveSet.stance;
         mode = Mode.STANDING;
+        currentMove = moveSet.stance;
+        currentMove.execute(this);
     }
     
     @Override

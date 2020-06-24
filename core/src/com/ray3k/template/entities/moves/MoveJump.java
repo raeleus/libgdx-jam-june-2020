@@ -10,7 +10,12 @@ public class MoveJump implements Move {
     public final static float H_SPEED = 400f;
     public final static float H_ACCELERATION = 2400f;
     public final static float JUMP_SPEED = 1200f;
+    public final static float EXTRA_JUMP_SPEED = 900f;
     public final static float GRAVITY = 2000f;
+    public final int TOTAL_JUMPS = 2;
+    public final float EXTRA_JUMP_DELAY = .25f;
+    public int jumps;
+    public float extraJumpTime;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -26,10 +31,20 @@ public class MoveJump implements Move {
         
         performer.deltaY = JUMP_SPEED;
         performer.y = 0;
+        jumps = 1;
+        extraJumpTime = EXTRA_JUMP_DELAY;
     }
     
     @Override
     public void update(PerformerEntity performer, float delta) {
+        extraJumpTime -= delta;
+        
+        if (extraJumpTime < 0 && jumps < TOTAL_JUMPS && performer.steering.jump) {
+            jumps++;
+            performer.deltaY = EXTRA_JUMP_SPEED;
+            extraJumpTime = EXTRA_JUMP_DELAY;
+        }
+        
         var speed = 0f;
         if (performer.steering.left) speed = -H_SPEED;
         else if (performer.steering.right) speed = H_SPEED;

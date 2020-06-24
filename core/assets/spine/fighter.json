@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "tH8S3P+IksF4qcUCfnvaLYPxHSo",
+	"hash": "8H3xC6CtMK5rmL0sf4KdQbM1xEo",
 	"spine": "3.8.95",
-	"x": -43.47,
-	"y": -4.77,
-	"width": 139.51,
-	"height": 321.16,
+	"x": -51.74,
+	"y": -7.14,
+	"width": 159.74,
+	"height": 340.52,
 	"images": "../output/",
 	"audio": ""
 },
@@ -46,6 +46,7 @@
 	{ "name": "leg-right", "bone": "leg-right", "attachment": "leg-right" },
 	{ "name": "foot-right", "bone": "foot-right", "attachment": "foot-right" },
 	{ "name": "weapon", "bone": "weapon" },
+	{ "name": "skirt", "bone": "body", "attachment": "skirt" },
 	{ "name": "forearm-right", "bone": "forearm-right", "attachment": "forearm-right" },
 	{ "name": "arm-right", "bone": "arm-right", "attachment": "arm-right" },
 	{ "name": "hand-right", "bone": "hand-right", "attachment": "hand-right" },
@@ -562,6 +563,9 @@
 			},
 			"leg-right": {
 				"leg-right": { "name": "lyze/lyze-leg", "x": 30.23, "y": 1.08, "rotation": 90.83, "width": 21, "height": 65 }
+			},
+			"skirt": {
+				"skirt": { "name": "lyze/lyze-skirt", "x": -22.3, "y": 31.8, "rotation": -92.59, "width": 48, "height": 53 }
 			}
 		}
 	},
@@ -1599,7 +1603,7 @@
 			{
 				"time": 0.1,
 				"offsets": [
-					{ "slot": "prop", "offset": -15 }
+					{ "slot": "prop", "offset": -16 }
 				]
 			}
 		]
@@ -3074,6 +3078,130 @@
 						}
 					]
 				}
+			}
+		}
+	},
+	"general/frozen": {
+		"slots": {
+			"arm-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"arm-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"bbox": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"body": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"foot-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"foot-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"forearm-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"forearm-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"foreleg-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"foreleg-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"hand-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"hand-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"hat": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"head": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"hitbox": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"leg-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"leg-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"prop": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"skirt": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
+			},
+			"weapon": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008fffff" }
+				]
 			}
 		}
 	},
@@ -5387,7 +5515,7 @@
 			{
 				"time": 0.2,
 				"offsets": [
-					{ "slot": "prop", "offset": -8 }
+					{ "slot": "prop", "offset": -9 }
 				]
 			}
 		]
@@ -6431,7 +6559,7 @@
 			{
 				"time": 0.2333,
 				"offsets": [
-					{ "slot": "prop", "offset": -15 }
+					{ "slot": "prop", "offset": -16 }
 				]
 			}
 		]
@@ -7280,6 +7408,130 @@
 			}
 		}
 	},
+	"general/stunned": {
+		"slots": {
+			"arm-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"arm-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"bbox": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"body": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"foot-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"foot-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"forearm-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"forearm-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"foreleg-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"foreleg-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"hand-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"hand-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"hat": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"head": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"hitbox": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"leg-left": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"leg-right": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"prop": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"skirt": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			},
+			"weapon": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "008400ff" }
+				]
+			}
+		}
+	},
 	"general/sweep-kick": {
 		"slots": {
 			"hitbox": {
@@ -7478,13 +7730,13 @@
 			{
 				"time": 0.2,
 				"offsets": [
-					{ "slot": "prop", "offset": -15 }
+					{ "slot": "prop", "offset": -16 }
 				]
 			},
 			{
 				"time": 1.8,
 				"offsets": [
-					{ "slot": "prop", "offset": -8 }
+					{ "slot": "prop", "offset": -9 }
 				]
 			}
 		]
@@ -7529,6 +7781,12 @@
 	},
 	"tomski/tomski-lightning": {
 		"slots": {
+			"hitbox": {
+				"attachment": [
+					{ "time": 0.3667, "name": "hitbox" },
+					{ "time": 0.4667, "name": null }
+				]
+			},
 			"prop": {
 				"attachment": [
 					{ "time": 0.3667, "name": "prop1" },
@@ -7560,6 +7818,18 @@
 				"scale": [
 					{ "time": 0.3667, "y": 1.647 }
 				]
+			}
+		},
+		"deform": {
+			"default": {
+				"hitbox": {
+					"hitbox": [
+						{
+							"time": 0.3667,
+							"vertices": [ -3.24203, 324.19995, 61.59787, 324.19995, 77.80797, -197.76202, 12.96806, -197.76202 ]
+						}
+					]
+				}
 			}
 		}
 	},

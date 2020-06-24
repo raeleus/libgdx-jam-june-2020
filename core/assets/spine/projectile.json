@@ -1,0 +1,361 @@
+{
+"skeleton": {
+	"hash": "l7YpwPhYV79OP4la+2kScjY3u9o",
+	"spine": "3.8.95",
+	"x": -59,
+	"y": -19.19,
+	"width": 119,
+	"height": 46,
+	"images": "../output/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "projectile", "parent": "root", "length": 117.11 }
+],
+"slots": [
+	{ "name": "projectile", "bone": "projectile", "attachment": "projectile" },
+	{ "name": "hitbox", "bone": "root", "attachment": "hitbox" }
+],
+"skins": [
+	{
+		"name": "evilentity-cloud",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -81.35, 59.65, -82.61, -52.13, 86.95, -53.39, 85.7, 57.77 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "evilentity/evil-entity-cloud", "x": 0.5, "y": 0.5, "width": 201, "height": 121 }
+			}
+		}
+	},
+	{
+		"name": "evilentity-dust",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -81.35, 59.65, -82.61, -52.13, 86.95, -53.39, 85.7, 57.77 ],
+					"color": "f00000ff"
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "evilentity/evil-entity-dust", "x": -0.11, "y": -0.87, "width": 238, "height": 145 }
+			}
+		}
+	},
+	{
+		"name": "goodentity-cloud",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -81.35, 59.65, -82.61, -52.13, 86.95, -53.39, 85.7, 57.77 ],
+					"color": "f00000ff"
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "goodentity/goodentity-cloud", "x": 0.5, "y": 0.5, "width": 201, "height": 121 }
+			}
+		}
+	},
+	{
+		"name": "john-arrow",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -43.12, 20.75, -41.85, -15.9, 66.22, -15.27, 66.85, 19.49 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "john-the-developer/john-arrow", "x": 0.5, "width": 137, "height": 20 }
+			}
+		}
+	},
+	{
+		"name": "john-bomb",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -23.52, 33.39, -22.26, -25.38, 26.4, -26.65, 25.77, 32.76 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "john-the-developer/john-bomb", "x": 0.5, "y": 14.4, "width": 78, "height": 104 }
+			}
+		}
+	},
+	{
+		"name": "john-boomerang",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -23.52, 33.39, -22.26, -25.38, 26.4, -26.65, 25.77, 32.76 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "john-the-developer/john-boomerang", "x": 0.5, "y": 0.5, "width": 39, "height": 75 }
+			}
+		}
+	},
+	{
+		"name": "mgsx-arrow",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -78.51, 15.07, -77.24, -14.64, 78.23, -15.9, 77.6, 14.43 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "mgsx/mgsx-arrow", "x": 0.5, "y": 0.5, "width": 151, "height": 24 }
+			}
+		}
+	},
+	{
+		"name": "mgsx-logo",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -78.51, 15.07, -77.24, -14.64, 78.23, -15.9, 77.6, 14.43 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "mgsx/mgsx-logo", "x": 5.56, "y": 14.4, "width": 201, "height": 104 }
+			}
+		}
+	},
+	{
+		"name": "panda-crown",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -27.95, 20.75, -27.95, -9.58, 22.61, -10.21, 23.24, 20.75 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "peanut-panda/panda-crown", "x": -4.56, "y": 6.82, "width": 50, "height": 34 }
+			}
+		}
+	},
+	{
+		"name": "panda-peanut",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -25.42, 16.33, -25.42, -14.01, 25.14, -14.64, 25.77, 16.33 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "peanut-panda/panda-peanut", "x": 0.5, "y": 1.13, "width": 52, "height": 28 }
+			}
+		}
+	},
+	{
+		"name": "payne-grenade",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -23.52, 33.39, -23.52, -17.8, 20.72, -19.06, 21.35, 32.76 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "payne/payne-grenade", "x": -4.56, "y": 6.82, "width": 48, "height": 53 }
+			}
+		}
+	},
+	{
+		"name": "payne-missile",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -44.38, 19.49, -44.38, -10.85, 48.52, -9.58, 49.16, 21.39 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "payne/payne-missile", "x": -4.56, "y": 6.82, "width": 105, "height": 40 }
+			}
+		}
+	},
+	{
+		"name": "snehks-venom",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -40.59, 33.39, -39.32, -36.13, 37.78, -36.13, 42.2, 34.03 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "snehks/snehks-venom", "x": -42.48, "y": 1.13, "width": 210, "height": 81 }
+			}
+		}
+	},
+	{
+		"name": "tann-axe",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -50.7, 95.33, -48.8, 18.23, 47.26, 18.23, 52.95, 95.96 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "tann/tann-axe", "x": -0.13, "y": 9.35, "width": 108, "height": 186 }
+			}
+		}
+	},
+	{
+		"name": "tettinger-net",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -21.7, 75.71, -22.26, -97.27, 45.97, -96.72, 47.16, 76.9 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "tettinger/tettinger-net", "x": 51.91, "y": -4.25, "width": 148, "height": 228 }
+			}
+		}
+	},
+	{
+		"name": "tettinger-yarn",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -74.03, 88.9, -73.22, -61.33, 75.09, -62.59, 74.91, 88.27 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "tettinger/tettinger-yarn", "x": 0.5, "y": 14.4, "width": 156, "height": 156 }
+			}
+		}
+	},
+	{
+		"name": "tom-ski-bolt",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -47.95, 21.42, -54.35, -19.15, 52.27, -17.54, 56.91, 23.18 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "tom-ski/tomski-bolt", "x": 0.5, "y": 3.81, "width": 119, "height": 46 }
+			}
+		}
+	}
+],
+"animations": {
+	"evilentity-dust": {
+		"slots": {
+			"projectile": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"projectile": {
+				"scale": [
+					{},
+					{ "time": 0.3333, "x": 1.567, "y": 1.567 }
+				]
+			}
+		},
+		"deform": {
+			"evilentity-dust": {
+				"hitbox": {
+					"hitbox": [
+						{},
+						{
+							"time": 0.3333,
+							"vertices": [ -86.57463, 58.94783, -87.87779, -57.03281, 88.04788, -58.33595, 86.74472, 56.99314 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"john-boomerang": {
+		"bones": {
+			"projectile": {
+				"rotate": [
+					{},
+					{ "time": 0.1333, "angle": 90 },
+					{ "time": 0.2333, "angle": 180 },
+					{ "time": 0.3667, "angle": -90 },
+					{ "time": 0.4667 }
+				]
+			}
+		}
+	},
+	"static": {},
+	"tann-axe": {
+		"bones": {
+			"projectile": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": -90 },
+					{ "time": 0.3333, "angle": -180 },
+					{ "time": 0.5, "angle": 90 },
+					{ "time": 0.6667 }
+				]
+			}
+		},
+		"deform": {
+			"tann-axe": {
+				"hitbox": {
+					"hitbox": [
+						{},
+						{
+							"time": 0.1667,
+							"vertices": [ 148.26595, -43.83138, 69.26606, 31.37654, -26.79793, -64.6874, 45.25013, -148.11143 ]
+						},
+						{
+							"time": 0.3333,
+							"vertices": [ 100.64264, -193.36133, 96.85065, -39.15358, -95.27728, -39.15353, -106.65326, -194.62558 ]
+						},
+						{
+							"time": 0.5,
+							"vertices": [ -46.99129, -148.26598, 28.21655, -69.26612, -67.8474, 26.79787, -151.27133, -45.25014 ]
+						},
+						{ "time": 0.6667 }
+					]
+				}
+			}
+		}
+	}
+}
+}

@@ -1,16 +1,22 @@
 package com.ray3k.template.entities;
 
-import com.esotericsoftware.spine.Animation;
 import com.ray3k.template.*;
+import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
 
 import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.SkinName.*;
+import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class PerformerEntity extends Entity {
     public Steering steering;
     public MoveSet moveSet;
+    public Move currentMove;
+    public Mode mode;
+    public static enum Mode {
+        MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING;
+    }
     
     @Override
     public void create() {
@@ -19,6 +25,8 @@ public class PerformerEntity extends Entity {
         animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
         moveSet = new MoveSetAceSkeleton();
+        currentMove = moveSet.stance;
+        mode = Mode.STANDING;
     }
     
     @Override
@@ -30,17 +38,56 @@ public class PerformerEntity extends Entity {
     public void act(float delta) {
         steering.update(delta);
         
-        if (steering.left && moveSet.goLeft.canPerform(this)) {
-            moveSet.goLeft.execute(this, delta);
-        } else if (steering.right && moveSet.goRight.canPerform(this)) {
-            moveSet.goRight.execute(this, delta);
-        } else if (moveSet.stance.canPerform(this)) {
-            moveSet.stance.execute(this, delta);
+        Move newMove = null;
+        Mode newMode = null;
+        if (steering.left) {
+            newMode = MOVING;
+            newMove = moveSet.goLeft;
+        } else if (steering.right) {
+            newMode = MOVING;
+            newMove = moveSet.goRight;
+        } else {
+            newMode = STANDING;
+            newMove = moveSet.stance;
         }
         
-        if (steering.attack && moveSet.attackNeutral.canPerform(this)) {
-            moveSet.attackNeutral.execute(this, delta);
+        if (steering.attack) {
+            if (steering.right || steering.left) {
+                newMode = ATTACKING;
+                newMove = moveSet.attackSide;
+            } else if (steering.up) {
+                newMode = ATTACKING;
+                newMove = moveSet.attackUp;
+            } else if (steering.down) {
+                newMode = ATTACKING;
+                newMove = moveSet.attackDown;
+            } else {
+                newMode = ATTACKING;
+                newMove = moveSet.attackNeutral;
+            }
+        } else if (steering.special) {
+            if (steering.right || steering.left) {
+                newMode = ATTACKING;
+                newMove = moveSet.specialSide;
+            } else if (steering.up) {
+                newMode = ATTACKING;
+                newMove = moveSet.specialUp;
+            } else if (steering.down) {
+                newMode = ATTACKING;
+                newMove = moveSet.specialDown;
+            } else {
+                newMode = ATTACKING;
+                newMove = moveSet.specialNeutral;
+            }
         }
+        
+        if (newMove != null && newMove != currentMove && newMove.canPerform(this)) {
+            currentMove = newMove;
+            mode = newMode;
+            currentMove.execute(this);
+        }
+        
+        currentMove.update(this, delta);
     }
     
     @Override

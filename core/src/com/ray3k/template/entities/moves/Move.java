@@ -4,5 +4,6 @@ import com.ray3k.template.entities.*;
 
 public interface Move {
     boolean canPerform(PerformerEntity performer);
-    void execute(PerformerEntity performer, float delta);
+    void execute(PerformerEntity performer);
+    void update(PerformerEntity performer, float delta);
 }

@@ -1,18 +1,34 @@
 package com.ray3k.template;
 
 import com.esotericsoftware.spine.Skin;
+import com.ray3k.template.entities.movesets.*;
 
 public enum SkinName {
-    ACE_SKELETON("ace-skeleton"), ALI("ali"), EVILENTITY("evilentity"), FEROCIOUS_ZEBRA("ferocious-zebra"), GOODENTITY(
-            "goodentity"), JOHN_THE_DEVELOPER("john-the-developer"), LYZE("lyze"), MGSX("mgsx"), PARTYTIME_FOXY(
-            "partytime-foxy"), PAYNE("payne"), PEANUT_PANDA("peanut-panda"), RAELEUS("raeleus"), SKINCOMPOSER(
-            "skincomposer"), SNEHKS("snehks"), TANN("tann"), TEMPLATE("template"), TETTINGER("tettinger"), TOM_SKI(
-            "tom-ski");
+    ACE_SKELETON("ace-skeleton", new MoveSetAceSkeleton()),
+    ALI("ali", new MoveSetAceSkeleton()),
+    EVILENTITY("evilentity", new MoveSetAceSkeleton()),
+    FEROCIOUS_ZEBRA("ferocious-zebra", new MoveSetAceSkeleton()),
+    GOODENTITY("goodentity", new MoveSetAceSkeleton()),
+    JOHN_THE_DEVELOPER("john-the-developer", new MoveSetAceSkeleton()),
+    LYZE("lyze", new MoveSetAceSkeleton()),
+    MGSX("mgsx", new MoveSetAceSkeleton()),
+    PARTYTIME_FOXY("partytime-foxy", new MoveSetAceSkeleton()),
+    PAYNE("payne", new MoveSetAceSkeleton()),
+    PEANUT_PANDA("peanut-panda", new MoveSetAceSkeleton()),
+    RAELEUS("raeleus", new MoveSetAceSkeleton()),
+    SKINCOMPOSER("skincomposer", new MoveSetAceSkeleton()),
+    SNEHKS("snehks", new MoveSetAceSkeleton()),
+    TANN("tann", new MoveSetAceSkeleton()),
+    TEMPLATE("template", new MoveSetAceSkeleton()),
+    TETTINGER("tettinger", new MoveSetAceSkeleton()),
+    TOM_SKI("tom-ski", new MoveSetAceSkeleton());
     
     public String name;
+    public MoveSet moveSet;
     public Skin skin;
-    SkinName(String name) {
+    SkinName(String name, MoveSet moveSet) {
         this.name = name;
+        this.moveSet = moveSet;
     }
     
     public static SkinName getByName(String name) {

@@ -28,7 +28,7 @@ public class PerformerEntity extends Entity {
         skeleton.setSkin(skinName.skin);
         animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
-        moveSet = new MoveSetAceSkeleton();
+        moveSet = skinName.moveSet;
         currentMove = moveSet.stance;
         mode = Mode.STANDING;
     }

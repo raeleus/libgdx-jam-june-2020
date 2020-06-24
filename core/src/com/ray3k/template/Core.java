@@ -69,6 +69,17 @@ public class Core extends JamGame {
             for (var skin : SkinName.values()) {
                 skin.skin = skeletonData.findSkin(skin.name);
             }
+    
+            //update values for ProjectileAnimationName
+            skeletonData = assetManager.get("spine/projectile.json");
+            for (var anim : ProjectileAnimationName.values()) {
+                anim.animation = skeletonData.findAnimation(anim.name);
+            }
+    
+            //update values for ProjectileSkinName
+            for (var skin : ProjectileSkinName.values()) {
+                skin.skin = skeletonData.findSkin(skin.name);
+            }
         }));
         defaultTransition = Transitions.colorFade(Color.BLACK);
         defaultTransitionDuration = .5f;

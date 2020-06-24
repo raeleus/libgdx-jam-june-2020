@@ -79,13 +79,6 @@ public class GameScreen extends JamScreen {
             entityController.act(delta);
         }
         stage.act(delta);
-    
-        if (isBindingJustPressed(Binding.P1_LEFT)) {
-            System.out.println("left");
-        }
-        if (isBindingJustPressed(Binding.P1_UP)) {
-            System.out.println("up");
-        }
     }
     
     @Override

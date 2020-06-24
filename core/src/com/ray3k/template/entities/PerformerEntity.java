@@ -2,6 +2,7 @@ package com.ray3k.template.entities;
 
 import com.esotericsoftware.spine.Animation;
 import com.ray3k.template.*;
+import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
 
 import static com.ray3k.template.AnimationName.*;
@@ -9,7 +10,7 @@ import static com.ray3k.template.SkinName.*;
 
 public class PerformerEntity extends Entity {
     public Steering steering;
-    public final static float MOVE_SPEED = 200f;
+    public MoveSet moveSet;
     
     @Override
     public void create() {
@@ -17,6 +18,7 @@ public class PerformerEntity extends Entity {
         skeleton.setSkin(ACE_SKELETON.skin);
         animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
+        moveSet = new MoveSetAceSkeleton();
     }
     
     @Override
@@ -27,26 +29,18 @@ public class PerformerEntity extends Entity {
     @Override
     public void act(float delta) {
         steering.update(delta);
-    
-        Animation anim = null;
         
-        if (steering.left) {
-            setMotion(MOVE_SPEED, 180);
-            
-            anim = GENERAL_WALK.animation;
+        if (steering.left && moveSet.goLeft.canPerform(this)) {
+            moveSet.goLeft.execute(this, delta);
+        } else if (steering.right && moveSet.goRight.canPerform(this)) {
+            moveSet.goRight.execute(this, delta);
+        } else if (moveSet.stance.canPerform(this)) {
+            moveSet.stance.execute(this, delta);
         }
-        else if (steering.right) {
-            setMotion(MOVE_SPEED, 0);
-    
-            anim = GENERAL_WALK.animation;
+        
+        if (steering.attack && moveSet.attackNeutral.canPerform(this)) {
+            moveSet.attackNeutral.execute(this, delta);
         }
-        else {
-            setSpeed(0);
-            
-            anim = GENERAL_STANCE.animation;
-        }
-    
-        if (animationState.getCurrent(0).getAnimation() != anim) animationState.setAnimation(0, anim, true);
     }
     
     @Override

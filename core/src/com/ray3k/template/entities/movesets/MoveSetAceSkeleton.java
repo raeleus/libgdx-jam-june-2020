@@ -11,9 +11,9 @@ public class MoveSetAceSkeleton extends MoveSet {
         attackSide = new MoveSpinKick();
         attackUp = new MoveDoubleAxeHandle();
         attackDown = new MoveLowKick();
-        specialNeutral = new MoveJab();
-        specialSide = new MoveJab();
-        specialUp = new MoveJab();
-        specialDown = new MoveJab();
+        specialNeutral = new MoveStraight();
+        specialSide = new MoveFrontFlip();
+        specialUp = new MoveUppercut();
+        specialDown = new MoveSweepKick();
     }
 }

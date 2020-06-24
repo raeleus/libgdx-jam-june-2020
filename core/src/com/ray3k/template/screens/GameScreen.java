@@ -11,7 +11,6 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.ray3k.template.Core.*;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.screens.DialogPause.*;
@@ -71,6 +70,8 @@ public class GameScreen extends JamScreen {
         entityController = new EntityController();
         var player = new PerformerEntity();
         entityController.add(player);
+        
+        camera.position.y = 200;
     }
     
     @Override

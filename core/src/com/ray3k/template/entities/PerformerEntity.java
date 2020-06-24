@@ -2,12 +2,15 @@ package com.ray3k.template.entities;
 
 import com.ray3k.template.*;
 
+import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.SkinName.*;
+
 public class PerformerEntity extends Entity {
     @Override
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
-        skeleton.setSkin("ace-skeleton");
-        animationState.setAnimation(0, "general/stance", true);
+        skeleton.setSkin(ACE_SKELETON.name);
+        animationState.setAnimation(0, GENERAL_STANCE.name, true);
     }
     
     @Override

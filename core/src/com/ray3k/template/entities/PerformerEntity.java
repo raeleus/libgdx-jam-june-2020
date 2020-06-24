@@ -6,10 +6,10 @@ import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
 
 import static com.ray3k.template.AnimationName.*;
-import static com.ray3k.template.SkinName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class PerformerEntity extends Entity {
+    public SkinName skinName;
     public Steering steering;
     public MoveSet moveSet;
     public Move currentMove;
@@ -18,10 +18,14 @@ public class PerformerEntity extends Entity {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING;
     }
     
+    public PerformerEntity(SkinName skinName) {
+        this.skinName = skinName;
+    }
+    
     @Override
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
-        skeleton.setSkin(ACE_SKELETON.skin);
+        skeleton.setSkin(skinName.skin);
         animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
         moveSet = new MoveSetAceSkeleton();

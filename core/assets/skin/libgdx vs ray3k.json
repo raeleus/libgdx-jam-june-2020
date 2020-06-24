@@ -110,6 +110,51 @@
 		"frameDuration": 0.03,
 		"regions": [],
 		"playMode": 2
+	},
+	"portrait-over": {
+		"region": "portrait_0",
+		"horizontalStretchAreas": [ 9, 108 ],
+		"verticalStretchAreas": [ 9, 108 ],
+		"tiling": false,
+		"minWidth": 119,
+		"minHeight": 119,
+		"rightWidth": 10,
+		"leftWidth": 9,
+		"bottomHeight": 9,
+		"topHeight": 10,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.2,
+		"regions": [
+			"portrait_0",
+			"portrait_1",
+			"portrait_2",
+			"portrait_3",
+			"portrait_4",
+			"portrait_5"
+		],
+		"playMode": 2
+	},
+	"portrait": {
+		"region": "portrait_0",
+		"horizontalStretchAreas": [ 9, 108 ],
+		"verticalStretchAreas": [ 9, 108 ],
+		"tiling": false,
+		"minWidth": 119,
+		"minHeight": 119,
+		"rightWidth": 10,
+		"leftWidth": 9,
+		"bottomHeight": 9,
+		"topHeight": 10,
+		"offsetX": 0,
+		"offsetY": 0,
+		"offsetXspeed": 0,
+		"offsetYspeed": 0,
+		"frameDuration": 0.2,
+		"regions": [],
+		"playMode": 2
 	}
 },
 "com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle": {
@@ -132,6 +177,79 @@
 	"multiplayer": {
 		"imageUp": "button-multiplayer",
 		"imageOver": "button-multiplayer-over"
+	},
+	"portrait": {
+		"up": "portrait",
+		"over": "portrait-over",
+		"focused": "portrait-over"
+	},
+	"portrait-ace-skeleton": {
+		"parent": "portrait",
+		"imageUp": "Ace-Skeleton"
+	},
+	"portrait-ali": {
+		"parent": "portrait",
+		"imageUp": "Ali"
+	},
+	"portrait-evilentity": {
+		"parent": "portrait",
+		"imageUp": "Evilentity"
+	},
+	"portrait-ferocious-zebra": {
+		"parent": "portrait",
+		"imageUp": "Ferocious-Zebra"
+	},
+	"portrait-goodentity": {
+		"parent": "portrait",
+		"imageUp": "Goodentity"
+	},
+	"portrait-john-the-developer": {
+		"parent": "portrait",
+		"imageUp": "John-the-Developer"
+	},
+	"portrait-lyze": {
+		"parent": "portrait",
+		"imageUp": "Lyze"
+	},
+	"portrait-mgsx": {
+		"parent": "portrait",
+		"imageUp": "MGSX"
+	},
+	"portrait-payne": {
+		"parent": "portrait",
+		"imageUp": "Payne"
+	},
+	"portrait-peanut-panda": {
+		"parent": "portrait",
+		"imageUp": "Peanut-Panda"
+	},
+	"portrait-raeleus": {
+		"parent": "portrait",
+		"imageUp": "Raeleus"
+	},
+	"portrait-skin-composer": {
+		"parent": "portrait",
+		"imageUp": "Skin-Composer"
+	},
+	"portrait-snehks": {
+		"parent": "portrait",
+		"imageUp": "Snehks"
+	},
+	"portrait-tann": {
+		"parent": "portrait",
+		"imageUp": "Tann"
+	},
+	"portrait-template": {
+		"parent": "portrait",
+		"imageUp": "Template"
+	},
+	"portrait-tettinger": {
+		"parent": "portrait",
+		"imageUp": "Tettinger"
+	},
+	"portrait-tom-ski": {
+		"parent": "portrait",
+		"imageUp": "Tom-Ski"
 	}
 },
 "com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle": {

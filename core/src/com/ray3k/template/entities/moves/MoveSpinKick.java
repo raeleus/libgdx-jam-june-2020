@@ -9,7 +9,7 @@ import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveSpinKick extends MoveAttackTemplate {
     public MoveSpinKick() {
-        friction = 500f;
+        friction = 1400f;
         anim = GENERAL_SPIN_KICK.animation;
     }
 }

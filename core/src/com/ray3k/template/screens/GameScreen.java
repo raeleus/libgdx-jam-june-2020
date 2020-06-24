@@ -21,6 +21,7 @@ import static com.ray3k.template.Core.*;
 public class GameScreen extends JamScreen {
     public static GameScreen gameScreen;
     public static final Color BG_COLOR = new Color();
+    public static SkinName player1Skin, player2Skin;
     public Stage stage;
     public ShapeDrawer shapeDrawer;
     public EntityController entityController;
@@ -68,7 +69,7 @@ public class GameScreen extends JamScreen {
         viewport = new FitViewport(1024, 576, camera);
         
         entityController = new EntityController();
-        var player = new PerformerEntity();
+        var player = new PerformerEntity(player1Skin);
         entityController.add(player);
         
         camera.position.y = 200;

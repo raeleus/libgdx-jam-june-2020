@@ -1228,6 +1228,125 @@ size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+Ace-Skeleton
+  rotate: false
+  xy: 440, 1372
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Ali
+  rotate: false
+  xy: 1272, 1586
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Evilentity
+  rotate: false
+  xy: 1374, 1586
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Ferocious-Zebra
+  rotate: false
+  xy: 317, 1314
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Goodentity
+  rotate: false
+  xy: 1272, 1484
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+John-the-Developer
+  rotate: false
+  xy: 1374, 1484
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Lyze
+  rotate: false
+  xy: 1759, 1530
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+MGSX
+  rotate: false
+  xy: 1861, 1530
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Payne
+  rotate: false
+  xy: 1476, 1471
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Peanut-Panda
+  rotate: false
+  xy: 1578, 1471
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Raeleus
+  rotate: false
+  xy: 1680, 1428
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Skin-Composer
+  rotate: false
+  xy: 1782, 1428
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Snehks
+  rotate: false
+  xy: 1884, 1428
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Tann
+  rotate: false
+  xy: 861, 1479
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Template
+  rotate: false
+  xy: 682, 1404
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Tettinger
+  rotate: false
+  xy: 542, 1323
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+Tom-Ski
+  rotate: false
+  xy: 419, 1270
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
 bg
   rotate: false
   xy: 619, 1667
@@ -1251,28 +1370,28 @@ button-credits-over
   index: -1
 button-multiplayer
   rotate: false
-  xy: 1013, 1688
+  xy: 1046, 1688
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-multiplayer-over
   rotate: false
-  xy: 1452, 1688
+  xy: 1, 1416
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-normal
   rotate: false
-  xy: 1341, 1491
+  xy: 956, 1581
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
   index: -1
 button-normal-over
   rotate: false
-  xy: 1657, 1491
+  xy: 1, 1309
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
@@ -1307,30 +1426,72 @@ button-play-over
   index: -1
 button-small
   rotate: false
-  xy: 834, 1840
+  xy: 956, 1840
   size: 88, 27
   orig: 88, 27
   offset: 0, 0
   index: -1
 button-small-over
   rotate: false
-  xy: 924, 1840
+  xy: 956, 1811
   size: 87, 27
   orig: 87, 27
   offset: 0, 0
   index: -1
 font
   rotate: false
-  xy: 834, 1543
+  xy: 1485, 1722
   size: 505, 143
   orig: 505, 143
   offset: 0, 0
   index: -1
 font-small
   rotate: false
-  xy: 1341, 1598
+  xy: 1485, 1632
   size: 506, 88
   orig: 506, 88
+  offset: 0, 0
+  index: -1
+portrait_0
+  rotate: false
+  xy: 619, 1546
+  size: 119, 119
+  orig: 119, 119
+  offset: 0, 0
+  index: -1
+portrait_1
+  rotate: false
+  xy: 834, 1748
+  size: 120, 119
+  orig: 120, 119
+  offset: 0, 0
+  index: -1
+portrait_2
+  rotate: false
+  xy: 834, 1627
+  size: 120, 119
+  orig: 120, 119
+  offset: 0, 0
+  index: -1
+portrait_3
+  rotate: false
+  xy: 440, 1474
+  size: 119, 119
+  orig: 119, 119
+  offset: 0, 0
+  index: -1
+portrait_4
+  rotate: false
+  xy: 740, 1506
+  size: 119, 119
+  orig: 119, 119
+  offset: 0, 0
+  index: -1
+portrait_5
+  rotate: false
+  xy: 561, 1425
+  size: 119, 119
+  orig: 119, 119
   offset: 0, 0
   index: -1
 scrollbar-knob
@@ -1342,7 +1503,7 @@ scrollbar-knob
   index: -1
 slider
   rotate: false
-  xy: 1, 1536
+  xy: 1476, 1573
   size: 281, 57
   orig: 281, 57
   offset: 0, 0

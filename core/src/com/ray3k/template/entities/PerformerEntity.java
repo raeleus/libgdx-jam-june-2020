@@ -5,7 +5,6 @@ import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
 
-import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class PerformerEntity extends Entity {
@@ -15,7 +14,7 @@ public class PerformerEntity extends Entity {
     public Move currentMove;
     public Mode mode;
     public static enum Mode {
-        MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING;
+        MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
     
     public PerformerEntity(SkinName skinName) {
@@ -53,6 +52,11 @@ public class PerformerEntity extends Entity {
         } else {
             newMode = STANDING;
             newMove = moveSet.stance;
+        }
+        
+        if (steering.jump) {
+            newMode = JUMPING;
+            newMove = moveSet.jump;
         }
         
         if (steering.attack) {

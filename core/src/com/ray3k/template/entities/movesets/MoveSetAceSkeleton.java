@@ -8,6 +8,7 @@ public class MoveSetAceSkeleton extends MoveSet {
         goLeft = new MoveGoLeft();
         goRight = new MoveGoRight();
         jump = new MoveJump();
+        jumpAttack = new MoveAirPunch();
         attackNeutral = new MoveJab();
         attackSide = new MoveSpinKick();
         attackUp = new MoveDoubleAxeHandle();

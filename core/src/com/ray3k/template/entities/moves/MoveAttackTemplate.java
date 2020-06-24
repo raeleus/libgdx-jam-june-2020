@@ -23,7 +23,12 @@ public class MoveAttackTemplate implements Move {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        performer.setSpeed(Utils.approach(performer.getSpeed(), 0, friction * delta));
+        performer.deltaX = Utils.approach(performer.deltaY, 0, friction * delta);
         if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
+    }
+    
+    @Override
+    public void continueExecution(PerformerEntity performer) {
+    
     }
 }

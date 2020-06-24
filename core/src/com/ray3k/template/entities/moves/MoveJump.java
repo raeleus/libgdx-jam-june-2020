@@ -43,6 +43,10 @@ public class MoveJump implements Move {
             jumps++;
             performer.deltaY = EXTRA_JUMP_SPEED;
             extraJumpTime = EXTRA_JUMP_DELAY;
+    
+            if (performer.animationState.getCurrent(0).getAnimation() != GENERAL_AIR.animation) {
+                performer.animationState.setAnimation(0, GENERAL_AIR.animation, true);
+            }
         }
         
         var speed = 0f;
@@ -55,6 +59,19 @@ public class MoveJump implements Move {
             performer.y = 0;
             performer.mode = STANDING;
             performer.deltaY = 0;
+        }
+    }
+    
+    @Override
+    public void continueExecution(PerformerEntity performer) {
+        if (extraJumpTime < 0 && jumps < TOTAL_JUMPS && performer.steering.jump) {
+            jumps++;
+            performer.deltaY = EXTRA_JUMP_SPEED;
+            extraJumpTime = EXTRA_JUMP_DELAY;
+        
+            if (performer.animationState.getCurrent(0).getAnimation() != GENERAL_AIR.animation) {
+                performer.animationState.setAnimation(0, GENERAL_AIR.animation, true);
+            }
         }
     }
 }

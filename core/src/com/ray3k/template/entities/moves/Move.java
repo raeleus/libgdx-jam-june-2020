@@ -6,4 +6,5 @@ public interface Move {
     boolean canPerform(PerformerEntity performer);
     void execute(PerformerEntity performer);
     void update(PerformerEntity performer, float delta);
+    void continueExecution(PerformerEntity performer);
 }

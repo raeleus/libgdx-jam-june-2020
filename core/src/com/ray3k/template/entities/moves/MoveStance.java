@@ -24,4 +24,9 @@ public class MoveStance implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.setSpeed(Utils.approach(performer.getSpeed(), 0, FRICTION * delta));
     }
+    
+    @Override
+    public void continueExecution(PerformerEntity performer) {
+    
+    }
 }

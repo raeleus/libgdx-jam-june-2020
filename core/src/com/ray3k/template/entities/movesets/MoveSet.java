@@ -15,5 +15,6 @@ public class MoveSet {
     public Move specialDown;
     public Move specialNeutral;
     public Move jump;
+    public Move jumpAttack;
     public Move shield;
 }

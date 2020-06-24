@@ -60,7 +60,10 @@ public class PerformerEntity extends Entity {
         }
         
         if (steering.attack) {
-            if (steering.right || steering.left) {
+            if (mode == JUMPING) {
+                newMode = JUMP_ATTACKING;
+                newMove = moveSet.jumpAttack;
+            } else if (steering.right || steering.left) {
                 newMode = ATTACKING;
                 newMove = moveSet.attackSide;
             } else if (steering.up) {

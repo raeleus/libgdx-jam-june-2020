@@ -30,7 +30,7 @@ public class MoveJump implements Move {
         }
         
         performer.deltaY = JUMP_SPEED;
-        performer.y = 0;
+        if (performer.y < 0) performer.y = 0;
         jumps = 1;
         extraJumpTime = EXTRA_JUMP_DELAY;
     }

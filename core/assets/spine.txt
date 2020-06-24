@@ -1,1 +1,2 @@
 spine/fighter.json
+spine/projectile.json

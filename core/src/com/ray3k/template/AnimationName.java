@@ -28,7 +28,7 @@ public enum AnimationName {
             "skin-composer/skin-composer-roll"), SNEHKS_DIVE("snehks/snehks-dive"), SNEHKS_INVISIBLE(
             "snehks/snehks-invisible"), SNEHKS_LUNGE("snehks/snehks-lunge"), SNEHKS_VENOM(
             "snehks/snehks-venom"), TETTINGER_BALLOON("tettinger/tettinger-balloon"), TETTINGER_COUNTER_ATTACK(
-            "tettinger/tettinger-counter-attack"), TOMSKI_LIGHTNING("tomski/tomski-lightning");
+            "tettinger/tettinger-counter-attack"), TOMSKI_LIGHTNING("tomski/tomski-lightning"), GENERAL_DOUBLE_AXE_HANDLE("general/double-axe-handle");
     
     public String name;
     

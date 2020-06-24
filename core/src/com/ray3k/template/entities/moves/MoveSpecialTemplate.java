@@ -8,7 +8,8 @@ import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveSpecialTemplate implements Move {
-    public float friction = 500f;
+    public float airFriction = 500f;
+    public float groundFriction = 1400f;
     public static float gravity = 2000f;
     public Animation attackAnim = GENERAL_AIR_PUNCH.animation;
     public float jumpDelay = 0f;
@@ -29,8 +30,6 @@ public class MoveSpecialTemplate implements Move {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        performer.deltaX = Utils.approach(performer.deltaX, 0, friction * delta);
-    
         if (performer.animationState.getCurrent(0).isComplete()) {
             jumpTime -= delta;
             if (jumpTime < 0 && performer.steering.jump) {
@@ -43,9 +42,12 @@ public class MoveSpecialTemplate implements Move {
     
         performer.deltaY -= gravity * delta;
         if (performer.y < 0) {
+            performer.deltaX = Utils.approach(performer.deltaX, 0, groundFriction * delta);
             performer.y = 0;
             if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
             performer.deltaY = 0;
+        } else {
+            performer.deltaX = Utils.approach(performer.deltaX, 0, airFriction * delta);
         }
     }
     

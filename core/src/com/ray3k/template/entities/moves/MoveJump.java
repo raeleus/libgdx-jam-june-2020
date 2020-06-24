@@ -49,10 +49,8 @@ public class MoveJump implements Move {
             }
         }
         
-        var speed = 0f;
-        if (performer.steering.left) speed = -H_SPEED;
-        else if (performer.steering.right) speed = H_SPEED;
-        performer.deltaX = Utils.approach(performer.deltaX, speed, H_ACCELERATION * delta);
+        if (performer.steering.left) performer.deltaX = Utils.approach(performer.deltaX, -H_SPEED, H_ACCELERATION * delta);
+        else if (performer.steering.right) performer.deltaX = Utils.approach(performer.deltaX, H_SPEED, H_ACCELERATION * delta);
         
         performer.deltaY -= GRAVITY * delta;
         if (performer.y < 0) {

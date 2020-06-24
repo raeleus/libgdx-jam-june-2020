@@ -10,7 +10,8 @@ public class MoveAceFlyingUppercut extends MoveSpecialTemplate {
     public static final float JUMP_SPEED = 1200f;
     
     public MoveAceFlyingUppercut() {
-        friction = 800f;
+        airFriction = 800f;
+        groundFriction = 1400f;
         attackAnim = ACE_FLYING_UPPERCUT.animation;
         jumpDelay = 0f;
         gravity = 2000f;

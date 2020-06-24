@@ -1,5 +1,6 @@
 package com.ray3k.template.entities;
 
+import com.esotericsoftware.spine.Animation;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.steering.*;
 
@@ -13,8 +14,8 @@ public class PerformerEntity extends Entity {
     @Override
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
-        skeleton.setSkin(ACE_SKELETON.name);
-        animationState.setAnimation(0, GENERAL_STANCE.name, true);
+        skeleton.setSkin(ACE_SKELETON.skin);
+        animationState.setAnimation(0, GENERAL_STANCE.animation, true);
         steering = new P1Steering();
     }
     
@@ -26,10 +27,26 @@ public class PerformerEntity extends Entity {
     @Override
     public void act(float delta) {
         steering.update(delta);
+    
+        Animation anim = null;
         
-        if (steering.left) setMotion(MOVE_SPEED, 180);
-        else if (steering.right) setMotion(MOVE_SPEED, 0);
-        else setSpeed(0);
+        if (steering.left) {
+            setMotion(MOVE_SPEED, 180);
+            
+            anim = GENERAL_WALK.animation;
+        }
+        else if (steering.right) {
+            setMotion(MOVE_SPEED, 0);
+    
+            anim = GENERAL_WALK.animation;
+        }
+        else {
+            setSpeed(0);
+            
+            anim = GENERAL_STANCE.animation;
+        }
+    
+        if (animationState.getCurrent(0).getAnimation() != anim) animationState.setAnimation(0, anim, true);
     }
     
     @Override

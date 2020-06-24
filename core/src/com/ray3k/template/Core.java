@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.esotericsoftware.spine.AnimationStateData;
+import com.esotericsoftware.spine.Skeleton;
 import com.esotericsoftware.spine.SkeletonData;
 import com.esotericsoftware.spine.SkeletonRenderer;
 import com.ray3k.template.AnimationStateDataLoader.*;
@@ -57,6 +58,17 @@ public class Core extends JamGame {
         
         setScreen(new LoadScreen(() -> {
             skin = assetManager.get("skin/libgdx vs ray3k.json");
+    
+            //update values for AnimationName
+            SkeletonData skeletonData = assetManager.get("spine/fighter.json");
+            for (var anim : AnimationName.values()) {
+                anim.animation = skeletonData.findAnimation(anim.name);
+            }
+    
+            //update values for SkinName
+            for (var skin : SkinName.values()) {
+                skin.skin = skeletonData.findSkin(skin.name);
+            }
         }));
         defaultTransition = Transitions.colorFade(Color.BLACK);
         defaultTransitionDuration = .5f;

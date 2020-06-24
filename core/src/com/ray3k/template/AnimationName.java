@@ -1,5 +1,7 @@
 package com.ray3k.template;
 
+import com.esotericsoftware.spine.Animation;
+
 public enum AnimationName {
     ACE_FLYING_UPPERCUT("ace-skeleton/ace-flying-uppercut"), ACE_GRAB("ace-skeleton/ace-grab"),
     ACE_PUNCH("ace-skeleton/ace-punch"), ACE_SLIDE("ace-skeleton/ace-slide"), ALI_ENERGY_SWORD("ali/ali-energy-sword"),
@@ -31,6 +33,7 @@ public enum AnimationName {
             "tettinger/tettinger-counter-attack"), TOMSKI_LIGHTNING("tomski/tomski-lightning"), GENERAL_DOUBLE_AXE_HANDLE("general/double-axe-handle");
     
     public String name;
+    public Animation animation;
     
     AnimationName(String name) {
         this.name = name;

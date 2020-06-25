@@ -4,13 +4,13 @@ import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
 
-public class MoveAcePunch extends MoveSpecialTemplate {
-    public MoveAcePunch() {
+public class MoveAceSlide extends MoveSpecialTemplate {
+    public MoveAceSlide() {
         airFriction = 0f;
-        groundFriction = 1400f;
-        attackAnim = ACE_PUNCH.animation;
+        groundFriction = 1000f;
+        attackAnim = ACE_SLIDE.animation;
         gravity = 2000f;
-        hSpeed = 0f;
+        hSpeed = 900f;
         vSpeed = 0f;
     }
 }

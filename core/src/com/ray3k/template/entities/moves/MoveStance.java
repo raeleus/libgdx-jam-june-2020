@@ -18,6 +18,7 @@ public class MoveStance implements Move {
     public void execute(PerformerEntity performer) {
         var current = performer.animationState.getCurrent(0);
         if (current == null || current.getAnimation() != GENERAL_STANCE.animation) performer.animationState.setAnimation(0, GENERAL_STANCE.animation, true);
+        performer.touchedGround = true;
     }
     
     @Override

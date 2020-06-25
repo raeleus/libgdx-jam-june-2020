@@ -19,6 +19,7 @@ public class MoveGoRight implements Move {
     public void execute(PerformerEntity performer) {
         if (performer.animationState.getCurrent(0).getAnimation() != GENERAL_WALK.animation) performer.animationState.setAnimation(0, GENERAL_WALK.animation, true);
         performer.skeleton.getRootBone().setScaleX(1);
+        performer.touchedGround = true;
     }
     
     @Override

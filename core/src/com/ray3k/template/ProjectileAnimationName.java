@@ -1,4 +1,4 @@
-package com.ray3k.template.transitions;
+package com.ray3k.template;
 
 import com.esotericsoftware.spine.Animation;
 

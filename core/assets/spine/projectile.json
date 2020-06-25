@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "l7YpwPhYV79OP4la+2kScjY3u9o",
+	"hash": "m2vjyJQgDFVOEw/n8TP117Q3jJk",
 	"spine": "3.8.95",
-	"x": -59,
-	"y": -19.19,
-	"width": 119,
-	"height": 46,
+	"x": -48,
+	"y": -14.58,
+	"width": 97,
+	"height": 34,
 	"images": "../output/",
 	"audio": ""
 },
@@ -18,6 +18,21 @@
 	{ "name": "hitbox", "bone": "root", "attachment": "hitbox" }
 ],
 "skins": [
+	{
+		"name": "ace-bone",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -49.09, 23.81, -47.83, -17.39, 46.38, -18.66, 45.75, 23.17 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "ace-skeleton/ace-bone", "x": 0.5, "y": 2.42, "width": 97, "height": 34 }
+			}
+		}
+	},
 	{
 		"name": "evilentity-cloud",
 		"attachments": {

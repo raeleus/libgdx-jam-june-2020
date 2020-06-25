@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "8H3xC6CtMK5rmL0sf4KdQbM1xEo",
+	"hash": "7Wqw8ShPe6DrTAeuhe+/48ash8w",
 	"spine": "3.8.95",
-	"x": -51.74,
-	"y": -7.14,
-	"width": 159.74,
-	"height": 340.52,
+	"x": -47.01,
+	"y": -13.36,
+	"width": 157.75,
+	"height": 332.22,
 	"images": "../output/",
 	"audio": ""
 },
@@ -31,7 +31,8 @@
 	{ "name": "leg-right-target", "parent": "hip", "x": -40.22, "y": -126.65, "color": "ff3f00ff" },
 	{ "name": "leg-left-target", "parent": "hip", "x": 22.9, "y": -129.15, "color": "ff3f00ff" },
 	{ "name": "prop", "parent": "root", "length": 102.2, "x": 128.51, "y": 213.35 },
-	{ "name": "weapon", "parent": "root", "length": 228.49, "rotation": 90, "x": 83.34, "y": 136.92 }
+	{ "name": "weapon", "parent": "root", "length": 228.49, "rotation": 90, "x": 83.34, "y": 136.92 },
+	{ "name": "projectile-origin", "parent": "root", "x": 195.75, "y": 299.62 }
 ],
 "slots": [
 	{ "name": "arm-left", "bone": "arm-left", "attachment": "arm-left" },
@@ -1428,6 +1429,9 @@
 		}
 	}
 ],
+"events": {
+	"fire-projectile": {}
+},
 "animations": {
 	"ace-skeleton/ace-flying-uppercut": {
 		"slots": {
@@ -2420,8 +2424,16 @@
 					{ "time": 0.5333, "x": 69.43, "y": 113.67 },
 					{ "time": 0.6667, "x": 8.76, "y": 39.77 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.3667, "x": -103.07, "y": -88.69 }
+				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.4, "name": "fire-projectile" }
+		]
 	},
 	"general/back-flip": {
 		"slots": {
@@ -3530,6 +3542,11 @@
 					{ "time": 0.3333, "x": -34.94, "y": 29.76 },
 					{ "time": 0.4333, "x": -111.28, "y": 29.76 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.5333, "x": -127.84, "y": -63.12 }
+				]
 			}
 		},
 		"drawOrder": [
@@ -3539,6 +3556,9 @@
 					{ "slot": "prop", "offset": -3 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.5667, "name": "fire-projectile" }
 		]
 	},
 	"john-the-developer/john-whirlwind": {
@@ -4540,6 +4560,11 @@
 					{ "time": 0.1333, "angle": 34.05 },
 					{ "time": 0.2667 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.2333, "x": -99.87, "y": -74.31 }
+				]
 			}
 		},
 		"deform": {
@@ -4556,7 +4581,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.2667, "name": "fire-projectile" }
+		]
 	},
 	"mario/mario-flying-uppercut": {
 		"slots": {
@@ -5591,6 +5619,11 @@
 				"translate": [
 					{ "time": 0.3333, "x": 47.58, "y": -135.42 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.7667, "x": -63.92, "y": -227.71 }
+				]
 			}
 		},
 		"deform": {
@@ -5620,7 +5653,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.8, "name": "fire-projectile" }
+		]
 	},
 	"payne/payne-nikita": {
 		"slots": {
@@ -5694,6 +5730,11 @@
 					{ "time": 0.5333, "x": -114.24, "y": 54.88 },
 					{ "time": 0.8, "x": -49.28, "y": 53.76 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.2667, "x": -101.47, "y": -107.87 }
+				]
 			}
 		},
 		"deform": {
@@ -5723,7 +5764,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.3, "name": "fire-projectile" }
+		]
 	},
 	"payne/payne-uav": {
 		"slots": {
@@ -7046,6 +7090,11 @@
 					{ "time": 0.5333, "angle": 41.9 },
 					{ "time": 0.8333 }
 				]
+			},
+			"projectile-origin": {
+				"translate": [
+					{ "time": 0.3, "x": -57.21, "y": -85.22 }
+				]
 			}
 		},
 		"deform": {
@@ -7073,7 +7122,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "fire-projectile" }
+		]
 	},
 	"general/spin-kick": {
 		"slots": {

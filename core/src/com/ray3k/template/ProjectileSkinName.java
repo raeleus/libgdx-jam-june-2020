@@ -4,6 +4,7 @@ import com.esotericsoftware.spine.Skin;
 import com.ray3k.template.entities.movesets.*;
 
 public enum ProjectileSkinName {
+    ACE_BONE("ace-bone"),
     EVILENTITY_CLOUD("evilentity-cloud"),
     EVILENTITY_DUST("evilentity-dust"),
     GOODENTITY_CLOUD("goodentity-cloud"),

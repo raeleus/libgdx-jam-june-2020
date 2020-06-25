@@ -2,12 +2,12 @@ package com.ray3k.template.entities.projectiles;
 
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
-import com.ray3k.template.transitions.*;
 
 public class Projectile extends Entity {
     public ProjectileSkinName skinName;
     public ProjectileAnimationName animationName;
     public PerformerEntity parent;
+    public float acceleration;
     
     @Override
     public void create() {
@@ -23,7 +23,7 @@ public class Projectile extends Entity {
     
     @Override
     public void act(float delta) {
-    
+        setSpeed(getSpeed() + acceleration * delta);
     }
     
     @Override

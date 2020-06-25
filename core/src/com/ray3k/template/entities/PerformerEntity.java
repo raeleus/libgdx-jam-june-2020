@@ -1,5 +1,9 @@
 package com.ray3k.template.entities;
 
+import com.badlogic.gdx.math.Vector2;
+import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
+import com.esotericsoftware.spine.AnimationState.TrackEntry;
+import com.esotericsoftware.spine.Event;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
@@ -13,9 +17,14 @@ public class PerformerEntity extends Entity {
     public MoveSet moveSet;
     public Move currentMove;
     public Mode mode;
-    public static enum Mode {
+    public boolean touchedGround;
+    public boolean fireProjectile;
+    public float projectileX;
+    public float projectileY;
+    public enum Mode {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
+    public static final Vector2 temp = new Vector2();
     
     public PerformerEntity(SkinName skinName) {
         this.skinName = skinName;
@@ -30,6 +39,20 @@ public class PerformerEntity extends Entity {
         mode = Mode.STANDING;
         currentMove = moveSet.stance;
         currentMove.execute(this);
+        touchedGround = true;
+        
+        animationState.addListener(new AnimationStateAdapter() {
+            @Override
+            public void event(TrackEntry entry, Event event) {
+                if (event.getData().getName().equals("fire-projectile")) {
+                    fireProjectile = true;
+                    temp.set(0, 0);
+                    skeleton.findBone("projectile-origin").localToWorld(temp);
+                    projectileX = temp.x;
+                    projectileY = temp.y;
+                }
+            }
+        });
     }
     
     @Override
@@ -99,6 +122,7 @@ public class PerformerEntity extends Entity {
         }
         
         currentMove.update(this, delta);
+        fireProjectile = false;
     }
     
     @Override

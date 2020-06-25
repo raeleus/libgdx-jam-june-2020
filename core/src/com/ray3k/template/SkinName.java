@@ -5,23 +5,23 @@ import com.ray3k.template.entities.movesets.*;
 
 public enum SkinName {
     ACE_SKELETON("ace-skeleton", new MoveSetAceSkeleton()),
-    ALI("ali", new MoveSetAceSkeleton()),
-    EVILENTITY("evilentity", new MoveSetAceSkeleton()),
-    FEROCIOUS_ZEBRA("ferocious-zebra", new MoveSetAceSkeleton()),
-    GOODENTITY("goodentity", new MoveSetAceSkeleton()),
-    JOHN_THE_DEVELOPER("john-the-developer", new MoveSetAceSkeleton()),
-    LYZE("lyze", new MoveSetAceSkeleton()),
-    MGSX("mgsx", new MoveSetAceSkeleton()),
+    ALI("ali", new MoveSetAli()),
+    EVILENTITY("evilentity", new MoveSetEvilentity()),
+    FEROCIOUS_ZEBRA("ferocious-zebra", new MoveSetFerociousZebra()),
+    GOODENTITY("goodentity", new MoveSetGoodentity()),
+    JOHN_THE_DEVELOPER("john-the-developer", new MoveSetJohnTheDeveloper()),
+    LYZE("lyze", new MoveSetLyze()),
+    MGSX("mgsx", new MoveSetMgsx()),
     PARTYTIME_FOXY("partytime-foxy", new MoveSetAceSkeleton()),
-    PAYNE("payne", new MoveSetAceSkeleton()),
-    PEANUT_PANDA("peanut-panda", new MoveSetAceSkeleton()),
-    RAELEUS("raeleus", new MoveSetAceSkeleton()),
-    SKINCOMPOSER("skincomposer", new MoveSetAceSkeleton()),
-    SNEHKS("snehks", new MoveSetAceSkeleton()),
-    TANN("tann", new MoveSetAceSkeleton()),
-    TEMPLATE("template", new MoveSetAceSkeleton()),
-    TETTINGER("tettinger", new MoveSetAceSkeleton()),
-    TOM_SKI("tom-ski", new MoveSetAceSkeleton());
+    PAYNE("payne", new MoveSetPayne()),
+    PEANUT_PANDA("peanut-panda", new MoveSetPeanutPanda()),
+    RAELEUS("raeleus", new MoveSetRaeleus()),
+    SKINCOMPOSER("skincomposer", new MoveSetSkinComposer()),
+    SNEHKS("snehks", new MoveSetSnehks()),
+    TANN("tann", new MoveSetTann()),
+    TEMPLATE("template", new MoveSetTemplate()),
+    TETTINGER("tettinger", new MoveSetTettinger()),
+    TOM_SKI("tom-ski", new MoveSetTomSki());
     
     public String name;
     public MoveSet moveSet;

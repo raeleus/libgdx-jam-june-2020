@@ -13,9 +13,9 @@ public class MoveSetAli extends MoveSet {
         attackSide = new MoveKick();
         attackUp = new MoveUppercut();
         attackDown = new MoveLowPunch();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
+        specialNeutral = new MoveAliEnergySword();
+        specialSide = new MoveAliKeyboard();
         specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialDown = new MoveAliLaser();
     }
 }

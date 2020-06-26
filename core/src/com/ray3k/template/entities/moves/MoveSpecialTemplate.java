@@ -15,9 +15,13 @@ public class MoveSpecialTemplate implements Move {
     public Animation attackAnim = GENERAL_AIR_PUNCH.animation;
     public float hSpeed;
     public float vSpeed;
+    public int projectileCountMax;
+    public int projectileCount;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
+        if (projectileCountMax > 0 && projectileCount >= projectileCountMax) return false;
+        
         return performer.mode == STANDING || performer.mode == MOVING || performer.mode == JUMPING && performer.touchedGround;
     }
     
@@ -32,7 +36,7 @@ public class MoveSpecialTemplate implements Move {
     
         if (!MathUtils.isZero(vSpeed)) {
             performer.deltaY = vSpeed;
-            if (performer.y < 0) performer.y = 0;
+            if (performer.y <= 0) performer.y = 1;
             performer.mode = JUMP_ATTACKING;
         }
         
@@ -42,7 +46,7 @@ public class MoveSpecialTemplate implements Move {
     @Override
     public void update(PerformerEntity performer, float delta) {
         performer.deltaY -= gravity * delta;
-        if (performer.y < 0) {
+        if (performer.y <= 0) {
             performer.deltaX = Utils.approach(performer.deltaX, 0, groundFriction * delta);
             performer.y = 0;
             if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;

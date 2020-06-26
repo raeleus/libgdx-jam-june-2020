@@ -13,9 +13,9 @@ public class MoveSetTann extends MoveSet {
         attackSide = new MoveDoubleKick();
         attackUp = new MoveHeadbutt();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
+        specialNeutral = new MoveTannAxe();
+        specialSide = new MoveLyzeTackle();
         specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialDown = new MoveLyzeDive();
     }
 }

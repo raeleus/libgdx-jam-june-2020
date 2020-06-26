@@ -13,9 +13,9 @@ public class MoveSetTomSki extends MoveSet {
         attackSide = new MoveDoubleKick();
         attackUp = new MoveFrontFlip();
         attackDown = new MoveLowPunch();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveTomSkiBolt();
+        specialSide = new MoveTomSkiTackle();
+        specialUp = new MoveTomSkiLightning();
+        specialDown = new MoveTomSkiSlide();
     }
 }

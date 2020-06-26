@@ -1,5 +1,6 @@
 package com.ray3k.template.entities.moves;
 
+import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
@@ -23,8 +24,10 @@ public class MoveAceBone extends MoveSpecialTemplate {
     public void update(PerformerEntity performer, float delta) {
         super.update(performer, delta);
         
-        if (performer.fireProjectile) {
-            var projectile = new ProjectileAceBone();
+        if (performer.fireProjectileEvent) {
+            var projectile = new Projectile();
+            projectile.skinName = ProjectileSkinName.ACE_BONE;
+            projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
             GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
             if (performer.skeleton.getRootBone().getScaleX() < 0) projectile.setMotion(PROJECTILE_SPEED, 180);

@@ -9,6 +9,7 @@ import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 public class MoveGoLeft implements Move {
     public final static float MOVE_SPEED = 400f;
     public final static float ACCELERATION = 2400f;
+    public static float GRAVITY = 2000f;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -25,6 +26,10 @@ public class MoveGoLeft implements Move {
     @Override
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, -MOVE_SPEED, ACCELERATION * delta);
+        performer.deltaY -= GRAVITY * delta;
+        if (performer.y < 0) {
+            performer.y = 0;
+        }
     }
     
     @Override

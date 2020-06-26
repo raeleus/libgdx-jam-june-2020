@@ -5,9 +5,11 @@ import com.ray3k.template.entities.movesets.*;
 
 public enum ProjectileSkinName {
     ACE_BONE("ace-bone"),
+    ALI_KEYBAORD("ali-keyboard"),
     EVILENTITY_CLOUD("evilentity-cloud"),
     EVILENTITY_DUST("evilentity-dust"),
     GOODENTITY_CLOUD("goodentity-cloud"),
+    GOODENTITY_DUST("goodentity-dust"),
     JOHN_ARROW("john-arrow"),
     JOHN_BOMB("john-bomb"),
     JOHN_BOOMERANG("john-boomerang"),

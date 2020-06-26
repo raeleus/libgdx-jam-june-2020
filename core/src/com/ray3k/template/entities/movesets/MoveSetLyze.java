@@ -13,9 +13,9 @@ public class MoveSetLyze extends MoveSet {
         attackSide = new MoveDoubleKick();
         attackUp = new MoveUppercut();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
+        specialNeutral = new MoveLyzeForcePush();
+        specialSide = new MoveLyzeTackle();
         specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialDown = new MoveLyzeDive();
     }
 }

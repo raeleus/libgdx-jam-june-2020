@@ -13,9 +13,9 @@ public class MoveSetGoodentity extends MoveSet {
         attackSide = new MoveFrontFlip();
         attackUp = new MoveUppercut();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
+        specialNeutral = new MoveGoodentityDust();
+        specialSide = new MoveGoodentityCloud();
+        specialUp = new MoveEvilentityTeleportUppercut();
         specialDown = new MoveAceSlide();
     }
 }

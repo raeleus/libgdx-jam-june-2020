@@ -104,14 +104,14 @@ ace-skeleton/ace-skeleton-leg-right
   index: -1
 ace-skeleton/ace-skeleton-logo
   rotate: true
-  xy: 1078, 1512
+  xy: 1438, 1499
   size: 151, 209
   orig: 151, 209
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-skull
   rotate: true
-  xy: 710, 1861
+  xy: 670, 1863
   size: 57, 61
   orig: 57, 61
   offset: 0, 0
@@ -125,21 +125,21 @@ ali/ali-arm
   index: -1
 ali/ali-blast
   rotate: true
-  xy: 1789, 1757
+  xy: 1957, 1757
   size: 80, 83
   orig: 80, 83
   offset: 0, 0
   index: -1
 ali/ali-body
   rotate: true
-  xy: 98, 1811
+  xy: 693, 1792
   size: 67, 131
   orig: 67, 131
   offset: 0, 0
   index: -1
 ali/ali-energy-sword
   rotate: false
-  xy: 384, 1799
+  xy: 372, 1803
   size: 241, 63
   orig: 241, 63
   offset: 0, 0
@@ -160,14 +160,14 @@ ali/ali-foreleg
   index: -1
 ali/ali-head
   rotate: false
-  xy: 1328, 1769
+  xy: 1455, 1768
   size: 89, 76
   orig: 89, 76
   offset: 0, 0
   index: -1
 ali/ali-keyboard
   rotate: false
-  xy: 725, 1691
+  xy: 976, 1687
   size: 131, 93
   orig: 131, 93
   offset: 0, 0
@@ -188,14 +188,14 @@ ali/ali-leg
   index: -1
 evilentity/evil-entity-cloud
   rotate: false
-  xy: 1732, 1634
+  xy: 1, 1604
   size: 200, 118
   orig: 201, 121
   offset: 0, 3
   index: -1
 evilentity/evil-entity-dust
   rotate: false
-  xy: 598, 1544
+  xy: 958, 1538
   size: 238, 145
   orig: 238, 145
   offset: 0, 0
@@ -209,7 +209,7 @@ evilentity/evilentity-arm
   index: -1
 evilentity/evilentity-body
   rotate: true
-  xy: 1419, 1766
+  xy: 1693, 1761
   size: 77, 130
   orig: 77, 130
   offset: 0, 0
@@ -251,7 +251,7 @@ evilentity/evilentity-head
   index: -1
 evilentity/evilentity-leg
   rotate: true
-  xy: 773, 1860
+  xy: 1028, 1855
   size: 57, 81
   orig: 57, 81
   offset: 0, 0
@@ -272,7 +272,7 @@ ferocious-zebra/zebra-arm-right
   index: -1
 ferocious-zebra/zebra-body
   rotate: true
-  xy: 357, 1715
+  xy: 608, 1708
   size: 82, 130
   orig: 86, 138
   offset: 1, 4
@@ -335,7 +335,7 @@ ferocious-zebra/zebra-hand-right
   index: -1
 ferocious-zebra/zebra-head
   rotate: false
-  xy: 606, 1700
+  xy: 857, 1705
   size: 117, 85
   orig: 121, 89
   offset: 1, 2
@@ -363,21 +363,21 @@ goodentity/goodentity-arm
   index: -1
 goodentity/goodentity-body
   rotate: true
-  xy: 1551, 1763
+  xy: 1825, 1760
   size: 77, 130
   orig: 77, 130
   offset: 0, 0
   index: -1
 goodentity/goodentity-cloud
   rotate: false
-  xy: 1, 1600
+  xy: 203, 1600
   size: 200, 118
   orig: 201, 121
   offset: 0, 3
   index: -1
 goodentity/goodentity-dust
   rotate: false
-  xy: 838, 1523
+  xy: 1198, 1514
   size: 238, 145
   orig: 238, 145
   offset: 0, 0
@@ -419,7 +419,7 @@ goodentity/goodentity-head
   index: -1
 goodentity/goodentity-leg
   rotate: true
-  xy: 856, 1860
+  xy: 1111, 1855
   size: 57, 81
   orig: 57, 81
   offset: 0, 0
@@ -440,7 +440,7 @@ john-the-developer/john-arrow
   index: -1
 john-the-developer/john-bomb
   rotate: true
-  xy: 1683, 1759
+  xy: 1, 1736
   size: 78, 104
   orig: 78, 104
   offset: 0, 0
@@ -461,7 +461,7 @@ john-the-developer/john-bow
   index: -1
 john-the-developer/john-chest
   rotate: true
-  xy: 1162, 1665
+  xy: 1210, 1670
   size: 107, 143
   orig: 107, 143
   offset: 0, 0
@@ -496,7 +496,7 @@ john-the-developer/john-hand
   index: -1
 john-the-developer/john-head
   rotate: false
-  xy: 1887, 1834
+  xy: 1, 1819
   size: 67, 66
   orig: 67, 66
   offset: 0, 0
@@ -510,14 +510,14 @@ john-the-developer/john-leg
   index: -1
 lyze/lyze-arm
   rotate: false
-  xy: 1079, 1854
+  xy: 1334, 1853
   size: 64, 58
   orig: 64, 58
   offset: 0, 0
   index: -1
 lyze/lyze-body
   rotate: true
-  xy: 1874, 1754
+  xy: 107, 1724
   size: 78, 143
   orig: 78, 143
   offset: 0, 0
@@ -531,7 +531,7 @@ lyze/lyze-foot
   index: -1
 lyze/lyze-forearm
   rotate: false
-  xy: 415, 1866
+  xy: 733, 1862
   size: 77, 56
   orig: 77, 56
   offset: 0, 0
@@ -545,7 +545,7 @@ lyze/lyze-foreleg
   index: -1
 lyze/lyze-head
   rotate: true
-  xy: 1, 1819
+  xy: 206, 1804
   size: 66, 95
   orig: 66, 95
   offset: 0, 0
@@ -580,14 +580,14 @@ mgsx/mgsx-arrow
   index: -1
 mgsx/mgsx-ball
   rotate: false
-  xy: 203, 1584
+  xy: 405, 1584
   size: 135, 134
   orig: 135, 134
   offset: 0, 0
   index: -1
 mgsx/mgsx-body
   rotate: true
-  xy: 1093, 1776
+  xy: 1546, 1767
   size: 73, 145
   orig: 73, 145
   offset: 0, 0
@@ -636,14 +636,14 @@ mgsx/mgsx-leg
   index: -1
 mgsx/mgsx-logo
   rotate: false
-  xy: 959, 1670
+  xy: 1355, 1661
   size: 201, 104
   orig: 201, 104
   offset: 0, 0
   index: -1
 partytime-foxy/partytime-foxy-head
   rotate: false
-  xy: 1492, 1648
+  xy: 1558, 1652
   size: 116, 113
   orig: 116, 113
   offset: 0, 0
@@ -657,7 +657,7 @@ payne/payne-arm
   index: -1
 payne/payne-body
   rotate: true
-  xy: 1751, 1839
+  xy: 70, 1816
   size: 62, 134
   orig: 62, 134
   offset: 0, 0
@@ -699,7 +699,7 @@ payne/payne-hand
   index: -1
 payne/payne-head
   rotate: false
-  xy: 1956, 1834
+  xy: 303, 1804
   size: 67, 66
   orig: 71, 68
   offset: 1, 0
@@ -727,7 +727,7 @@ payne/payne-mortar
   index: -1
 payne/payne-uav
   rotate: false
-  xy: 1240, 1774
+  xy: 1367, 1772
   size: 86, 75
   orig: 86, 75
   offset: 0, 0
@@ -748,7 +748,7 @@ peanut-panda/panda-arm-right
   index: -1
 peanut-panda/panda-body
   rotate: true
-  xy: 848, 1786
+  xy: 1122, 1781
   size: 72, 123
   orig: 81, 128
   offset: 6, 2
@@ -818,7 +818,7 @@ peanut-panda/panda-hand-right
   index: -1
 peanut-panda/panda-head
   rotate: true
-  xy: 858, 1690
+  xy: 1109, 1685
   size: 94, 99
   orig: 102, 104
   offset: 5, 1
@@ -846,14 +846,14 @@ peanut-panda/panda-peanut
   index: -1
 peanut-panda/panda-proeller-2
   rotate: true
-  xy: 489, 1712
+  xy: 740, 1705
   size: 85, 115
   orig: 114, 120
   offset: 10, 0
   index: -1
 peanut-panda/panda-propeller1
   rotate: true
-  xy: 1610, 1643
+  xy: 1861, 1641
   size: 114, 120
   orig: 114, 120
   offset: 0, 0
@@ -867,7 +867,7 @@ raeleus/raeleus-arm
   index: -1
 raeleus/raeleus-body
   rotate: true
-  xy: 705, 1787
+  xy: 979, 1782
   size: 71, 141
   orig: 71, 141
   offset: 0, 0
@@ -902,7 +902,7 @@ raeleus/raeleus-foreleg
   index: -1
 raeleus/raeleus-hammer
   rotate: true
-  xy: 340, 1577
+  xy: 542, 1570
   size: 133, 256
   orig: 133, 256
   offset: 0, 0
@@ -923,7 +923,7 @@ raeleus/raeleus-hand-right
   index: -1
 raeleus/raeleus-head
   rotate: true
-  xy: 973, 1780
+  xy: 1247, 1779
   size: 72, 118
   orig: 72, 118
   offset: 0, 0
@@ -937,7 +937,7 @@ raeleus/raeleus-leg
   index: -1
 skincomposer/skin-composer-electricity
   rotate: false
-  xy: 797, 1169
+  xy: 797, 1195
   size: 372, 341
   orig: 372, 341
   offset: 0, 0
@@ -951,7 +951,7 @@ skincomposer/skincomposer-arm
   index: -1
 skincomposer/skincomposer-body
   rotate: true
-  xy: 573, 1864
+  xy: 812, 1861
   size: 56, 135
   orig: 56, 135
   offset: 0, 0
@@ -986,7 +986,7 @@ skincomposer/skincomposer-hand
   index: -1
 skincomposer/skincomposer-head
   rotate: true
-  xy: 939, 1860
+  xy: 1194, 1855
   size: 57, 73
   orig: 57, 73
   offset: 0, 0
@@ -1007,14 +1007,14 @@ snehks/snehks-arm
   index: -1
 snehks/snehks-body
   rotate: true
-  xy: 1344, 1847
+  xy: 1599, 1842
   size: 61, 138
   orig: 61, 138
   offset: 0, 0
   index: -1
 snehks/snehks-cloud
   rotate: true
-  xy: 1, 1332
+  xy: 1, 1355
   size: 243, 375
   orig: 243, 375
   offset: 0, 0
@@ -1063,28 +1063,28 @@ snehks/snehks-leg
   index: -1
 snehks/snehks-venom
   rotate: false
-  xy: 145, 1720
+  xy: 396, 1720
   size: 210, 81
   orig: 210, 81
   offset: 0, 0
   index: -1
 tann/tann-arm
   rotate: false
-  xy: 1014, 1855
+  xy: 1269, 1854
   size: 63, 57
   orig: 63, 57
   offset: 0, 0
   index: -1
 tann/tann-axe
   rotate: true
-  xy: 1307, 1657
+  xy: 1676, 1651
   size: 107, 183
   orig: 108, 186
   offset: 1, 0
   index: -1
 tann/tann-body
   rotate: true
-  xy: 1, 1731
+  xy: 252, 1723
   size: 78, 142
   orig: 78, 142
   offset: 0, 0
@@ -1098,7 +1098,7 @@ tann/tann-foot
   index: -1
 tann/tann-forearm
   rotate: false
-  xy: 494, 1865
+  xy: 949, 1861
   size: 77, 56
   orig: 77, 56
   offset: 0, 0
@@ -1112,7 +1112,7 @@ tann/tann-foreleg
   index: -1
 tann/tann-head
   rotate: false
-  xy: 1484, 1845
+  xy: 1739, 1840
   size: 127, 61
   orig: 127, 61
   offset: 0, 0
@@ -1133,7 +1133,7 @@ template/template-arm
   index: -1
 template/template-body
   rotate: true
-  xy: 1613, 1842
+  xy: 1868, 1839
   size: 61, 136
   orig: 61, 136
   offset: 0, 0
@@ -1175,7 +1175,7 @@ template/template-hat
   index: -1
 template/template-head
   rotate: false
-  xy: 1145, 1853
+  xy: 1400, 1849
   size: 62, 59
   orig: 62, 59
   offset: 0, 0
@@ -1196,14 +1196,14 @@ tettinger/tettinger-arm
   index: -1
 tettinger/tettinger-balloons
   rotate: false
-  xy: 378, 1222
+  xy: 378, 1248
   size: 417, 320
   orig: 425, 324
   offset: 0, 0
   index: -1
 tettinger/tettinger-body
   rotate: true
-  xy: 231, 1803
+  xy: 826, 1792
   size: 67, 151
   orig: 67, 151
   offset: 0, 0
@@ -1287,7 +1287,7 @@ tettinger/tettinger-hand
   index: -1
 tettinger/tettinger-head
   rotate: true
-  xy: 627, 1795
+  xy: 615, 1794
   size: 67, 76
   orig: 67, 76
   offset: 0, 0
@@ -1301,14 +1301,14 @@ tettinger/tettinger-leg
   index: -1
 tettinger/tettinger-net
   rotate: true
-  xy: 1447, 1493
-  size: 148, 228
-  orig: 148, 228
+  xy: 415, 1868
+  size: 52, 253
+  orig: 52, 253
   offset: 0, 0
   index: -1
 tettinger/tettinger-yarn
   rotate: false
-  xy: 1289, 1499
+  xy: 800, 1547
   size: 156, 156
   orig: 156, 156
   offset: 0, 0
@@ -1322,7 +1322,7 @@ tom-ski/tom-arm
   index: -1
 tom-ski/tom-body
   rotate: true
-  xy: 1209, 1851
+  xy: 1464, 1846
   size: 60, 133
   orig: 60, 133
   offset: 0, 0
@@ -1378,7 +1378,7 @@ tom-ski/tomski-bolt
   index: -1
 tom-ski/tomski-lightning
   rotate: true
-  xy: 1677, 1478
+  xy: 1649, 1485
   size: 154, 356
   orig: 154, 356
   offset: 0, 0

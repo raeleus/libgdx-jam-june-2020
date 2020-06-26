@@ -13,9 +13,9 @@ public class MoveSetEvilentity extends MoveSet {
         attackSide = new MoveFrontFlip();
         attackUp = new MoveUppercut();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
+        specialNeutral = new MoveEvilentityDust();
+        specialSide = new MoveEvilentityCloud();
+        specialUp = new MoveEvilentityTeleportUppercut();
         specialDown = new MoveAceSlide();
     }
 }

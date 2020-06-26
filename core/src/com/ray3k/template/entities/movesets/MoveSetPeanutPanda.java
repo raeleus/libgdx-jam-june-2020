@@ -13,9 +13,9 @@ public class MoveSetPeanutPanda extends MoveSet {
         attackSide = new MoveHeadbutt();
         attackUp = new MoveSplitKick();
         attackDown = new MoveLowPunch();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MovePandaCrown();
+        specialSide = new MovePandaGun();
+        specialUp = new MovePandaPropeller();
+        specialDown = new MovePandaCounter();
     }
 }

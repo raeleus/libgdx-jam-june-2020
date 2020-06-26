@@ -13,9 +13,9 @@ public class MoveSetJohnTheDeveloper extends MoveSet {
         attackSide = new MoveDoublePunch();
         attackUp = new MoveDoubleAxeHandle();
         attackDown = new MoveLowPunch();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveJohnArrow();
+        specialSide = new MoveJohnBoomerang();
+        specialUp = new MoveJohnWhirlwind();
+        specialDown = new MoveJohnBomb();
     }
 }

@@ -13,9 +13,9 @@ public class MoveSetMgsx extends MoveSet {
         attackSide = new MoveHeadbutt();
         attackUp = new MoveBackFlip();
         attackDown = new MoveSplitPunch();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveMgsxArrow();
+        specialSide = new MoveMgsxShoulderDash();
+        specialUp = new MoveMgsxLogo();
+        specialDown = new MoveMgsxMetamorph();
     }
 }

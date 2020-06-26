@@ -18,9 +18,11 @@ public class PerformerEntity extends Entity {
     public Move currentMove;
     public Mode mode;
     public boolean touchedGround;
-    public boolean fireProjectile;
+    public boolean fireProjectileEvent;
     public float projectileX;
     public float projectileY;
+    public boolean moveEvent;
+    public boolean animationCompleteEvent;
     public enum Mode {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
@@ -43,13 +45,24 @@ public class PerformerEntity extends Entity {
         
         animationState.addListener(new AnimationStateAdapter() {
             @Override
+            public void complete(TrackEntry entry) {
+                super.end(entry);
+                animationCompleteEvent = true;
+            }
+    
+            @Override
             public void event(TrackEntry entry, Event event) {
-                if (event.getData().getName().equals("fire-projectile")) {
-                    fireProjectile = true;
-                    temp.set(0, 0);
-                    skeleton.findBone("projectile-origin").localToWorld(temp);
-                    projectileX = temp.x;
-                    projectileY = temp.y;
+                switch (event.getData().getName()) {
+                    case "fire-projectile":
+                        fireProjectileEvent = true;
+                        temp.set(0, 0);
+                        skeleton.findBone("projectile-origin").localToWorld(temp);
+                        projectileX = temp.x;
+                        projectileY = temp.y;
+                        break;
+                    case "move":
+                        moveEvent = true;
+                        break;
                 }
             }
         });
@@ -122,7 +135,9 @@ public class PerformerEntity extends Entity {
         }
         
         currentMove.update(this, delta);
-        fireProjectile = false;
+        fireProjectileEvent = false;
+        moveEvent = false;
+        animationCompleteEvent = false;
     }
     
     @Override
@@ -133,5 +148,9 @@ public class PerformerEntity extends Entity {
     @Override
     public void destroy() {
     
+    }
+    
+    public boolean facingRight() {
+        return skeleton.getRootBone().getScaleX() > 0;
     }
 }

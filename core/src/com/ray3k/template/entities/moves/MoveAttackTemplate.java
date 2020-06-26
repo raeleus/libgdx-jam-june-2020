@@ -10,6 +10,7 @@ import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 public class MoveAttackTemplate implements Move {
     public float friction = 500f;
     public Animation anim = GENERAL_JAB.animation;
+    public static float GRAVITY = 2000f;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -23,8 +24,12 @@ public class MoveAttackTemplate implements Move {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        performer.deltaX = Utils.approach(performer.deltaY, 0, friction * delta);
+        performer.deltaX = Utils.approach(performer.deltaX, 0, friction * delta);
         if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
+        performer.deltaY -= GRAVITY * delta;
+        if (performer.y < 0) {
+            performer.y = 0;
+        }
     }
     
     @Override

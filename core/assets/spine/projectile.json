@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "m2vjyJQgDFVOEw/n8TP117Q3jJk",
+	"hash": "lYIHMwIPp3JUCOg36bocw7QwLLM",
 	"spine": "3.8.95",
-	"x": -48,
-	"y": -14.58,
-	"width": 97,
-	"height": 34,
+	"x": -27.58,
+	"y": -130.75,
+	"width": 52,
+	"height": 253,
 	"images": "../output/",
 	"audio": ""
 },
@@ -30,6 +30,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "ace-skeleton/ace-bone", "x": 0.5, "y": 2.42, "width": 97, "height": 34 }
+			}
+		}
+	},
+	{
+		"name": "ali-keyboard",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -49.09, 23.81, -47.83, -17.39, 46.38, -18.66, 45.75, 23.17 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "ali/ali-keyboard", "x": 0.5, "y": 2.42, "width": 131, "height": 93 }
 			}
 		}
 	},
@@ -77,6 +92,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "goodentity/goodentity-cloud", "x": 0.5, "y": 0.5, "width": 201, "height": 121 }
+			}
+		}
+	},
+	{
+		"name": "goodentity-dust",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -81.35, 59.65, -82.61, -52.13, 86.95, -53.39, 85.7, 57.77 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "goodentity/goodentity-dust", "x": -0.11, "y": -0.87, "width": 238, "height": 145 }
 			}
 		}
 	},
@@ -256,7 +286,7 @@
 				}
 			},
 			"projectile": {
-				"projectile": { "name": "tettinger/tettinger-net", "x": 51.91, "y": -4.25, "width": 148, "height": 228 }
+				"projectile": { "name": "tettinger/tettinger-net", "x": -1.58, "y": -4.25, "width": 52, "height": 253 }
 			}
 		}
 	},

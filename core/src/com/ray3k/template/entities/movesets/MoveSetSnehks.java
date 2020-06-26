@@ -13,9 +13,9 @@ public class MoveSetSnehks extends MoveSet {
         attackSide = new MoveSpinKick();
         attackUp = new MoveDoubleKick();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveSnehksLunge();
+        specialSide = new MoveSnehksVenom();
+        specialUp = new MoveSnehksDive();
+        specialDown = new MoveSnehksInvisible();
     }
 }

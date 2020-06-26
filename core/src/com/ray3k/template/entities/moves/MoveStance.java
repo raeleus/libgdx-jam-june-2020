@@ -9,6 +9,7 @@ import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveStance implements Move {
     public static float FRICTION = 1400f;
+    public static float GRAVITY = 2000f;
     @Override
     public boolean canPerform(PerformerEntity performer) {
         return performer.mode == STANDING || performer.mode == MOVING;
@@ -23,7 +24,11 @@ public class MoveStance implements Move {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        performer.setSpeed(Utils.approach(performer.getSpeed(), 0, FRICTION * delta));
+        performer.deltaX = Utils.approach(performer.deltaX, 0, FRICTION * delta);
+        performer.deltaY -= GRAVITY * delta;
+        if (performer.y < 0) {
+            performer.y = 0;
+        }
     }
     
     @Override

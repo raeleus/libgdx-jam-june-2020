@@ -13,9 +13,9 @@ public class MoveSetRaeleus extends MoveSet {
         attackSide = new MoveSpinKick();
         attackUp = new MoveDoubleAxeHandle();
         attackDown = new MoveKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveRaeleusHammer();
+        specialSide = new MoveRaeleusChargePunch();
+        specialUp = new MoveRaeleusKneeUppercut();
+        specialDown = new MoveRaeleusChargeKick();
     }
 }

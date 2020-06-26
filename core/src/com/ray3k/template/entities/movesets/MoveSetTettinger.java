@@ -13,9 +13,9 @@ public class MoveSetTettinger extends MoveSet {
         attackSide = new MoveKick();
         attackUp = new MoveUpKick();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveTettingerNet();
+        specialSide = new MoveTettingerYarn();
+        specialUp = new MoveTettingerBalloons();
+        specialDown = new MoveTettingerCounter();
     }
 }

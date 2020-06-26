@@ -13,9 +13,9 @@ public class MoveSetSkinComposer extends MoveSet {
         attackSide = new MoveFrontFlip();
         attackUp = new MoveUppercut();
         attackDown = new MovePlank();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveSkincomposerElectiricity();
+        specialSide = new MoveSkincomposerRoll();
+        specialUp = new MoveSkincomposerRollUp();
+        specialDown = new MoveSkincomposerTumble();
     }
 }

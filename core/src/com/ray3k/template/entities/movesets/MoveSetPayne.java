@@ -13,9 +13,9 @@ public class MoveSetPayne extends MoveSet {
         attackSide = new MoveDoublePunch();
         attackUp = new MoveUpKick();
         attackDown = new MovePlank();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MovePayneGrenade();
+        specialSide = new MovePayneNikita();
+        specialUp = new MovePayneUav();
+        specialDown = new MovePayneMortar();
     }
 }

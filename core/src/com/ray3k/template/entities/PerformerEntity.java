@@ -1,6 +1,8 @@
 package com.ray3k.template.entities;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
+import com.dongbat.jbump.Item;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
 import com.esotericsoftware.spine.Event;
@@ -13,7 +15,7 @@ import com.ray3k.template.screens.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 import static com.ray3k.template.screens.GameScreen.*;
 
-public class PerformerEntity extends Entity {
+public class PerformerEntity extends Entity implements Bumpable {
     public SkinName skinName;
     public Steering steering;
     public MoveSet moveSet;
@@ -25,6 +27,10 @@ public class PerformerEntity extends Entity {
     public float projectileY;
     public boolean moveEvent;
     public boolean animationCompleteEvent;
+    public float width;
+    public float height;
+    public Item<Entity> item;
+    public static final Color DEBUG_COLOR = new Color(Color.YELLOW.r, Color.YELLOW.g, Color.YELLOW.b, .5f);
     public enum Mode {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
@@ -32,6 +38,8 @@ public class PerformerEntity extends Entity {
     
     public PerformerEntity(SkinName skinName) {
         this.skinName = skinName;
+        width = 100;
+        height = 300;
     }
     
     @Override
@@ -146,7 +154,11 @@ public class PerformerEntity extends Entity {
     
     @Override
     public void draw(float delta) {
-    
+        var g = gameScreen.shapeDrawer;
+        g.setColor(DEBUG_COLOR);
+        var rect = gameScreen.entityController.world.getRect(item);
+        g.setDefaultLineWidth(5f);
+        g.rectangle(rect.x, rect.y, rect.w, rect.h);
     }
     
     @Override
@@ -156,5 +168,41 @@ public class PerformerEntity extends Entity {
     
     public boolean facingRight() {
         return skeleton.getRootBone().getScaleX() > 0;
+    }
+    
+    
+    @Override
+    public float getBumpX() {
+        return x - 50;
+    }
+    
+    @Override
+    public float getBumpY() {
+        return y;
+    }
+    
+    @Override
+    public float getBumpWidth() {
+        return width;
+    }
+    
+    @Override
+    public float getBumpHeight() {
+        return height;
+    }
+    
+    @Override
+    public Item<Entity> getItem() {
+        return item;
+    }
+    
+    @Override
+    public void setItem(Item<Entity> item) {
+        this.item = item;
+    }
+    
+    @Override
+    public void updateEntityPosition(float x, float y) {
+        setPosition(x + 50, y);
     }
 }

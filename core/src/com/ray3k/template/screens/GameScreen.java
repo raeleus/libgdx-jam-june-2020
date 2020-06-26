@@ -13,6 +13,9 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.crashinvaders.vfx.effects.EarthquakeEffect;
+import com.dongbat.jbump.Item;
+import com.dongbat.jbump.World;
 import com.ray3k.template.*;
 import com.ray3k.template.OgmoReader.*;
 import com.ray3k.template.entities.*;
@@ -28,11 +31,13 @@ public class GameScreen extends JamScreen {
     public Stage stage;
     public ShapeDrawer shapeDrawer;
     public EntityController entityController;
+    private EarthquakeEffect vfxEffect;
     public boolean paused;
     public static CameraEntity cameraEntity;
     
     public GameScreen() {
         gameScreen = this;
+        vfxEffect = new EarthquakeEffect();
         
         BG_COLOR.set(Color.PINK);
     
@@ -76,6 +81,8 @@ public class GameScreen extends JamScreen {
         
         cameraEntity = new CameraEntity();
         entityController.add(cameraEntity);
+    
+        vfxManager.addEffect(vfxEffect);
         
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
@@ -164,11 +171,13 @@ public class GameScreen extends JamScreen {
     
     @Override
     public void dispose() {
+        vfxEffect.dispose();
     }
     
     @Override
     public void hide() {
         super.hide();
         vfxManager.removeAllEffects();
+        vfxEffect.dispose();
     }
 }

@@ -1,6 +1,7 @@
 package com.ray3k.template.entities;
 
 import com.badlogic.gdx.math.Vector2;
+import com.dongbat.jbump.Item;
 import com.esotericsoftware.spine.*;
 
 public abstract class Entity {

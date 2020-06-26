@@ -1,26 +1,37 @@
 package com.ray3k.template.entities;
 
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.utils.Array;
+import com.dongbat.jbump.*;
+import com.dongbat.jbump.Response.Result;
 
 import java.util.Comparator;
 
 import static com.ray3k.template.Core.*;
 import static com.ray3k.template.JamGame.batch;
+import static com.ray3k.template.screens.GameScreen.*;
 
 public class EntityController {
     public Array<Entity> entities;
     public Comparator<Entity> depthComparator;
     private Array<Entity> sortedEntities;
+    public World<Entity> world;
     
     public EntityController() {
         entities = new Array<>();
         sortedEntities = new Array<>();
+        world = new World<>();
         
         depthComparator = (o1, o2) -> o2.depth - o1.depth;
     }
     
     public void add(Entity entity) {
         entities.add(entity);
+        if (entity instanceof Bumpable) {
+            var bump = (Bumpable) entity;
+            bump.setItem(new Item<>(entity));
+            world.add(bump.getItem(), bump.getBumpX(), bump.getBumpY(), bump.getBumpWidth(), bump.getBumpHeight());
+        }
         entity.create();
     }
     
@@ -53,6 +64,20 @@ public class EntityController {
                 entity.skeletonBounds.update(entity.skeleton, true);
             }
             
+            //update collisions
+            if (entity instanceof Bumpable) {
+                var bump = (Bumpable) entity;
+                var result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), CollisionFilter.defaultFilter);
+                var rect = world.getRect(bump.getItem());
+                bump.updateEntityPosition(rect.x, rect.y);
+                var projectedCollisions = result.projectedCollisions;
+                var  touched = new Array<Item<Entity>>();
+                for (int i = 0; i < projectedCollisions.size(); i++) {
+                    Collision col = projectedCollisions.get(i);
+                    touched.add(col.other);
+                }
+            }
+            
             entity.act(delta);
         }
     
@@ -61,6 +86,11 @@ public class EntityController {
             if (entity.destroy) {
                 entity.destroy();
                 entities.removeValue(entity, false);
+    
+                if (entity instanceof Bumpable) {
+                    var bump = (Bumpable) entity;
+                    world.remove(bump.getItem());
+                }
             }
         }
     }

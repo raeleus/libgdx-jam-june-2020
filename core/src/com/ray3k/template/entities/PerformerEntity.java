@@ -43,6 +43,7 @@ public class PerformerEntity extends Entity implements Bumpable {
         this.skinName = skinName;
         width = 100;
         height = 300;
+        item = new Item<>();
     }
     
     @Override

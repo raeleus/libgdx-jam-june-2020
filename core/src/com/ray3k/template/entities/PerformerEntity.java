@@ -8,8 +8,10 @@ import com.ray3k.template.*;
 import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
+import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
+import static com.ray3k.template.screens.GameScreen.*;
 
 public class PerformerEntity extends Entity {
     public SkinName skinName;
@@ -138,6 +140,8 @@ public class PerformerEntity extends Entity {
         fireProjectileEvent = false;
         moveEvent = false;
         animationCompleteEvent = false;
+    
+        cameraEntity.setPosition(x, y);
     }
     
     @Override

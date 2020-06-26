@@ -6,1379 +6,1428 @@ filter: Linear,Linear
 repeat: none
 ace-skeleton/ace-bone
   rotate: false
-  xy: 858, 1961
+  xy: 858, 1960
   size: 97, 34
   orig: 97, 34
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-arm-left
   rotate: false
-  xy: 52, 2035
+  xy: 52, 2034
   size: 59, 11
   orig: 59, 11
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-arm-right
   rotate: false
-  xy: 113, 2035
+  xy: 113, 2034
   size: 59, 11
   orig: 59, 11
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-body
   rotate: true
-  xy: 264, 1872
+  xy: 562, 1869
   size: 52, 149
   orig: 52, 149
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-foot-left
   rotate: false
-  xy: 474, 2029
+  xy: 474, 2028
   size: 39, 17
   orig: 39, 17
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-foot-right
   rotate: false
-  xy: 474, 2029
+  xy: 474, 2028
   size: 39, 17
   orig: 39, 17
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-forearm-left
   rotate: false
-  xy: 226, 2032
+  xy: 226, 2031
   size: 48, 14
   orig: 48, 14
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-forearm-right
   rotate: false
-  xy: 226, 2032
+  xy: 226, 2031
   size: 48, 14
   orig: 48, 14
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-foreleg-left
   rotate: true
-  xy: 1144, 2025
+  xy: 1144, 2024
   size: 21, 66
   orig: 21, 66
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-foreleg-right
   rotate: true
-  xy: 1144, 2025
+  xy: 1144, 2024
   size: 21, 66
   orig: 21, 66
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-hand-left
   rotate: true
-  xy: 450, 2030
+  xy: 450, 2029
   size: 16, 22
   orig: 16, 22
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-hand-right
   rotate: true
-  xy: 763, 2028
+  xy: 763, 2027
   size: 18, 21
   orig: 18, 21
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-leg-left
   rotate: true
-  xy: 515, 2029
+  xy: 515, 2028
   size: 17, 74
   orig: 17, 74
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-leg-right
   rotate: true
-  xy: 515, 2029
+  xy: 515, 2028
   size: 17, 74
   orig: 17, 74
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-logo
   rotate: true
-  xy: 1438, 1499
+  xy: 241, 1465
   size: 151, 209
   orig: 151, 209
   offset: 0, 0
   index: -1
 ace-skeleton/ace-skeleton-skull
   rotate: true
-  xy: 670, 1863
+  xy: 968, 1859
   size: 57, 61
   orig: 57, 61
   offset: 0, 0
   index: -1
 ali/ali-arm
   rotate: false
-  xy: 1425, 2024
+  xy: 1425, 2023
   size: 47, 22
   orig: 47, 22
   offset: 0, 0
   index: -1
 ali/ali-blast
   rotate: true
-  xy: 1957, 1757
+  xy: 1960, 1759
   size: 80, 83
   orig: 80, 83
   offset: 0, 0
   index: -1
 ali/ali-body
   rotate: true
-  xy: 693, 1792
+  xy: 960, 1788
   size: 67, 131
   orig: 67, 131
   offset: 0, 0
   index: -1
 ali/ali-energy-sword
   rotate: false
-  xy: 372, 1803
+  xy: 639, 1799
   size: 241, 63
   orig: 241, 63
   offset: 0, 0
   index: -1
 ali/ali-forearm
   rotate: false
-  xy: 1474, 2024
+  xy: 1474, 2023
   size: 70, 22
   orig: 70, 22
   offset: 0, 0
   index: -1
 ali/ali-foreleg
   rotate: true
-  xy: 668, 2000
+  xy: 668, 1999
   size: 27, 49
   orig: 27, 49
   offset: 0, 0
   index: -1
 ali/ali-head
   rotate: false
-  xy: 1455, 1768
+  xy: 1869, 1763
   size: 89, 76
   orig: 89, 76
   offset: 0, 0
   index: -1
 ali/ali-keyboard
   rotate: false
-  xy: 976, 1687
+  xy: 1240, 1684
   size: 131, 93
   orig: 131, 93
   offset: 0, 0
   index: -1
 ali/ali-laser
   rotate: false
-  xy: 1190, 1958
+  xy: 1190, 1957
   size: 136, 35
   orig: 136, 35
   offset: 0, 0
   index: -1
 ali/ali-leg
   rotate: true
-  xy: 134, 1931
+  xy: 304, 1927
   size: 39, 66
   orig: 39, 66
   offset: 0, 0
   index: -1
 evilentity/evil-entity-cloud
   rotate: false
-  xy: 1, 1604
+  xy: 833, 1580
   size: 200, 118
   orig: 201, 121
   offset: 0, 3
   index: -1
 evilentity/evil-entity-dust
   rotate: false
-  xy: 958, 1538
+  xy: 1631, 1507
   size: 238, 145
   orig: 238, 145
   offset: 0, 0
   index: -1
 evilentity/evilentity-arm
   rotate: false
-  xy: 1872, 1951
+  xy: 1974, 1950
   size: 65, 37
   orig: 65, 37
   offset: 0, 0
   index: -1
 evilentity/evilentity-body
   rotate: true
-  xy: 1693, 1761
+  xy: 107, 1736
   size: 77, 130
   orig: 77, 130
   offset: 0, 0
   index: -1
 evilentity/evilentity-foot
   rotate: false
-  xy: 323, 1969
+  xy: 323, 1968
   size: 38, 33
   orig: 38, 33
   offset: 0, 0
   index: -1
 evilentity/evilentity-forearm
   rotate: false
-  xy: 402, 1967
+  xy: 402, 1966
   size: 61, 33
   orig: 61, 33
   offset: 0, 0
   index: -1
 evilentity/evilentity-foreleg
   rotate: true
-  xy: 417, 2002
+  xy: 417, 2001
   size: 26, 51
   orig: 26, 51
   offset: 0, 0
   index: -1
 evilentity/evilentity-hand
   rotate: false
-  xy: 363, 1969
+  xy: 363, 1968
   size: 37, 33
   orig: 37, 33
   offset: 0, 0
   index: -1
 evilentity/evilentity-head
   rotate: true
-  xy: 1701, 1905
+  xy: 1, 1888
   size: 46, 68
   orig: 46, 68
   offset: 0, 0
   index: -1
 evilentity/evilentity-leg
   rotate: true
-  xy: 1028, 1855
+  xy: 1326, 1852
   size: 57, 81
   orig: 57, 81
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-arm-left
   rotate: false
-  xy: 749, 1964
+  xy: 749, 1963
   size: 52, 33
   orig: 55, 33
   offset: 2, 0
   index: -1
 ferocious-zebra/zebra-arm-right
   rotate: false
-  xy: 803, 1963
+  xy: 803, 1962
   size: 53, 33
   orig: 55, 33
   offset: 2, 0
   index: -1
 ferocious-zebra/zebra-body
   rotate: true
-  xy: 608, 1708
+  xy: 872, 1704
   size: 82, 130
   orig: 86, 138
   offset: 1, 4
   index: -1
 ferocious-zebra/zebra-foot-left
   rotate: false
-  xy: 1971, 2023
+  xy: 1971, 2022
   size: 48, 23
   orig: 48, 23
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-foot-right
   rotate: false
-  xy: 1721, 2024
+  xy: 1721, 2023
   size: 50, 22
   orig: 50, 22
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-forearm-left
   rotate: false
-  xy: 1743, 1991
+  xy: 1743, 1990
   size: 64, 30
   orig: 66, 33
   offset: 2, 1
   index: -1
 ferocious-zebra/zebra-forearm-right
   rotate: false
-  xy: 1624, 1993
+  xy: 1624, 1992
   size: 64, 29
   orig: 66, 29
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-foreleg-left
   rotate: true
-  xy: 996, 1997
+  xy: 996, 1996
   size: 27, 63
   orig: 27, 63
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-foreleg-right
   rotate: true
-  xy: 1417, 1994
+  xy: 1417, 1993
   size: 28, 63
   orig: 32, 63
   offset: 1, 0
   index: -1
 ferocious-zebra/zebra-hand-left
   rotate: false
-  xy: 289, 1971
+  xy: 289, 1970
   size: 32, 32
   orig: 34, 32
   offset: 2, 0
   index: -1
 ferocious-zebra/zebra-hand-right
   rotate: false
-  xy: 1809, 1991
+  xy: 1809, 1990
   size: 33, 30
   orig: 33, 30
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-head
   rotate: false
-  xy: 857, 1705
+  xy: 1121, 1700
   size: 117, 85
   orig: 121, 89
   offset: 1, 2
   index: -1
 ferocious-zebra/zebra-leg-left
   rotate: true
-  xy: 737, 1920
+  xy: 1108, 1915
   size: 41, 73
   orig: 42, 73
   offset: 0, 0
   index: -1
 ferocious-zebra/zebra-leg-right
   rotate: true
-  xy: 465, 1924
+  xy: 1032, 1916
   size: 40, 74
   orig: 41, 74
   offset: 0, 0
   index: -1
 goodentity/goodentity-arm
   rotate: false
-  xy: 1939, 1951
+  xy: 1, 1936
   size: 65, 37
   orig: 65, 37
   offset: 0, 0
   index: -1
 goodentity/goodentity-body
   rotate: true
-  xy: 1825, 1760
+  xy: 239, 1730
   size: 77, 130
   orig: 77, 130
   offset: 0, 0
   index: -1
 goodentity/goodentity-cloud
   rotate: false
-  xy: 203, 1600
+  xy: 1035, 1580
   size: 200, 118
   orig: 201, 121
   offset: 0, 3
   index: -1
 goodentity/goodentity-dust
   rotate: false
-  xy: 1198, 1514
+  xy: 1, 1471
   size: 238, 145
   orig: 238, 145
   offset: 0, 0
   index: -1
 goodentity/goodentity-foot
   rotate: false
-  xy: 465, 1966
+  xy: 465, 1965
   size: 38, 33
   orig: 38, 33
   offset: 0, 0
   index: -1
 goodentity/goodentity-forearm
   rotate: false
-  xy: 505, 1966
+  xy: 505, 1965
   size: 61, 33
   orig: 61, 33
   offset: 0, 0
   index: -1
 goodentity/goodentity-forelog
   rotate: true
-  xy: 470, 2001
+  xy: 470, 2000
   size: 26, 51
   orig: 26, 51
   offset: 0, 0
   index: -1
 goodentity/goodentity-hand
   rotate: false
-  xy: 568, 1966
+  xy: 568, 1965
   size: 37, 33
   orig: 37, 33
   offset: 0, 0
   index: -1
 goodentity/goodentity-head
   rotate: true
-  xy: 1771, 1904
+  xy: 126, 1884
   size: 46, 68
   orig: 46, 68
   offset: 0, 0
   index: -1
 goodentity/goodentity-leg
   rotate: true
-  xy: 1111, 1855
+  xy: 1409, 1852
   size: 57, 81
   orig: 57, 81
   offset: 0, 0
   index: -1
 john-the-developer/john-arm
   rotate: false
-  xy: 1593, 1955
+  xy: 1593, 1954
   size: 50, 36
   orig: 50, 36
   offset: 0, 0
   index: -1
 john-the-developer/john-arrow
   rotate: false
-  xy: 884, 2026
+  xy: 884, 2025
   size: 137, 20
   orig: 137, 20
   offset: 0, 0
   index: -1
 john-the-developer/john-bomb
   rotate: true
-  xy: 1, 1736
+  xy: 1, 1741
   size: 78, 104
   orig: 78, 104
   offset: 0, 0
   index: -1
 john-the-developer/john-boomerang
   rotate: true
-  xy: 202, 1931
+  xy: 475, 1924
   size: 39, 75
   orig: 39, 75
   offset: 0, 0
   index: -1
 john-the-developer/john-bow
   rotate: true
-  xy: 1045, 1914
+  xy: 1551, 1908
   size: 42, 225
   orig: 42, 225
   offset: 0, 0
   index: -1
 john-the-developer/john-chest
   rotate: true
-  xy: 1210, 1670
+  xy: 1780, 1654
   size: 107, 143
   orig: 107, 143
   offset: 0, 0
   index: -1
 john-the-developer/john-foot
   rotate: false
-  xy: 1, 2010
+  xy: 1, 2009
   size: 44, 24
   orig: 44, 24
   offset: 0, 0
   index: -1
 john-the-developer/john-forearm
   rotate: false
-  xy: 1844, 1990
+  xy: 1844, 1989
   size: 52, 31
   orig: 52, 31
   offset: 0, 0
   index: -1
 john-the-developer/john-foreleg
   rotate: true
-  xy: 523, 2001
+  xy: 523, 2000
   size: 26, 50
   orig: 26, 50
   offset: 0, 0
   index: -1
 john-the-developer/john-hand
   rotate: true
-  xy: 1061, 1996
+  xy: 1061, 1995
   size: 28, 31
   orig: 28, 31
   offset: 0, 0
   index: -1
 john-the-developer/john-head
   rotate: false
-  xy: 1, 1819
+  xy: 130, 1815
   size: 67, 66
   orig: 67, 66
   offset: 0, 0
   index: -1
 john-the-developer/john-leg
   rotate: true
-  xy: 1, 1937
+  xy: 68, 1936
   size: 37, 59
   orig: 37, 59
   offset: 0, 0
   index: -1
+level/ platform-purple
+  rotate: false
+  xy: 1474, 1672
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+level/platform-brown
+  rotate: false
+  xy: 1576, 1668
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+level/platform-brown-small
+  rotate: false
+  xy: 129, 1932
+  size: 101, 37
+  orig: 101, 101
+  offset: 0, 64
+  index: -1
+level/platform-purple-small
+  rotate: false
+  xy: 372, 1926
+  size: 101, 37
+  orig: 101, 101
+  offset: 0, 64
+  index: -1
+level/platform-red
+  rotate: false
+  xy: 1678, 1666
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+level/platform-red-small
+  rotate: false
+  xy: 1823, 1951
+  size: 100, 36
+  orig: 100, 100
+  offset: 0, 64
+  index: -1
+level/player-demo
+  rotate: true
+  xy: 204, 1618
+  size: 99, 320
+  orig: 99, 320
+  offset: 0, 0
+  index: -1
 lyze/lyze-arm
   rotate: false
-  xy: 1334, 1853
+  xy: 1632, 1848
   size: 64, 58
   orig: 64, 58
   offset: 0, 0
   index: -1
 lyze/lyze-body
   rotate: true
-  xy: 107, 1724
+  xy: 371, 1725
   size: 78, 143
   orig: 78, 143
   offset: 0, 0
   index: -1
 lyze/lyze-foot
   rotate: false
-  xy: 1546, 2024
+  xy: 1546, 2023
   size: 37, 22
   orig: 37, 22
   offset: 0, 0
   index: -1
 lyze/lyze-forearm
   rotate: false
-  xy: 733, 1862
+  xy: 1031, 1857
   size: 77, 56
   orig: 77, 56
   offset: 0, 0
   index: -1
 lyze/lyze-foreleg
   rotate: true
-  xy: 401, 2031
+  xy: 401, 2030
   size: 15, 47
   orig: 15, 47
   offset: 0, 0
   index: -1
 lyze/lyze-head
   rotate: true
-  xy: 206, 1804
+  xy: 542, 1801
   size: 66, 95
   orig: 66, 95
   offset: 0, 0
   index: -1
 lyze/lyze-leg
   rotate: true
-  xy: 1212, 2025
+  xy: 1212, 2024
   size: 21, 65
   orig: 21, 65
   offset: 0, 0
   index: -1
 lyze/lyze-skirt
   rotate: true
-  xy: 1, 1887
+  xy: 71, 1886
   size: 48, 53
   orig: 48, 53
   offset: 0, 0
   index: -1
 mgsx/mgsx-arm
   rotate: false
-  xy: 749, 1999
+  xy: 749, 1998
   size: 57, 27
   orig: 57, 27
   offset: 0, 0
   index: -1
 mgsx/mgsx-arrow
   rotate: false
-  xy: 47, 2009
+  xy: 47, 2008
   size: 151, 24
   orig: 151, 24
   offset: 0, 0
   index: -1
 mgsx/mgsx-ball
-  rotate: false
-  xy: 405, 1584
+  rotate: true
+  xy: 1237, 1547
   size: 135, 134
   orig: 135, 134
   offset: 0, 0
   index: -1
 mgsx/mgsx-body
   rotate: true
-  xy: 1546, 1767
+  xy: 1722, 1768
   size: 73, 145
   orig: 73, 145
   offset: 0, 0
   index: -1
 mgsx/mgsx-foot
   rotate: false
-  xy: 1279, 2025
+  xy: 1279, 2024
   size: 36, 21
   orig: 36, 21
   offset: 0, 0
   index: -1
 mgsx/mgsx-forearm
   rotate: false
-  xy: 200, 2006
+  xy: 200, 2005
   size: 52, 24
   orig: 52, 24
   offset: 0, 0
   index: -1
 mgsx/mgsx-foreleg
   rotate: true
-  xy: 1023, 2026
+  xy: 1023, 2025
   size: 20, 50
   orig: 20, 50
   offset: 0, 0
   index: -1
 mgsx/mgsx-hand
   rotate: false
-  xy: 1094, 1995
+  xy: 1094, 1994
   size: 45, 29
   orig: 45, 29
   offset: 0, 0
   index: -1
 mgsx/mgsx-head
   rotate: false
-  xy: 1907, 1902
+  xy: 262, 1878
   size: 90, 47
   orig: 90, 47
   offset: 0, 0
   index: -1
 mgsx/mgsx-leg
   rotate: true
-  xy: 660, 1965
+  xy: 660, 1964
   size: 33, 87
   orig: 33, 87
   offset: 0, 0
   index: -1
 mgsx/mgsx-logo
   rotate: false
-  xy: 1355, 1661
+  xy: 1, 1630
   size: 201, 104
   orig: 201, 104
   offset: 0, 0
   index: -1
 partytime-foxy/partytime-foxy-head
   rotate: false
-  xy: 1558, 1652
+  xy: 1925, 1644
   size: 116, 113
   orig: 116, 113
   offset: 0, 0
   index: -1
 payne/payne-arm
   rotate: false
-  xy: 1085, 1959
+  xy: 1085, 1958
   size: 51, 34
   orig: 51, 34
   offset: 0, 0
   index: -1
 payne/payne-body
   rotate: true
-  xy: 70, 1816
+  xy: 337, 1809
   size: 62, 134
   orig: 62, 134
   offset: 0, 0
   index: -1
 payne/payne-foot
   rotate: false
-  xy: 575, 2001
+  xy: 575, 2000
   size: 46, 26
   orig: 46, 26
   offset: 0, 0
   index: -1
 payne/payne-forearm
   rotate: false
-  xy: 359, 2004
+  xy: 359, 2003
   size: 56, 25
   orig: 56, 25
   offset: 0, 0
   index: -1
 payne/payne-foreleg
   rotate: true
-  xy: 1195, 1995
+  xy: 1195, 1994
   size: 28, 54
   orig: 28, 54
   offset: 0, 0
   index: -1
 payne/payne-grenade
   rotate: true
-  xy: 56, 1887
+  xy: 354, 1876
   size: 48, 53
   orig: 48, 53
   offset: 0, 0
   index: -1
 payne/payne-hand
   rotate: false
-  xy: 177, 1972
+  xy: 177, 1971
   size: 48, 32
   orig: 48, 32
   offset: 0, 0
   index: -1
 payne/payne-head
   rotate: false
-  xy: 303, 1804
+  xy: 473, 1805
   size: 67, 66
   orig: 71, 68
   offset: 1, 0
   index: -1
 payne/payne-leg
   rotate: true
-  xy: 541, 1923
+  xy: 1183, 1914
   size: 41, 85
   orig: 41, 85
   offset: 0, 0
   index: -1
 payne/payne-missile
   rotate: false
-  xy: 279, 1928
+  xy: 552, 1924
   size: 102, 39
   orig: 105, 40
   offset: 2, 1
   index: -1
 payne/payne-mortar
   rotate: true
-  xy: 1444, 1910
+  xy: 1778, 1905
   size: 44, 76
   orig: 44, 76
   offset: 0, 0
   index: -1
 payne/payne-uav
   rotate: false
-  xy: 1367, 1772
+  xy: 1634, 1770
   size: 86, 75
   orig: 86, 75
   offset: 0, 0
   index: -1
 peanut-panda/panda-arm-left
   rotate: false
-  xy: 1328, 1958
+  xy: 1328, 1957
   size: 52, 35
   orig: 52, 35
   offset: 0, 0
   index: -1
 peanut-panda/panda-arm-right
   rotate: false
-  xy: 1645, 1954
+  xy: 1645, 1953
   size: 54, 36
   orig: 55, 38
   offset: 0, 1
   index: -1
 peanut-panda/panda-body
   rotate: true
-  xy: 1122, 1781
+  xy: 1389, 1775
   size: 72, 123
   orig: 81, 128
   offset: 6, 2
   index: -1
 peanut-panda/panda-crown
   rotate: false
-  xy: 957, 1961
+  xy: 957, 1960
   size: 50, 34
   orig: 50, 34
   offset: 0, 0
   index: -1
 peanut-panda/panda-foot-left
   rotate: false
-  xy: 254, 2006
+  xy: 254, 2005
   size: 50, 24
   orig: 52, 25
   offset: 0, 1
   index: -1
 peanut-panda/panda-foot-right
   rotate: false
-  xy: 306, 2005
+  xy: 306, 2004
   size: 51, 25
   orig: 54, 27
   offset: 1, 2
   index: -1
 peanut-panda/panda-forearm-left
   rotate: false
-  xy: 1898, 1990
+  xy: 1898, 1989
   size: 60, 31
   orig: 61, 33
   offset: 1, 2
   index: -1
 peanut-panda/panda-forearm-right
   rotate: false
-  xy: 1, 1976
+  xy: 1, 1975
   size: 61, 31
   orig: 64, 35
   offset: 2, 2
   index: -1
 peanut-panda/panda-foreleg-left
   rotate: true
-  xy: 1701, 1953
+  xy: 1701, 1952
   size: 36, 62
   orig: 36, 64
   offset: 0, 1
   index: -1
 peanut-panda/panda-foreleg-right
   rotate: true
-  xy: 1382, 1957
+  xy: 1382, 1956
   size: 35, 61
   orig: 39, 61
   offset: 2, 0
   index: -1
 peanut-panda/panda-hand-left
   rotate: true
-  xy: 1009, 1961
+  xy: 1009, 1960
   size: 34, 36
   orig: 34, 37
   offset: 0, 1
   index: -1
 peanut-panda/panda-hand-right
   rotate: true
-  xy: 1047, 1959
+  xy: 1047, 1958
   size: 35, 36
   orig: 38, 38
   offset: 1, 0
   index: -1
 peanut-panda/panda-head
   rotate: true
-  xy: 1109, 1685
+  xy: 1373, 1679
   size: 94, 99
   orig: 102, 104
   offset: 5, 1
   index: -1
 peanut-panda/panda-leg-left
   rotate: true
-  xy: 111, 1880
+  xy: 409, 1873
   size: 49, 75
   orig: 53, 75
   offset: 0, 0
   index: -1
 peanut-panda/panda-leg-right
   rotate: true
-  xy: 188, 1880
+  xy: 486, 1873
   size: 49, 74
   orig: 51, 74
   offset: 1, 0
   index: -1
 peanut-panda/panda-peanut
   rotate: false
-  xy: 1141, 1995
+  xy: 1141, 1994
   size: 52, 28
   orig: 52, 28
   offset: 0, 0
   index: -1
 peanut-panda/panda-proeller-2
   rotate: true
-  xy: 740, 1705
+  xy: 1004, 1700
   size: 85, 115
   orig: 114, 120
   offset: 10, 0
   index: -1
 peanut-panda/panda-propeller1
   rotate: true
-  xy: 1861, 1641
+  xy: 711, 1600
   size: 114, 120
   orig: 114, 120
   offset: 0, 0
   index: -1
 raeleus/raeleus-arm
-  rotate: true
-  xy: 2006, 1929
+  rotate: false
+  xy: 738, 1921
   size: 59, 40
   orig: 59, 40
   offset: 0, 0
   index: -1
 raeleus/raeleus-body
   rotate: true
-  xy: 979, 1782
+  xy: 1246, 1779
   size: 71, 141
   orig: 71, 141
   offset: 0, 0
   index: -1
 raeleus/raeleus-foot
   rotate: false
-  xy: 841, 2027
+  xy: 841, 2026
   size: 41, 19
   orig: 41, 19
   offset: 0, 0
   index: -1
 raeleus/raeleus-forearm-left
   rotate: false
-  xy: 1960, 1990
+  xy: 1960, 1989
   size: 56, 31
   orig: 56, 31
   offset: 0, 0
   index: -1
 raeleus/raeleus-forearm-right
   rotate: false
-  xy: 64, 1976
+  xy: 64, 1975
   size: 56, 31
   orig: 56, 31
   offset: 0, 0
   index: -1
 raeleus/raeleus-foreleg
   rotate: true
-  xy: 1251, 1995
+  xy: 1251, 1994
   size: 28, 50
   orig: 28, 50
   offset: 0, 0
   index: -1
 raeleus/raeleus-hammer
   rotate: true
-  xy: 542, 1570
+  xy: 1373, 1533
   size: 133, 256
   orig: 133, 256
   offset: 0, 0
   index: -1
 raeleus/raeleus-hand-left
   rotate: false
-  xy: 719, 2000
+  xy: 719, 1999
   size: 28, 27
   orig: 28, 27
   offset: 0, 0
   index: -1
 raeleus/raeleus-hand-right
   rotate: false
-  xy: 808, 1999
+  xy: 808, 1998
   size: 29, 27
   orig: 29, 27
   offset: 0, 0
   index: -1
 raeleus/raeleus-head
   rotate: true
-  xy: 1247, 1779
+  xy: 1514, 1774
   size: 72, 118
   orig: 72, 118
   offset: 0, 0
   index: -1
 raeleus/raeleus-leg
   rotate: true
-  xy: 1445, 1956
+  xy: 1445, 1955
   size: 35, 77
   orig: 35, 77
   offset: 0, 0
   index: -1
 skincomposer/skin-composer-electricity
   rotate: false
-  xy: 797, 1195
+  xy: 1606, 1143
   size: 372, 341
   orig: 372, 341
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-arm
   rotate: false
-  xy: 1773, 2023
+  xy: 1773, 2022
   size: 58, 23
   orig: 58, 23
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-body
   rotate: true
-  xy: 812, 1861
+  xy: 1110, 1856
   size: 56, 135
   orig: 56, 135
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-foot
   rotate: false
-  xy: 623, 2001
+  xy: 623, 2000
   size: 43, 26
   orig: 43, 26
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-forearm
   rotate: false
-  xy: 276, 2032
+  xy: 276, 2031
   size: 52, 14
   orig: 52, 14
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-foreleg
   rotate: true
-  xy: 174, 2035
+  xy: 174, 2034
   size: 11, 50
   orig: 11, 50
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-hand
   rotate: false
-  xy: 1303, 1995
+  xy: 1303, 1994
   size: 56, 28
   orig: 56, 28
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-head
   rotate: true
-  xy: 1194, 1855
+  xy: 1492, 1849
   size: 57, 73
   orig: 57, 73
   offset: 0, 0
   index: -1
 skincomposer/skincomposer-leg
   rotate: true
-  xy: 1482, 1993
+  xy: 1482, 1992
   size: 29, 78
   orig: 29, 78
   offset: 0, 0
   index: -1
 snehks/snehks-arm
   rotate: false
-  xy: 1833, 2023
+  xy: 1833, 2022
   size: 43, 23
   orig: 43, 23
   offset: 0, 0
   index: -1
 snehks/snehks-body
   rotate: true
-  xy: 1599, 1842
+  xy: 1897, 1841
   size: 61, 138
   orig: 61, 138
   offset: 0, 0
   index: -1
 snehks/snehks-cloud
   rotate: true
-  xy: 1, 1355
+  xy: 810, 1335
   size: 243, 375
   orig: 243, 375
   offset: 0, 0
   index: -1
 snehks/snehks-foot
   rotate: false
-  xy: 1317, 2025
+  xy: 1317, 2024
   size: 35, 21
   orig: 35, 21
   offset: 0, 0
   index: -1
 snehks/snehks-forearm
   rotate: false
-  xy: 786, 2028
+  xy: 786, 2027
   size: 53, 18
   orig: 53, 18
   offset: 0, 0
   index: -1
 snehks/snehks-foreleg
   rotate: true
-  xy: 1585, 2024
+  xy: 1585, 2023
   size: 22, 48
   orig: 22, 48
   offset: 0, 0
   index: -1
 snehks/snehks-hand
   rotate: false
-  xy: 1635, 2024
+  xy: 1635, 2023
   size: 30, 22
   orig: 30, 22
   offset: 0, 0
   index: -1
 snehks/snehks-head
   rotate: false
-  xy: 628, 1922
+  xy: 1270, 1914
   size: 107, 41
   orig: 107, 41
   offset: 0, 0
   index: -1
 snehks/snehks-leg
   rotate: true
-  xy: 1075, 2026
+  xy: 1075, 2025
   size: 20, 67
   orig: 20, 67
   offset: 0, 0
   index: -1
 snehks/snehks-venom
   rotate: false
-  xy: 396, 1720
+  xy: 660, 1716
   size: 210, 81
   orig: 210, 81
   offset: 0, 0
   index: -1
 tann/tann-arm
   rotate: false
-  xy: 1269, 1854
+  xy: 1567, 1849
   size: 63, 57
   orig: 63, 57
   offset: 0, 0
   index: -1
 tann/tann-axe
   rotate: true
-  xy: 1676, 1651
+  xy: 526, 1607
   size: 107, 183
   orig: 108, 186
   offset: 1, 0
   index: -1
 tann/tann-body
   rotate: true
-  xy: 252, 1723
+  xy: 516, 1719
   size: 78, 142
   orig: 78, 142
   offset: 0, 0
   index: -1
 tann/tann-foot
   rotate: false
-  xy: 1878, 2023
+  xy: 1878, 2022
   size: 38, 23
   orig: 38, 23
   offset: 0, 0
   index: -1
 tann/tann-forearm
   rotate: false
-  xy: 949, 1861
+  xy: 1247, 1856
   size: 77, 56
   orig: 77, 56
   offset: 0, 0
   index: -1
 tann/tann-foreleg
   rotate: true
-  xy: 1, 2036
+  xy: 1, 2035
   size: 10, 49
   orig: 10, 49
   offset: 0, 0
   index: -1
 tann/tann-head
   rotate: false
-  xy: 1739, 1840
+  xy: 1, 1821
   size: 127, 61
   orig: 127, 61
   offset: 0, 0
   index: -1
 tann/tann-leg
   rotate: true
-  xy: 330, 2032
+  xy: 330, 2031
   size: 14, 69
   orig: 14, 69
   offset: 0, 0
   index: -1
 template/template-arm
   rotate: false
-  xy: 1690, 1992
+  xy: 1690, 1991
   size: 51, 30
   orig: 51, 30
   offset: 0, 0
   index: -1
 template/template-body
   rotate: true
-  xy: 1868, 1839
+  xy: 199, 1815
   size: 61, 136
   orig: 61, 136
   offset: 0, 0
   index: -1
 template/template-foot
   rotate: false
-  xy: 1354, 2025
+  xy: 1354, 2024
   size: 33, 21
   orig: 33, 21
   offset: 0, 0
   index: -1
 template/template-forearm
   rotate: false
-  xy: 1562, 1993
+  xy: 1562, 1992
   size: 60, 29
   orig: 60, 29
   offset: 0, 0
   index: -1
 template/template-foreleg
   rotate: true
-  xy: 1918, 2023
+  xy: 1918, 2022
   size: 23, 51
   orig: 23, 51
   offset: 0, 0
   index: -1
 template/template-hand
   rotate: false
-  xy: 839, 1998
+  xy: 839, 1997
   size: 32, 27
   orig: 32, 27
   offset: 0, 0
   index: -1
 template/template-hat
   rotate: false
-  xy: 1522, 1910
+  xy: 1856, 1905
   size: 58, 44
   orig: 58, 44
   offset: 0, 0
   index: -1
 template/template-head
   rotate: false
-  xy: 1400, 1849
+  xy: 1698, 1847
   size: 62, 59
   orig: 62, 59
   offset: 0, 0
   index: -1
 template/template-leg
   rotate: true
-  xy: 62, 1937
+  xy: 232, 1931
   size: 37, 70
   orig: 37, 70
   offset: 0, 0
   index: -1
 tettinger/tettinger-arm
   rotate: false
-  xy: 1524, 1956
+  xy: 1524, 1955
   size: 67, 35
   orig: 67, 35
   offset: 0, 0
   index: -1
 tettinger/tettinger-balloons
   rotate: false
-  xy: 378, 1248
+  xy: 1187, 1211
   size: 417, 320
   orig: 425, 324
   offset: 0, 0
   index: -1
 tettinger/tettinger-body
   rotate: true
-  xy: 826, 1792
+  xy: 1093, 1787
   size: 67, 151
   orig: 67, 151
   offset: 0, 0
   index: -1
 tettinger/tettinger-foot
   rotate: false
-  xy: 1389, 2025
+  xy: 1389, 2024
   size: 34, 21
   orig: 34, 21
   offset: 0, 0
   index: -1
 tettinger/tettinger-forearm
   rotate: false
-  xy: 873, 1997
+  xy: 873, 1996
   size: 68, 27
   orig: 68, 27
   offset: 0, 0
   index: -1
 tettinger/tettinger-foreleg
   rotate: true
-  xy: 943, 1997
+  xy: 943, 1996
   size: 27, 51
   orig: 27, 51
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph1
   rotate: true
-  xy: 1765, 1953
+  xy: 1765, 1952
   size: 36, 56
   orig: 36, 56
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph2
   rotate: true
-  xy: 227, 1972
+  xy: 227, 1971
   size: 32, 60
   orig: 32, 60
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph3
   rotate: true
-  xy: 122, 1976
+  xy: 122, 1975
   size: 31, 53
   orig: 31, 53
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph4
   rotate: true
-  xy: 1823, 1952
+  xy: 1925, 1951
   size: 36, 47
   orig: 36, 47
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph5
   rotate: true
-  xy: 607, 1966
+  xy: 607, 1965
   size: 33, 51
   orig: 33, 51
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph6
   rotate: true
-  xy: 1138, 1959
+  xy: 1138, 1958
   size: 34, 50
   orig: 34, 50
   offset: 0, 0
   index: -1
 tettinger/tettinger-glyph7
   rotate: true
-  xy: 1361, 1995
+  xy: 1361, 1994
   size: 28, 54
   orig: 28, 54
   offset: 0, 0
   index: -1
 tettinger/tettinger-hand
   rotate: true
-  xy: 2021, 2011
+  xy: 2021, 2010
   size: 35, 24
   orig: 35, 24
   offset: 0, 0
   index: -1
 tettinger/tettinger-head
   rotate: true
-  xy: 615, 1794
+  xy: 882, 1795
   size: 67, 76
   orig: 67, 76
   offset: 0, 0
   index: -1
 tettinger/tettinger-leg
   rotate: true
-  xy: 383, 1926
+  xy: 656, 1923
   size: 39, 80
   orig: 39, 80
   offset: 0, 0
   index: -1
 tettinger/tettinger-net
   rotate: true
-  xy: 415, 1868
+  xy: 713, 1864
   size: 52, 253
   orig: 52, 253
   offset: 0, 0
   index: -1
 tettinger/tettinger-yarn
   rotate: false
-  xy: 800, 1547
+  xy: 1871, 1486
   size: 156, 156
   orig: 156, 156
   offset: 0, 0
   index: -1
 tom-ski/tom-arm
   rotate: false
-  xy: 1667, 2024
+  xy: 1667, 2023
   size: 52, 22
   orig: 52, 22
   offset: 0, 0
   index: -1
 tom-ski/tom-body
   rotate: true
-  xy: 1464, 1846
+  xy: 1762, 1843
   size: 60, 133
   orig: 60, 133
   offset: 0, 0
   index: -1
 tom-ski/tom-foot
   rotate: false
-  xy: 1272, 1913
+  xy: 1379, 1911
   size: 170, 42
   orig: 170, 42
   offset: 0, 0
   index: -1
 tom-ski/tom-forearm
   rotate: false
-  xy: 591, 2029
+  xy: 591, 2028
   size: 54, 17
   orig: 54, 17
   offset: 0, 0
   index: -1
 tom-ski/tom-foreleg
   rotate: true
-  xy: 647, 2029
+  xy: 647, 2028
   size: 17, 52
   orig: 17, 52
   offset: 0, 0
   index: -1
 tom-ski/tom-hand
   rotate: true
-  xy: 812, 1919
+  xy: 799, 1918
   size: 40, 231
   orig: 40, 231
   offset: 0, 0
   index: -1
 tom-ski/tom-head
   rotate: true
-  xy: 1841, 1903
+  xy: 196, 1883
   size: 46, 64
   orig: 46, 64
   offset: 0, 0
   index: -1
 tom-ski/tom-leg
   rotate: true
-  xy: 701, 2029
+  xy: 701, 2028
   size: 17, 60
   orig: 17, 60
   offset: 0, 0
   index: -1
 tom-ski/tomski-bolt
   rotate: false
-  xy: 1582, 1908
+  xy: 1916, 1904
   size: 117, 44
   orig: 119, 46
   offset: 1, 0
   index: -1
 tom-ski/tomski-lightning
   rotate: true
-  xy: 1649, 1485
+  xy: 452, 1444
   size: 154, 356
   orig: 154, 356
   offset: 0, 0

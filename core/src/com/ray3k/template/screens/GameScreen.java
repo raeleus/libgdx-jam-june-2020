@@ -9,9 +9,12 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.ray3k.template.*;
+import com.ray3k.template.OgmoReader.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.screens.DialogPause.*;
 import space.earlygrey.shapedrawer.ShapeDrawer;
@@ -26,6 +29,7 @@ public class GameScreen extends JamScreen {
     public ShapeDrawer shapeDrawer;
     public EntityController entityController;
     public boolean paused;
+    public static CameraEntity cameraEntity;
     
     public GameScreen() {
         gameScreen = this;
@@ -67,12 +71,54 @@ public class GameScreen extends JamScreen {
         
         camera = new OrthographicCamera();
         viewport = new FitViewport(1024, 576, camera);
-        
+    
         entityController = new EntityController();
-        var player = new PerformerEntity(player1Skin);
-        entityController.add(player);
         
-        camera.position.y = 200;
+        cameraEntity = new CameraEntity();
+        entityController.add(cameraEntity);
+        
+        var ogmoReader = new OgmoReader();
+        ogmoReader.addListener(new OgmoAdapter() {
+            @Override
+            public void level(String ogmoVersion, int width, int height, int offsetX, int offsetY,
+                              ObjectMap<String, OgmoValue> valuesMap) {
+                
+            }
+    
+            @Override
+            public void layer(String name, int gridCellWidth, int gridCellHeight, int offsetX, int offsetY) {
+            
+            }
+    
+            @Override
+            public void entity(String name, int id, int x, int y, int width, int height, boolean flippedX,
+                               boolean flippedY, int originX, int originY, int rotation, Array<EntityNode> nodes,
+                               ObjectMap<String, OgmoValue> valuesMap) {
+                if (valuesMap.get("index").asInt() == 1) {
+                    var player = new PerformerEntity(player1Skin);
+                    player.setPosition(x, y);
+                    entityController.add(player);
+                }
+            }
+    
+            @Override
+            public void grid(int col, int row, int x, int y, int id) {
+            
+            }
+    
+            @Override
+            public void decal(int x, int y, float scaleX, float scaleY, int rotation, String texture, String folder) {
+                DecalEntity decalEntity = new DecalEntity(x, y, folder + "/" + Utils.fileName(texture));
+                entityController.add(decalEntity);
+            }
+    
+            @Override
+            public void layerComplete() {
+            
+            }
+        });
+        
+        ogmoReader.readFile(Gdx.files.internal("levels/stage1.json"));
     }
     
     @Override

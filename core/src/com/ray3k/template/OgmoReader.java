@@ -81,7 +81,7 @@ public class OgmoReader {
                     int row = 0;
                     for (JsonValue grid : child.get("grid").iterator()) {
                         for (OgmoListener ogmoListener : layerListeners) {
-                            ogmoListener.grid(column, row, column * cellWidth, levelHeight - row * cellHeight, grid.asInt());
+                            ogmoListener.grid(column, row, column * cellWidth, levelHeight - (row + 1) * cellHeight, cellWidth, cellHeight, grid.asInt());
                         }
                         
                         column++;
@@ -99,7 +99,7 @@ public class OgmoReader {
                         int column = 0;
                         for (JsonValue grid : gridY.iterator()) {
                             for (OgmoListener ogmoListener : layerListeners) {
-                                ogmoListener.grid(column, row, column * cellWidth, levelHeight - row * cellHeight, grid.asInt());
+                                ogmoListener.grid(column, row, column * cellWidth, levelHeight - (row + 1) * cellHeight, cellWidth, cellHeight, grid.asInt());
                             }
     
                             column++;
@@ -261,19 +261,19 @@ public class OgmoReader {
          * @param y The y coordinate of the grid, adjusted to y-up coordinates.
          * @param id The unique ID of the grid numbered from 0.
          */
-        void grid(int col, int row, int x, int y, int id);
+        void grid(int col, int row, int x, int y, int width, int height, int id);
     
         /**
          * Called for every decal image placed in a decal layer.
-         * @param x The x coordinate of the decal.
-         * @param y The y coordinate of the decal, adjusted to y-up coordinates.
+         * @param centerX The x coordinate of the decal.
+         * @param centerY The y coordinate of the decal, adjusted to y-up coordinates.
          * @param scaleX The horizontal scale multiplier. 1.0f is the original scale of the image.
          * @param scaleY The vertical scale multiplier. 1.0f is the original scale of the image.
          * @param rotation The rotation of the decal in degrees wound CCW.
          * @param texture The name of the texture linked by the decal.
          * @param folder The name of the folder that the decal layer is linked to.
          */
-        void decal(int x, int y, float scaleX, float scaleY, int rotation, String texture, String folder);
+        void decal(int centerX, int centerY, float scaleX, float scaleY, int rotation, String texture, String folder);
     
         /**
          * Called for every tile placed in a tile layer when the layer uses id's.
@@ -366,15 +366,15 @@ public class OgmoReader {
          * @param id  The unique ID of the grid numbered from 0.
          */
         @Override
-        public void grid(int col, int row, int x, int y, int id) {
+        public void grid(int col, int row, int x, int y, int width, int height, int id) {
         
         }
     
         /**
          * Called for every decal image placed in a decal layer.
          *
-         * @param x        The x coordinate of the decal.
-         * @param y        The y coordinate of the decal, adjusted to y-up coordinates.
+         * @param centerX        The x coordinate of the decal.
+         * @param centerY        The y coordinate of the decal, adjusted to y-up coordinates.
          * @param scaleX   The horizontal scale multiplier. 1.0f is the original scale of the image.
          * @param scaleY   The vertical scale multiplier. 1.0f is the original scale of the image.
          * @param rotation The rotation of the decal in degrees wound CCW.
@@ -382,7 +382,7 @@ public class OgmoReader {
          * @param folder   The name of the folder that the decal layer is linked to.
          */
         @Override
-        public void decal(int x, int y, float scaleX, float scaleY, int rotation, String texture, String folder) {
+        public void decal(int centerX, int centerY, float scaleX, float scaleY, int rotation, String texture, String folder) {
         
         }
     

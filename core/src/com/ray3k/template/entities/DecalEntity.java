@@ -1,24 +1,16 @@
 package com.ray3k.template.entities;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
-import com.badlogic.gdx.utils.Array;
-import com.dongbat.jbump.Collision;
-import com.dongbat.jbump.Collisions;
-import com.dongbat.jbump.Item;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasSprite;
 import com.ray3k.template.*;
 
-public class DecalEntity extends Entity implements Bumpable {
-    AtlasRegion region;
-    public float width;
-    public float height;
-    public Item<Entity> item;
+public class DecalEntity extends Entity {
+    public AtlasSprite sprite;
+    
     public DecalEntity(int x, int y, String region) {
         setPosition(x, y);
         TextureAtlas atlas = Core.assetManager.get("textures/textures.atlas");
-        this.region = atlas.findRegion(region);
-        width = 100;
-        height = 100;
+        sprite = new AtlasSprite(atlas.findRegion(region));
     }
     
     @Override
@@ -38,51 +30,12 @@ public class DecalEntity extends Entity implements Bumpable {
     
     @Override
     public void draw(float delta) {
-        Core.batch.draw(region, x, y);
+        sprite.setPosition(x - sprite.getWidth() / 2, y - sprite.getHeight() / 2);
+        sprite.draw(Core.batch);
     }
     
     @Override
     public void destroy() {
-    
-    }
-    
-    @Override
-    public float getBumpX() {
-        return x;
-    }
-    
-    @Override
-    public float getBumpY() {
-        return y;
-    }
-    
-    @Override
-    public float getBumpWidth() {
-        return width;
-    }
-    
-    @Override
-    public float getBumpHeight() {
-        return height;
-    }
-    
-    @Override
-    public Item<Entity> getItem() {
-        return item;
-    }
-    
-    @Override
-    public void setItem(Item<Entity> item) {
-        this.item = item;
-    }
-    
-    @Override
-    public void updateEntityPosition(float x, float y) {
-    
-    }
-    
-    @Override
-    public void collisions(Array<Entity> touched, Array<Collision> collisions) {
     
     }
 }

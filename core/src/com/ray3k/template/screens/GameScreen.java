@@ -109,13 +109,25 @@ public class GameScreen extends JamScreen {
             }
     
             @Override
-            public void grid(int col, int row, int x, int y, int id) {
-            
+            public void grid(int col, int row, int x, int y, int width, int height, int id) {
+                if (id == 1) {
+                    var wall = new WallEntity();
+                    wall.setPosition(x, y);
+                    wall.width = width;
+                    wall.height = height;
+                    entityController.add(wall);
+                } else if (id == 2) {
+                    var platform = new PlatformEntity();
+                    platform.setPosition(x, y);
+                    platform.width = width;
+                    platform.height = height;
+                    entityController.add(platform);
+                }
             }
     
             @Override
-            public void decal(int x, int y, float scaleX, float scaleY, int rotation, String texture, String folder) {
-                DecalEntity decalEntity = new DecalEntity(x, y, folder + "/" + Utils.fileName(texture));
+            public void decal(int centerX, int centerY, float scaleX, float scaleY, int rotation, String texture, String folder) {
+                var decalEntity = new DecalEntity(centerX, centerY, folder + "/" + Utils.fileName(texture));
                 entityController.add(decalEntity);
             }
     
@@ -149,6 +161,9 @@ public class GameScreen extends JamScreen {
         viewport.apply();
         batch.setProjectionMatrix(camera.combined);
         entityController.draw(paused ? 0 : delta);
+        
+        shapeDrawer.setColor(Color.BLUE);
+        shapeDrawer.rectangle(0, 0, 100, 100);
         batch.end();
         
         vfxManager.endCapture();

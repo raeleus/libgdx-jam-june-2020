@@ -39,10 +39,8 @@ public class MoveAttackAirTemplate implements Move {
         }
     
         performer.deltaY -= gravity * delta;
-        if (performer.y < 0) {
-            performer.y = 0;
+        if (performer.onGround) {
             performer.mode = STANDING;
-            performer.deltaY = 0;
         }
     }
     

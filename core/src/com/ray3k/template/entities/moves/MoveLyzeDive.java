@@ -17,7 +17,7 @@ public class MoveLyzeDive extends MoveSpecialTemplate {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        if (performer.y < 0) {
+        if (performer.onGround) {
             performer.mode = STANDING;
         }
         

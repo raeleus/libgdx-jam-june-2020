@@ -36,7 +36,6 @@ public class MoveSpecialTemplate implements Move {
     
         if (!MathUtils.isZero(vSpeed)) {
             performer.deltaY = vSpeed;
-            if (performer.y <= 0) performer.y = 1;
             performer.mode = JUMP_ATTACKING;
         }
         
@@ -46,11 +45,9 @@ public class MoveSpecialTemplate implements Move {
     @Override
     public void update(PerformerEntity performer, float delta) {
         performer.deltaY -= gravity * delta;
-        if (performer.y <= 0) {
+        if (performer.onGround) {
             performer.deltaX = Utils.approach(performer.deltaX, 0, groundFriction * delta);
-            performer.y = 0;
             if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
-            performer.deltaY = 0;
         } else {
             performer.deltaX = Utils.approach(performer.deltaX, 0, airFriction * delta);
         }

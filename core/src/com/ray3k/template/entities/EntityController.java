@@ -63,7 +63,7 @@ public class EntityController {
                 entity.animationState.apply(entity.skeleton);
                 entity.skeletonBounds.update(entity.skeleton, true);
             }
-            
+    
             //update collisions
             if (entity instanceof Bumpable) {
                 var bump = (Bumpable) entity;
@@ -71,14 +71,27 @@ public class EntityController {
                 var rect = world.getRect(bump.getItem());
                 bump.updateEntityPosition(rect.x, rect.y);
                 var projectedCollisions = result.projectedCollisions;
-                var  touched = new Array<Item<Entity>>();
+                var  touched = new Array<Entity>();
+                var collisions = new Array<Collision>();
                 for (int i = 0; i < projectedCollisions.size(); i++) {
                     Collision col = projectedCollisions.get(i);
-                    touched.add(col.other);
+                    touched.add((Entity) col.other.userData);
+                    collisions.add(col);
+                    if (col.normal.x < 0 && entity.deltaX < 0) entity.deltaX = 0;
+                    if (col.normal.x > 0 && entity.deltaX > 0) entity.deltaX = 0;
+                    if (col.normal.y < 0 && entity.deltaY < 0) entity.deltaY = 0;
+                    if (col.normal.y > 0 && entity.deltaY > 0) entity.deltaY = 0;
                 }
+                bump.collisions(touched, collisions);
             }
             
             entity.act(delta);
+    
+            //snap world items to real entity positions.
+            if (entity instanceof Bumpable) {
+                var bump = (Bumpable) entity;
+                world.update(bump.getItem(), bump.getBumpX(), bump.getBumpY());
+            }
         }
     
         //call destroy methods and remove the entities

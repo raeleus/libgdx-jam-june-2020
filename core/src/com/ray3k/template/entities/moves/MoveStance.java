@@ -26,9 +26,6 @@ public class MoveStance implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, 0, FRICTION * delta);
         performer.deltaY -= GRAVITY * delta;
-        if (performer.y < 0) {
-            performer.y = 0;
-        }
     }
     
     @Override

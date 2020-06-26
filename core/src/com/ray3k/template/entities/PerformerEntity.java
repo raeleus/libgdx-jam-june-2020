@@ -2,6 +2,8 @@ package com.ray3k.template.entities;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Array;
+import com.dongbat.jbump.Collision;
 import com.dongbat.jbump.Item;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
@@ -10,7 +12,6 @@ import com.ray3k.template.*;
 import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
-import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 import static com.ray3k.template.screens.GameScreen.*;
@@ -22,6 +23,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     public Move currentMove;
     public Mode mode;
     public boolean touchedGround;
+    public boolean onGround;
     public boolean fireProjectileEvent;
     public float projectileX;
     public float projectileY;
@@ -204,5 +206,12 @@ public class PerformerEntity extends Entity implements Bumpable {
     @Override
     public void updateEntityPosition(float x, float y) {
         setPosition(x + 50, y);
+    }
+    
+    @Override
+    public void collisions(Array<Entity> touched, Array<Collision> collisions) {
+        for (int i = 0; i < touched.size; i++) {
+            if (collisions.get(i).normal.y < 0) onGround = true;
+        }
     }
 }

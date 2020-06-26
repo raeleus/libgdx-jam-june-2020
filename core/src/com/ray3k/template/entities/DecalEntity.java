@@ -2,6 +2,9 @@ package com.ray3k.template.entities;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+import com.badlogic.gdx.utils.Array;
+import com.dongbat.jbump.Collision;
+import com.dongbat.jbump.Collisions;
 import com.dongbat.jbump.Item;
 import com.ray3k.template.*;
 
@@ -75,6 +78,11 @@ public class DecalEntity extends Entity implements Bumpable {
     
     @Override
     public void updateEntityPosition(float x, float y) {
+    
+    }
+    
+    @Override
+    public void collisions(Array<Entity> touched, Array<Collision> collisions) {
     
     }
 }

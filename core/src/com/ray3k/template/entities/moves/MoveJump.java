@@ -30,9 +30,9 @@ public class MoveJump implements Move {
         }
         
         performer.deltaY = JUMP_SPEED;
-        if (performer.y < 0) performer.y = 0;
         jumps = 1;
         extraJumpTime = EXTRA_JUMP_DELAY;
+        performer.onGround = false;
     }
     
     @Override
@@ -53,10 +53,8 @@ public class MoveJump implements Move {
         else if (performer.steering.right) performer.deltaX = Utils.approach(performer.deltaX, H_SPEED, H_ACCELERATION * delta);
         
         performer.deltaY -= GRAVITY * delta;
-        if (performer.y < 0) {
-            performer.y = 0;
+        if (performer.onGround) {
             performer.mode = STANDING;
-            performer.deltaY = 0;
         }
     }
     

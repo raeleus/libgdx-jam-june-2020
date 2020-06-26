@@ -27,9 +27,6 @@ public class MoveGoLeft implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, -MOVE_SPEED, ACCELERATION * delta);
         performer.deltaY -= GRAVITY * delta;
-        if (performer.y < 0) {
-            performer.y = 0;
-        }
     }
     
     @Override

@@ -1,6 +1,7 @@
 package com.ray3k.template.entities;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.dongbat.jbump.Collision;
@@ -151,7 +152,7 @@ public class PerformerEntity extends Entity implements Bumpable {
         moveEvent = false;
         animationCompleteEvent = false;
     
-        cameraEntity.setPosition(x, y);
+        cameraEntity.setPosition(x + deltaX * delta, y + deltaY * delta);
     }
     
     @Override
@@ -211,7 +212,10 @@ public class PerformerEntity extends Entity implements Bumpable {
     @Override
     public void collisions(Array<Entity> touched, Array<Collision> collisions) {
         for (int i = 0; i < touched.size; i++) {
-            if (collisions.get(i).normal.y < 0) onGround = true;
+            if (!MathUtils.isZero(collisions.get(i).normal.y) && collisions.get(i).move.y < 0) {
+                onGround = true;
+                gravityY = 0;
+            }
         }
     }
 }

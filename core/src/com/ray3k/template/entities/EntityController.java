@@ -1,15 +1,16 @@
 package com.ray3k.template.entities;
 
-import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
-import com.dongbat.jbump.*;
-import com.dongbat.jbump.Response.Result;
+import com.dongbat.jbump.Collision;
+import com.dongbat.jbump.CollisionFilter;
+import com.dongbat.jbump.Item;
+import com.dongbat.jbump.World;
 
 import java.util.Comparator;
 
 import static com.ray3k.template.Core.*;
-import static com.ray3k.template.JamGame.batch;
-import static com.ray3k.template.screens.GameScreen.*;
+import static com.ray3k.template.JamGame.*;
 
 public class EntityController {
     public Array<Entity> entities;
@@ -77,21 +78,13 @@ public class EntityController {
                     Collision col = projectedCollisions.get(i);
                     touched.add((Entity) col.other.userData);
                     collisions.add(col);
-                    if (col.normal.x < 0 && entity.deltaX < 0) entity.deltaX = 0;
-                    if (col.normal.x > 0 && entity.deltaX > 0) entity.deltaX = 0;
-                    if (col.normal.y < 0 && entity.deltaY < 0) entity.deltaY = 0;
-                    if (col.normal.y > 0 && entity.deltaY > 0) entity.deltaY = 0;
+                    if (!MathUtils.isZero(col.normal.x)) entity.deltaX = 0;
+                    if (!MathUtils.isZero(col.normal.y)) entity.deltaY = 0;
                 }
                 bump.collisions(touched, collisions);
             }
             
             entity.act(delta);
-    
-            //snap world items to real entity positions.
-            if (entity instanceof Bumpable) {
-                var bump = (Bumpable) entity;
-                world.update(bump.getItem(), bump.getBumpX(), bump.getBumpY());
-            }
         }
     
         //call destroy methods and remove the entities

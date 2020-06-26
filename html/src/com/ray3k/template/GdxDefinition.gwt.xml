@@ -7,6 +7,7 @@
 	<inherits name="space.earlygrey.shapedrawer"/>
 	<inherits name="com.rafaskoberg.gdx.typinglabel.typinglabel" />
 	<inherits name="regexodus"/>
+	<inherits name="com.ray3k.stripe" />
 	<inherits name="com.esotericsoftware.spine"/>
 	<inherits name='com.crashinvaders.vfx.GdxVfxCore' />
 	<inherits name='com.crashinvaders.vfx.GdxVfxGwt' />
@@ -18,4 +19,5 @@
 	<set-configuration-property name="gdx.assetpath" value="../core/assets" />
 	<set-property name="user.agent" value="gecko1_8, safari"/>
 	<collapse-property name="user.agent" values="*" />
+	<set-property name="compiler.useSourceMaps" value="true"/>
 </module>

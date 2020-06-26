@@ -27,7 +27,7 @@ public class MoveGoRight implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, MOVE_SPEED, ACCELERATION * delta);
     
-        performer.deltaY -= GRAVITY * delta;
+        performer.gravityY = -GRAVITY;
     }
     
     @Override

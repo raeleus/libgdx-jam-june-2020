@@ -26,7 +26,7 @@ public class MoveAttackTemplate implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, 0, friction * delta);
         if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
-        performer.deltaY -= GRAVITY * delta;
+        performer.gravityY = -GRAVITY;
     }
     
     @Override

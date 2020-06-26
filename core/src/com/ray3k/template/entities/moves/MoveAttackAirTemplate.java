@@ -37,8 +37,8 @@ public class MoveAttackAirTemplate implements Move {
                 performer.currentMove.continueExecution(performer);
             }
         }
-    
-        performer.deltaY -= gravity * delta;
+        
+        performer.gravityY = -gravity;
         if (performer.onGround) {
             performer.mode = STANDING;
         }

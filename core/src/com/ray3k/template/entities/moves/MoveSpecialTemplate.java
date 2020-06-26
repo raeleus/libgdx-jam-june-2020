@@ -44,7 +44,7 @@ public class MoveSpecialTemplate implements Move {
     
     @Override
     public void update(PerformerEntity performer, float delta) {
-        performer.deltaY -= gravity * delta;
+        performer.gravityY = -gravity;
         if (performer.onGround) {
             performer.deltaX = Utils.approach(performer.deltaX, 0, groundFriction * delta);
             if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;

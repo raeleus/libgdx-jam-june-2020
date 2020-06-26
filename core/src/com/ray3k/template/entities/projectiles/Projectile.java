@@ -46,7 +46,7 @@ public class Projectile extends Entity {
         
         deltaX += accelerationH * delta;
         
-        deltaY -= gravity * delta;
+        gravityY = -gravity;
         if (landOnGround || bounce) {
             if (y < 0) {
                 y = 0;

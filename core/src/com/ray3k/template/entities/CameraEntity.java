@@ -2,7 +2,6 @@ package com.ray3k.template.entities;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Array;
-import com.ray3k.template.*;
 
 import static com.ray3k.template.screens.GameScreen.*;
 

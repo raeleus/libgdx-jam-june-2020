@@ -157,11 +157,11 @@ public class PerformerEntity extends Entity implements Bumpable {
     
     @Override
     public void draw(float delta) {
-        var g = gameScreen.shapeDrawer;
-        g.setColor(DEBUG_COLOR);
-        var rect = gameScreen.entityController.world.getRect(item);
-        g.setDefaultLineWidth(5f);
-        g.rectangle(rect.x, rect.y, rect.w, rect.h);
+//        var g = gameScreen.shapeDrawer;
+//        g.setColor(DEBUG_COLOR);
+//        var rect = gameScreen.entityController.world.getRect(item);
+//        g.setDefaultLineWidth(5f);
+//        g.rectangle(rect.x, rect.y, rect.w, rect.h);
     }
     
     @Override

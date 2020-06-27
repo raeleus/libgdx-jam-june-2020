@@ -74,8 +74,8 @@ public class PlatformEntity extends Entity implements Bumpable {
     
     @Override
     public void draw(float delta) {
-        gameScreen.shapeDrawer.setColor(Color.PURPLE);
-        gameScreen.shapeDrawer.rectangle(getBumpX(), getBumpY(), getBumpWidth(), getBumpHeight());
+//        gameScreen.shapeDrawer.setColor(Color.PURPLE);
+//        gameScreen.shapeDrawer.rectangle(getBumpX(), getBumpY(), getBumpWidth(), getBumpHeight());
     }
     
     @Override

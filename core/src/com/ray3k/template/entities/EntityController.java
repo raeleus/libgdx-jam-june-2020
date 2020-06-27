@@ -87,7 +87,6 @@ public class EntityController {
                         if (col.overlaps) noCollisions.add(otherEntity);
                         else if (!MathUtils.isZero(col.normal.x)) noCollisions.add(otherEntity);
                         else if (!MathUtils.isZero(col.normal.y) && col.move.y > 0) noCollisions.add(otherEntity);
-                        else System.out.println(col.touch.y + " " + col.itemRect.y);
                     }
                 }
     

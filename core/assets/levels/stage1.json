@@ -57,7 +57,13 @@
         {"x": 50, "y": 1850, "texture": "platform-red.png"},
         {"x": 50, "y": 1750, "texture": "platform-red.png"},
         {"x": 50, "y": 1650, "texture": "platform-red.png"},
-        {"x": 50, "y": 1550, "texture": "platform-red.png"}
+        {"x": 50, "y": 1550, "texture": "platform-red.png"},
+        {"x": 1750, "y": 1050, "texture": "platform-brown.png"},
+        {"x": 1850, "y": 1050, "texture": "platform-brown.png"},
+        {"x": 1950, "y": 1050, "texture": "platform-brown.png"},
+        {"x": 250, "y": 1050, "texture": "platform-brown.png"},
+        {"x": 150, "y": 1050, "texture": "platform-brown.png"},
+        {"x": 50, "y": 1050, "texture": "platform-brown.png"}
       ],
       "folder": "level"
     },
@@ -127,14 +133,14 @@
           "name": "wall",
           "id": 0,
           "_eid": "22165194",
-          "x": 300,
+          "x": 0,
           "y": 1100,
           "originX": 0,
           "originY": 0,
           "nodes": [
-            {"x": 300, "y": 1000},
-            {"x": 1700, "y": 1000},
-            {"x": 1700, "y": 1100}
+            {"x": 0, "y": 1000},
+            {"x": 2000, "y": 1000},
+            {"x": 2000, "y": 1100}
           ]
         },
         {

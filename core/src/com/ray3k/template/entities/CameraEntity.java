@@ -1,14 +1,19 @@
 package com.ray3k.template.entities;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
+import com.ray3k.template.*;
 
 import static com.ray3k.template.screens.GameScreen.*;
 
 public class CameraEntity extends Entity {
     public static final float PADDING = 200;
     public static final float PLAYER_HEIGHT = 300;
+    public static final float WINDOW_MIN_X = -1000;
+    public static final float WINDOW_MAX_X = 3000;
+    public static final float WINDOW_MIN_Y = 0;
+    public static final float WINDOW_MAX_Y = 2000;
+    
     @Override
     public void create() {
     
@@ -44,6 +49,7 @@ public class CameraEntity extends Entity {
     
         for (int i = 0; i < points.size; i++) {
             point = points.get(i);
+            
             if (point.x < lowX) lowX = point.x;
             if (point.x > highX) highX = point.x;
         
@@ -59,7 +65,15 @@ public class CameraEntity extends Entity {
         
         var zoomX = width / Gdx.graphics.getWidth();
         var zoomY = height / Gdx.graphics.getHeight();
-        gameScreen.camera.zoom = Math.max(zoomX, zoomY);
+        var maxZoomX = (WINDOW_MAX_X - WINDOW_MIN_X) / Gdx.graphics.getWidth();
+        var maxZoomY = (WINDOW_MAX_Y - WINDOW_MIN_Y) / Gdx.graphics.getHeight();
+        
+        gameScreen.camera.zoom = Math.min(Math.min(maxZoomX, maxZoomY), Math.max(zoomX, zoomY));
+        if (x - Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2 < WINDOW_MIN_X) x = WINDOW_MIN_X + Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2;
+        if (x + Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2 > WINDOW_MAX_X) x = WINDOW_MAX_X - Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2;
+    
+        if (y - Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2 < WINDOW_MIN_Y) y = WINDOW_MIN_Y + Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2;
+        if (y + Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2 > WINDOW_MAX_Y) y = WINDOW_MAX_Y - Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2;
         gameScreen.camera.position.set(x, y, 0);
     }
     

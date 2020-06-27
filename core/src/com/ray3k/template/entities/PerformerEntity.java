@@ -183,8 +183,9 @@ public class PerformerEntity extends Entity implements Bumpable {
             lives--;
             if (lives < 0) destroy = true;
             else {
-                setPosition(1000, 3000);
+                setPosition(1000, 3500);
                 teleporting = true;
+                deltaX = 0;
                 deltaY = 0;
             }
         }

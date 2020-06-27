@@ -2,6 +2,7 @@ package com.ray3k.template.entities;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import static com.ray3k.template.screens.GameScreen.*;
 
@@ -11,7 +12,7 @@ public class CameraEntity extends Entity {
     public static final float WINDOW_MIN_X = -1000;
     public static final float WINDOW_MAX_X = 3000;
     public static final float WINDOW_MIN_Y = 0;
-    public static final float WINDOW_MAX_Y = 2000;
+    public static final float WINDOW_MAX_Y = 3000;
     
     @Override
     public void create() {
@@ -62,17 +63,17 @@ public class CameraEntity extends Entity {
         var midPointY = height / 2 + lowY - PADDING;
         setPosition(midPointX, midPointY);
         
-        var zoomX = width / Gdx.graphics.getWidth();
-        var zoomY = height / Gdx.graphics.getHeight();
-        var maxZoomX = (WINDOW_MAX_X - WINDOW_MIN_X) / Gdx.graphics.getWidth();
-        var maxZoomY = (WINDOW_MAX_Y - WINDOW_MIN_Y) / Gdx.graphics.getHeight();
-        
+        var zoomX = width / gameScreen.viewport.getWorldWidth();
+        var zoomY = height / gameScreen.viewport.getWorldHeight();
+        var maxZoomX = (WINDOW_MAX_X - WINDOW_MIN_X) / gameScreen.viewport.getWorldWidth();
+        var maxZoomY = (WINDOW_MAX_Y - WINDOW_MIN_Y) / gameScreen.viewport.getWorldHeight();
+
         gameScreen.camera.zoom = Math.min(Math.min(maxZoomX, maxZoomY), Math.max(zoomX, zoomY));
-        if (x - Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2 < WINDOW_MIN_X) x = WINDOW_MIN_X + Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2;
-        if (x + Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2 > WINDOW_MAX_X) x = WINDOW_MAX_X - Gdx.graphics.getWidth() * gameScreen.camera.zoom / 2;
-    
-        if (y - Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2 < WINDOW_MIN_Y) y = WINDOW_MIN_Y + Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2;
-        if (y + Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2 > WINDOW_MAX_Y) y = WINDOW_MAX_Y - Gdx.graphics.getHeight() * gameScreen.camera.zoom / 2;
+        if (x - gameScreen.viewport.getWorldWidth() * gameScreen.camera.zoom / 2 < WINDOW_MIN_X) x = WINDOW_MIN_X + gameScreen.viewport.getWorldWidth() * gameScreen.camera.zoom / 2;
+        if (x + gameScreen.viewport.getWorldWidth() * gameScreen.camera.zoom / 2 > WINDOW_MAX_X) x = WINDOW_MAX_X - gameScreen.viewport.getWorldWidth() * gameScreen.camera.zoom / 2;
+
+        if (y - gameScreen.viewport.getWorldHeight() * gameScreen.camera.zoom / 2 < WINDOW_MIN_Y) y = WINDOW_MIN_Y + gameScreen.viewport.getWorldHeight() * gameScreen.camera.zoom / 2;
+        if (y + gameScreen.viewport.getWorldHeight() * gameScreen.camera.zoom / 2 > WINDOW_MAX_Y) y = WINDOW_MAX_Y - gameScreen.viewport.getWorldHeight() * gameScreen.camera.zoom / 2;
         gameScreen.camera.position.set(x, y, 0);
     }
     

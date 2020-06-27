@@ -14,6 +14,7 @@ public class WallEntity extends Entity implements Bumpable {
     
     public WallEntity() {
         item = new Item<>();
+        item.userData = this;
     }
     
     @Override

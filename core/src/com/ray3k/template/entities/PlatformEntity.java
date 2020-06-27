@@ -14,6 +14,7 @@ public class PlatformEntity extends Entity implements Bumpable {
     
     public PlatformEntity() {
         item = new Item<>();
+        item.userData = this;
     }
     
     @Override

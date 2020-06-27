@@ -1,11 +1,10 @@
 package com.ray3k.template.entities;
 
+import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
-import com.dongbat.jbump.Collision;
-import com.dongbat.jbump.CollisionFilter;
-import com.dongbat.jbump.Item;
-import com.dongbat.jbump.World;
+import com.dongbat.jbump.*;
 
 import java.util.Comparator;
 
@@ -68,7 +67,24 @@ public class EntityController {
             //update collisions
             if (entity instanceof Bumpable) {
                 var bump = (Bumpable) entity;
-                var result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), CollisionFilter.defaultFilter);
+                var result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
+                    @Override
+                    public Response filter(Item item, Item other) {
+                        var entity = (Entity) item.userData;
+                        var otherEntity = (Entity) other.userData;
+                        
+                        if (otherEntity instanceof PlatformEntity) {
+                            var rect = world.getRect(item);
+                            var rectangle = new Rectangle(rect.x, rect.y, rect.w, rect.h);
+                            var otherRect = world.getRect(other);
+                            var otherRectangle = new Rectangle(otherRect.x, otherRect.y, otherRect.w, otherRect.h);
+                            if (Intersector.overlaps(rectangle, otherRectangle)) return null;
+    
+                            if (entity.deltaY > 0) return null;
+                        }
+                        return Response.slide;
+                    }
+                });
                 var rect = world.getRect(bump.getItem());
                 bump.updateEntityPosition(rect.x, rect.y);
                 var projectedCollisions = result.projectedCollisions;

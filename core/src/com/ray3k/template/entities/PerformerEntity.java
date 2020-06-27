@@ -44,6 +44,7 @@ public class PerformerEntity extends Entity implements Bumpable {
         width = 100;
         height = 300;
         item = new Item<>();
+        item.userData = this;
     }
     
     @Override

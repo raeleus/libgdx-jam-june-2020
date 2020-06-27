@@ -40,6 +40,9 @@ public class PerformerEntity extends Entity implements Bumpable {
     public Slot hurtBoxSlot;
     public float health;
     public int lives;
+    public boolean onPlatform;
+    public float platformTimer;
+    public static final float PLATFORM_DELAY = .25f;
     public enum Mode {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
@@ -265,6 +268,9 @@ public class PerformerEntity extends Entity implements Bumpable {
             if (!MathUtils.isZero(collisions.get(i).normal.y) && collisions.get(i).move.y < 0) {
                 onGround = true;
                 gravityY = 0;
+                
+                if (!onPlatform) platformTimer = PLATFORM_DELAY;
+                onPlatform = touched.get(i) instanceof PlatformEntity;
             }
         }
     }

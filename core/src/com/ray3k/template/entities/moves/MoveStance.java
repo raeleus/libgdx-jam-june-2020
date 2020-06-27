@@ -26,6 +26,13 @@ public class MoveStance implements Move {
     public void update(PerformerEntity performer, float delta) {
         performer.deltaX = Utils.approach(performer.deltaX, 0, FRICTION * delta);
         performer.gravityY = -GRAVITY;
+    
+        if (performer.steering.down && performer.onPlatform) {
+            performer.platformTimer -= delta;
+            if (performer.platformTimer < 0) performer.setTeleporting(true);
+        } else {
+            performer.platformTimer = PerformerEntity.PLATFORM_DELAY;
+        }
     }
     
     @Override

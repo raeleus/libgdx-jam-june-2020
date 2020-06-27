@@ -17,6 +17,9 @@ public class MoveSpecialTemplate implements Move {
     public float vSpeed;
     public int projectileCountMax;
     public int projectileCount;
+    public float damage = 10f;
+    public float force = 2000f;
+    public float forceAngle = 30f;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -40,6 +43,10 @@ public class MoveSpecialTemplate implements Move {
         }
         
         performer.touchedGround = false;
+    
+        performer.damage = damage;
+        performer.force = force;
+        performer.forceAngle = forceAngle;
     }
     
     @Override

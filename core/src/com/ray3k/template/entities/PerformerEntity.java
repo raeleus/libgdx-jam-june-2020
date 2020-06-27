@@ -43,11 +43,16 @@ public class PerformerEntity extends Entity implements Bumpable {
     public boolean onPlatform;
     public float platformTimer;
     public static final float PLATFORM_DELAY = .25f;
+    public float damage;
+    public float force;
+    public float forceAngle;
     public enum Mode {
-        MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
+        MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING, HURTING;
     }
     public static final Vector2 temp = new Vector2();
     private boolean teleporting;
+    public float hurtableTimer;
+    public static final float HURTABLE_DELAY = .2f;
     
     public PerformerEntity(SkinName skinName, Steering steering, int lives) {
         this.skinName = skinName;
@@ -71,10 +76,11 @@ public class PerformerEntity extends Entity implements Bumpable {
         currentMove.execute(this);
         touchedGround = true;
         hitbox = new HitboxEntity();
+        hitbox.parent = this;
         gameScreen.entityController.add(hitbox);
         hurtbox = new HurtboxEntity();
+        hurtbox.parent = this;
         gameScreen.entityController.add(hurtbox);
-        hitBoxWorld.add(new Item<>(hurtbox), 0, 0, 0, 0);
         
         animationState.addListener(new AnimationStateAdapter() {
             @Override
@@ -109,6 +115,13 @@ public class PerformerEntity extends Entity implements Bumpable {
     @Override
     public void act(float delta) {
         steering.update(delta);
+    
+        if (hurtableTimer > 0) {
+            hurtableTimer -= delta;
+            if (hurtableTimer <= 0) {
+                mode = STANDING;
+            }
+        }
         
         Move newMove = null;
         Mode newMode = null;
@@ -175,6 +188,10 @@ public class PerformerEntity extends Entity implements Bumpable {
         hitbox.active = hitBoxSlot.getAttachment() != null;
         if (hitbox.active) {
             hitbox.rectangle.set(Utils.verticesToAABB(skeletonBounds.getPolygon((BoundingBoxAttachment) hitBoxSlot.getAttachment())));
+            hitbox.damage = damage;
+            hitbox.force = force;
+            if (facingRight()) hitbox.forceAngle = forceAngle;
+            else hitbox.forceAngle = 180 - forceAngle;
         }
     
         hurtbox.active = hurtBoxSlot.getAttachment() != null;
@@ -190,6 +207,7 @@ public class PerformerEntity extends Entity implements Bumpable {
                 teleporting = true;
                 deltaX = 0;
                 deltaY = 0;
+                health = 0;
             }
         }
     }
@@ -283,5 +301,15 @@ public class PerformerEntity extends Entity implements Bumpable {
     @Override
     public void setTeleporting(boolean teleporting) {
         this.teleporting = teleporting;
+    }
+    
+    public void hurt(float damage, float force, float forceAngle) {
+        if (mode != HURTING) {
+            health += damage;
+            mode = HURTING;
+            hurtableTimer = HURTABLE_DELAY;
+            setMotion(force, forceAngle);
+            
+        }
     }
 }

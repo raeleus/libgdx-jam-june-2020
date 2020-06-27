@@ -11,6 +11,9 @@ public class MoveAttackTemplate implements Move {
     public float friction = 500f;
     public Animation anim = GENERAL_JAB.animation;
     public static float GRAVITY = 2000f;
+    public float damage = 10f;
+    public float force = 2000f;
+    public float forceAngle = 30f;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -20,6 +23,9 @@ public class MoveAttackTemplate implements Move {
     @Override
     public void execute(PerformerEntity performer) {
         performer.animationState.setAnimation(0, anim, false);
+        performer.damage = damage;
+        performer.force = force;
+        performer.forceAngle = forceAngle;
     }
     
     @Override

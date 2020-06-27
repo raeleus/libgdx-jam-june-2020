@@ -31,8 +31,8 @@ public class MovePandaCrown extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.PANDA_CROWN;
             projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parentMove = this;
             projectile.lifeTimer = 2f;
             var projectileSpeed = 1500f;

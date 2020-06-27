@@ -31,8 +31,8 @@ public class MovePandaGun extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.PANDA_PEANUT;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parentMove = this;
             projectile.lifeTimer = 1.5f;
             var projectileSpeed = 700f;

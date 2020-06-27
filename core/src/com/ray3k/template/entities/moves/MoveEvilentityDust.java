@@ -30,9 +30,12 @@ public class MoveEvilentityDust extends MoveSpecialTemplate {
             projectile.skinName = EVILENTITY_DUST;
             projectile.animationName = ProjectileAnimationName.EVILENTITY_DUST;
             projectile.killOnAnimationEnd = true;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
-            if (performer.skeleton.getRootBone().getScaleX() < 0) projectile.setMotion(PROJECTILE_SPEED, 180);
+            GameScreen.gameScreen.entityController.add(projectile);
+            if (performer.skeleton.getRootBone().getScaleX() < 0) {
+                projectile.setMotion(PROJECTILE_SPEED, 180);
+                projectile.skeleton.getRootBone().setScaleX(-1);
+            }
             else projectile.setMotion(PROJECTILE_SPEED, 0);
             projectile.acceleration = PROJECTILE_ACCELERATION;
             projectile.setPosition(performer.projectileX, performer.projectileY);

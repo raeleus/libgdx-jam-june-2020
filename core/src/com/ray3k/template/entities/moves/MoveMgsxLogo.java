@@ -25,10 +25,13 @@ public class MoveMgsxLogo extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.MGSX_LOGO;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             projectile.lifeTimer = 1f;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+            if (performer.skeleton.getRootBone().getScaleX() < 0) {
+                projectile.skeleton.getRootBone().setScaleX(-1);
+            }
         }
     }
 }

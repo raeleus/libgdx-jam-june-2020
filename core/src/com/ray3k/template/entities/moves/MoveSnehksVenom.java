@@ -27,8 +27,8 @@ public class MoveSnehksVenom extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.SNEHKS_VENOM;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             float projectileSpeed = 1500f;
             if (!performer.facingRight()) {
                 projectile.setMotion(projectileSpeed, 180);

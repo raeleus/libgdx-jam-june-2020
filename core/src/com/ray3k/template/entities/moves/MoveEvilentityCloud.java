@@ -35,11 +35,14 @@ public class MoveEvilentityCloud extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = EVILENTITY_CLOUD;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parentMove = this;
             projectile.lifeTimer = 1.5f;
-            if (performer.skeleton.getRootBone().getScaleX() < 0) projectile.setMotion(PROJECTILE_SPEED, 180);
+            if (performer.skeleton.getRootBone().getScaleX() < 0) {
+                projectile.setMotion(PROJECTILE_SPEED, 180);
+                projectile.skeleton.getRootBone().setScaleX(-1);
+            }
             else projectile.setMotion(PROJECTILE_SPEED, 0);
             projectile.acceleration = PROJECTILE_ACCELERATION;
             projectile.setPosition(performer.projectileX, performer.projectileY);

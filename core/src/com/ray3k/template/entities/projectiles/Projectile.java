@@ -2,9 +2,13 @@ package com.ray3k.template.entities.projectiles;
 
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
+import com.esotericsoftware.spine.Slot;
+import com.esotericsoftware.spine.attachments.BoundingBoxAttachment;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.moves.*;
+
+import static com.ray3k.template.screens.GameScreen.*;
 
 public class Projectile extends Entity {
     public ProjectileSkinName skinName;
@@ -21,6 +25,11 @@ public class Projectile extends Entity {
     public float lifeTimer = 10f;
     public boolean rotateWithDirection;
     public boolean bounce;
+    public HitboxEntity hitbox;
+    public Slot hitBoxSlot;
+    public float damage = 10f;
+    public float force = 2000f;
+    public float forceAngle = 30f;
     
     @Override
     public void create() {
@@ -33,6 +42,11 @@ public class Projectile extends Entity {
                 if (killOnAnimationEnd) destroy = true;
             }
         });
+    
+        hitBoxSlot = skeleton.findSlot("hitbox");
+        hitbox = new HitboxEntity();
+        hitbox.parent = parent;
+        gameScreen.entityController.add(hitbox);
     }
     
     @Override
@@ -66,6 +80,15 @@ public class Projectile extends Entity {
         if (rotateWithDirection) {
             skeleton.getRootBone().setRotation(getDirection());
         }
+    
+        hitbox.active = hitBoxSlot.getAttachment() != null;
+        if (hitbox.active) {
+            hitbox.rectangle.set(Utils.verticesToAABB(skeletonBounds.getPolygon((BoundingBoxAttachment) hitBoxSlot.getAttachment())));
+            hitbox.damage = damage;
+            hitbox.force = force;
+            if (facingRight()) hitbox.forceAngle = forceAngle;
+            else hitbox.forceAngle = 180 - forceAngle;
+        }
     }
     
     @Override
@@ -79,5 +102,9 @@ public class Projectile extends Entity {
             parentMove.projectileCount--;
             if (parentMove.projectileCount < 0) parentMove.projectileCount = 0;
         }
+    }
+    
+    public boolean facingRight() {
+        return skeleton.getRootBone().getScaleX() > 0;
     }
 }

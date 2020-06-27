@@ -30,10 +30,11 @@ public class MovePayneMortar extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.PAYNE_MISSILE;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180 - PROJECTILE_ANGLE);
+                projectile.skeleton.getRootBone().setScaleX(-1);
             }
             else {
                 projectile.setMotion(PROJECTILE_SPEED, PROJECTILE_ANGLE);

@@ -11,7 +11,7 @@ public class HitboxEntity extends Entity {
     public Rectangle rectangle = new Rectangle();
     public boolean active;
     public Item<Entity> item = new Item<>(this);
-    public Entity parent;
+    public PerformerEntity parent;
     public float damage;
     public float force;
     public float forceAngle;

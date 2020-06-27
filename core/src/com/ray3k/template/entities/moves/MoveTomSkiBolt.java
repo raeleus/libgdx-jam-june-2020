@@ -25,8 +25,8 @@ public class MoveTomSkiBolt extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.TOM_SKI_BOLT;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 1200f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(projectileSpeed, 180);

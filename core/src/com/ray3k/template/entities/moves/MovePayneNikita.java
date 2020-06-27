@@ -25,8 +25,8 @@ public class MovePayneNikita extends MoveSpecialTemplate {
             var projectile = new Projectile();
             projectile.skinName = ProjectileSkinName.PAYNE_MISSILE;
             projectile.animationName = ProjectileAnimationName.STATIC;
-            GameScreen.gameScreen.entityController.add(projectile);
             projectile.parent = performer;
+            GameScreen.gameScreen.entityController.add(projectile);
             float projectileSpeed = 10f;
             if (!performer.facingRight()) {
                 projectile.setMotion(projectileSpeed, 180);

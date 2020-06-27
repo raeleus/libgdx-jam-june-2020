@@ -71,6 +71,7 @@ public class EntityController {
                 var result = world.check(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
                     @Override
                     public Response filter(Item item, Item other) {
+                        if (other.userData instanceof PerformerEntity) return null;
                         return Response.slide;
                     }
                 });
@@ -92,6 +93,7 @@ public class EntityController {
                 result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
                     @Override
                     public Response filter(Item item, Item other) {
+                        if (other.userData instanceof PerformerEntity) return null;
                         return noCollisions.contains((Entity) other.userData, true) ? null : Response.slide;
                     }
                 });

@@ -39,19 +39,19 @@ public class PerformerEntity extends Entity implements Bumpable {
     }
     public static final Vector2 temp = new Vector2();
     
-    public PerformerEntity(SkinName skinName) {
+    public PerformerEntity(SkinName skinName, Steering steering) {
         this.skinName = skinName;
         width = 100;
         height = 300;
         item = new Item<>();
         item.userData = this;
+        this.steering = steering;
     }
     
     @Override
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
         skeleton.setSkin(skinName.skin);
-        steering = new P1Steering();
         moveSet = skinName.moveSet;
         mode = Mode.STANDING;
         currentMove = moveSet.stance;

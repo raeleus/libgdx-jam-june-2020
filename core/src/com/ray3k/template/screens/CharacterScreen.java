@@ -51,6 +51,7 @@ public class CharacterScreen extends JamScreen {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
                         GameScreen.player1Skin = SkinName.getByName(imageButton.getName());
+                        GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
                         core.transition(new GameScreen());
                     }
                 });

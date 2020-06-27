@@ -19,7 +19,9 @@ import com.dongbat.jbump.World;
 import com.ray3k.template.*;
 import com.ray3k.template.OgmoReader.*;
 import com.ray3k.template.entities.*;
+import com.ray3k.template.entities.steering.*;
 import com.ray3k.template.screens.DialogPause.*;
+import com.sun.source.tree.CaseTree;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 import static com.ray3k.template.Core.*;
@@ -103,10 +105,21 @@ public class GameScreen extends JamScreen {
                                boolean flippedY, int originX, int originY, int rotation, Array<EntityNode> nodes,
                                ObjectMap<String, OgmoValue> valuesMap) {
                 if (layerName.equals("entities")) {
-                    if (valuesMap.get("index").asInt() == 1) {
-                        var player = new PerformerEntity(player1Skin);
-                        player.setPosition(x, y);
-                        entityController.add(player);
+                    switch (valuesMap.get("index").asInt()) {
+                        case 1:
+                            if (player1Skin != null) {
+                                var player = new PerformerEntity(player1Skin, new P1Steering());
+                                player.setPosition(x, y);
+                                entityController.add(player);
+                            }
+                            break;
+                        case 2:
+                            if (player2Skin != null) {
+                                var player = new PerformerEntity(player2Skin, new P2Steering());
+                                player.setPosition(x, y);
+                                entityController.add(player);
+                            }
+                            break;
                     }
                 } else if (layerName.equals("bbox")) {
                     if (name.equals("wall")) {
@@ -145,19 +158,7 @@ public class GameScreen extends JamScreen {
     
             @Override
             public void grid(int col, int row, int x, int y, int width, int height, int id) {
-//                if (id == 1) {
-//                    var wall = new WallEntity();
-//                    wall.setPosition(x, y);
-//                    wall.width = width;
-//                    wall.height = height;
-//                    entityController.add(wall);
-//                } else if (id == 2) {
-//                    var platform = new PlatformEntity();
-//                    platform.setPosition(x, y);
-//                    platform.width = width;
-//                    platform.height = height;
-//                    entityController.add(platform);
-//                }
+            
             }
     
             @Override

@@ -39,6 +39,7 @@ public class GameScreen extends JamScreen {
     public boolean paused;
     public static CameraEntity cameraEntity;
     public static World<Entity> hitBoxWorld;
+    public BackgroundEntity backgroundEntity;
     
     public GameScreen() {
         gameScreen = this;
@@ -93,6 +94,8 @@ public class GameScreen extends JamScreen {
         cameraEntity = new CameraEntity();
         entityController.add(cameraEntity);
     
+        backgroundEntity = new BackgroundEntity("space");
+        entityController.add(backgroundEntity);
         
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
@@ -189,6 +192,7 @@ public class GameScreen extends JamScreen {
         if (!paused) {
             entityController.act(delta);
         }
+        backgroundEntity.updatePosition();
         stage.act(delta);
     }
     
@@ -238,5 +242,6 @@ public class GameScreen extends JamScreen {
         super.hide();
         vfxManager.removeAllEffects();
         vfxEffect.dispose();
+        backgroundEntity.dispose();
     }
 }

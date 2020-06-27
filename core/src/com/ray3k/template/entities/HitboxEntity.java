@@ -39,7 +39,6 @@ public class HitboxEntity extends Entity {
             for (int i = 0; i < result.projectedCollisions.size(); i++) {
                 var col = result.projectedCollisions.get(i);
                 ((HurtboxEntity) col.other.userData).parent.hurt(damage, force, forceAngle);
-                System.out.println(((HurtboxEntity) col.other.userData).parent.health);
             }
         }
     }
@@ -47,9 +46,9 @@ public class HitboxEntity extends Entity {
     @Override
     public void draw(float delta) {
         if (active) {
-            var g = gameScreen.shapeDrawer;
-            g.setColor(Color.RED);
-            g.filledRectangle(rectangle);
+//            var g = gameScreen.shapeDrawer;
+//            g.setColor(Color.RED);
+//            g.filledRectangle(rectangle);
         }
     }
     

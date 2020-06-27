@@ -32,9 +32,9 @@ public class HurtboxEntity extends Entity {
     @Override
     public void draw(float delta) {
         if (active) {
-            var g = gameScreen.shapeDrawer;
-            g.setColor(Color.GREEN);
-            g.filledRectangle(rectangle);
+//            var g = gameScreen.shapeDrawer;
+//            g.setColor(Color.GREEN);
+//            g.filledRectangle(rectangle);
         }
     }
     

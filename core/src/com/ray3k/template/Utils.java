@@ -16,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.ShortArray;
+import com.dongbat.jbump.Rect;
 import com.esotericsoftware.spine.SkeletonBounds;
 import com.ray3k.template.JamScreen.*;
 import regexodus.Matcher;
@@ -30,6 +31,7 @@ public class Utils {
     private static final Ray rayTemp = new Ray();
     private static final Vector2 vector2 = new Vector2();
     private static Pattern fileNamePattern = new Pattern("([^/.]+)(?:\\.?[^/.])*$");
+    private static final Rectangle tempRectangle1 = new Rectangle(), tempRectangle2 = new Rectangle();
     
     public static Array<Actor> getActorsRecursive(Actor actor) {
         Array<Actor> actors = new Array<>();
@@ -262,5 +264,11 @@ public class Utils {
         polygon.setRotation(angle);
         polygon.setPosition(x, y);
         return polygon;
+    }
+    
+    public static boolean overlapRects(Rect rect, Rect otherRect) {
+        tempRectangle1.set(rect.x, rect.y, rect.w, rect.h);
+        tempRectangle2.set(otherRect.x, otherRect.y, otherRect.w, otherRect.h);
+        return Intersector.overlaps(tempRectangle1, tempRectangle2);
     }
 }

@@ -5,6 +5,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 import com.dongbat.jbump.*;
+import com.ray3k.template.*;
 
 import java.util.Comparator;
 
@@ -67,27 +68,36 @@ public class EntityController {
             //update collisions
             if (entity instanceof Bumpable) {
                 var bump = (Bumpable) entity;
-                var result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
+                var result = world.check(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
                     @Override
                     public Response filter(Item item, Item other) {
-                        var entity = (Entity) item.userData;
-                        var otherEntity = (Entity) other.userData;
-                        
-                        if (otherEntity instanceof PlatformEntity) {
-                            var rect = world.getRect(item);
-                            var rectangle = new Rectangle(rect.x, rect.y, rect.w, rect.h);
-                            var otherRect = world.getRect(other);
-                            var otherRectangle = new Rectangle(otherRect.x, otherRect.y, otherRect.w, otherRect.h);
-                            if (Intersector.overlaps(rectangle, otherRectangle)) return null;
-    
-                            if (entity.deltaY > 0) return null;
-                        }
                         return Response.slide;
                     }
                 });
+                var projectedCollisions = result.projectedCollisions;
+                
+                var noCollisions = new Array<Entity>();
+                for (int i = 0; i < projectedCollisions.size(); i++) {
+                    Collision col = projectedCollisions.get(i);
+                    var otherEntity = (Entity) col.other.userData;
+                    if (otherEntity instanceof PlatformEntity) {
+                        
+                        if (col.overlaps) noCollisions.add(otherEntity);
+                        else if (!MathUtils.isZero(col.normal.x)) noCollisions.add(otherEntity);
+                        else if (!MathUtils.isZero(col.normal.y) && col.move.y > 0) noCollisions.add(otherEntity);
+                        else System.out.println(col.touch.y + " " + col.itemRect.y);
+                    }
+                }
+    
+                result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
+                    @Override
+                    public Response filter(Item item, Item other) {
+                        return noCollisions.contains((Entity) other.userData, true) ? null : Response.slide;
+                    }
+                });
+                projectedCollisions = result.projectedCollisions;
                 var rect = world.getRect(bump.getItem());
                 bump.updateEntityPosition(rect.x, rect.y);
-                var projectedCollisions = result.projectedCollisions;
                 var  touched = new Array<Entity>();
                 var collisions = new Array<Collision>();
                 for (int i = 0; i < projectedCollisions.size(); i++) {

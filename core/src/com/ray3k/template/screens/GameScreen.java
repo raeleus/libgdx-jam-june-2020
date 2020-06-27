@@ -86,6 +86,7 @@ public class GameScreen extends JamScreen {
         
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
+            String layerName;
             @Override
             public void level(String ogmoVersion, int width, int height, int offsetX, int offsetY,
                               ObjectMap<String, OgmoValue> valuesMap) {
@@ -94,35 +95,69 @@ public class GameScreen extends JamScreen {
     
             @Override
             public void layer(String name, int gridCellWidth, int gridCellHeight, int offsetX, int offsetY) {
-            
+                layerName = name;
             }
     
             @Override
             public void entity(String name, int id, int x, int y, int width, int height, boolean flippedX,
                                boolean flippedY, int originX, int originY, int rotation, Array<EntityNode> nodes,
                                ObjectMap<String, OgmoValue> valuesMap) {
-                if (valuesMap.get("index").asInt() == 1) {
-                    var player = new PerformerEntity(player1Skin);
-                    player.setPosition(x, y);
-                    entityController.add(player);
+                if (layerName.equals("entities")) {
+                    if (valuesMap.get("index").asInt() == 1) {
+                        var player = new PerformerEntity(player1Skin);
+                        player.setPosition(x, y);
+                        entityController.add(player);
+                    }
+                } else if (layerName.equals("bbox")) {
+                    if (name.equals("wall")) {
+                        var wall = new WallEntity();
+                        wall.setPosition(x, y);
+                        wall.width = 0;
+                        wall.height = 0;
+                        
+                        for (var node : nodes) {
+                            var newWidth = node.x - x;
+                            var newHeight = node.y - y;
+                            
+                            if (newWidth > wall.width) wall.width = newWidth;
+                            if (newHeight > wall.height) wall.height = newHeight;
+                        }
+                        
+                        entityController.add(wall);
+                    } else if (name.equals("platform")) {
+                        var platform = new PlatformEntity();
+                        platform.setPosition(x, y);
+                        platform.width = width;
+                        platform.height = height;
+    
+                        for (var node : nodes) {
+                            var newWidth = node.x - x;
+                            var newHeight = node.y - y;
+        
+                            if (newWidth > platform.width) platform.width = newWidth;
+                            if (newHeight > platform.height) platform.height = newHeight;
+                        }
+                        
+                        entityController.add(platform);
+                    }
                 }
             }
     
             @Override
             public void grid(int col, int row, int x, int y, int width, int height, int id) {
-                if (id == 1) {
-                    var wall = new WallEntity();
-                    wall.setPosition(x, y);
-                    wall.width = width;
-                    wall.height = height;
-                    entityController.add(wall);
-                } else if (id == 2) {
-                    var platform = new PlatformEntity();
-                    platform.setPosition(x, y);
-                    platform.width = width;
-                    platform.height = height;
-                    entityController.add(platform);
-                }
+//                if (id == 1) {
+//                    var wall = new WallEntity();
+//                    wall.setPosition(x, y);
+//                    wall.width = width;
+//                    wall.height = height;
+//                    entityController.add(wall);
+//                } else if (id == 2) {
+//                    var platform = new PlatformEntity();
+//                    platform.setPosition(x, y);
+//                    platform.width = width;
+//                    platform.height = height;
+//                    entityController.add(platform);
+//                }
             }
     
             @Override

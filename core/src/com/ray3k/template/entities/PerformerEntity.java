@@ -153,8 +153,6 @@ public class PerformerEntity extends Entity implements Bumpable {
         fireProjectileEvent = false;
         moveEvent = false;
         animationCompleteEvent = false;
-    
-        cameraEntity.setPosition(x + deltaX * delta, y + deltaY * delta);
     }
     
     @Override

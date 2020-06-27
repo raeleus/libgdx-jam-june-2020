@@ -11,8 +11,10 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectMap;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 import com.crashinvaders.vfx.effects.EarthquakeEffect;
 import com.dongbat.jbump.Item;
 import com.dongbat.jbump.World;
@@ -40,6 +42,8 @@ public class GameScreen extends JamScreen {
     public GameScreen() {
         gameScreen = this;
         vfxEffect = new EarthquakeEffect();
+        vfxEffect.setAmount(0);
+        vfxEffect.rebind();
         
         BG_COLOR.set(Color.PINK);
     
@@ -77,7 +81,7 @@ public class GameScreen extends JamScreen {
         Gdx.input.setInputProcessor(inputMultiplexer);
         
         camera = new OrthographicCamera();
-        viewport = new FitViewport(1024, 576, camera);
+        viewport = new ExtendViewport(1024, 576, camera);
     
         entityController = new EntityController();
         

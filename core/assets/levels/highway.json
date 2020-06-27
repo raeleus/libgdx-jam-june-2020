@@ -1,0 +1,159 @@
+{
+  "ogmoVersion": "3.3.0",
+  "width": 2000,
+  "height": 2000,
+  "offsetX": 0,
+  "offsetY": 0,
+  "values": {"background": "highway", "focals": "1000,1000"},
+  "layers": [
+    {
+      "name": "decals",
+      "_eid": "14586106",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "decals": [
+        {"x": 50, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 150, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 250, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 350, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 450, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 550, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 650, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 750, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 850, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 950, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1050, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1150, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1250, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1350, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1450, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1550, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1650, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1750, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1850, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 1950, "y": 1050, "texture": "platform-highway.png"},
+        {"x": 250, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 350, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 450, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 550, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 1450, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 1550, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 1650, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 1750, "y": 650, "texture": "platform-highway-small.png"},
+        {"x": 650, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 750, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 850, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 950, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 1050, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 1150, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 1250, "y": 150, "texture": "platform-highway-small.png"},
+        {"x": 1350, "y": 150, "texture": "platform-highway-small.png"}
+      ],
+      "folder": "level"
+    },
+    {
+      "name": "entities",
+      "_eid": "14741566",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "player-spawn",
+          "id": 0,
+          "_eid": "14620666",
+          "x": 1600,
+          "y": 250,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "2"}
+        },
+        {
+          "name": "player-spawn",
+          "id": 1,
+          "_eid": "14620666",
+          "x": 250,
+          "y": 250,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "1"}
+        }
+      ]
+    },
+    {
+      "name": "bbox",
+      "_eid": "22160305",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "wall",
+          "id": 0,
+          "_eid": "22165194",
+          "x": 0,
+          "y": 1100,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 0, "y": 1000},
+            {"x": 2000, "y": 1000},
+            {"x": 2000, "y": 1100}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 1,
+          "_eid": "22172761",
+          "x": 200,
+          "y": 700,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 200, "y": 600},
+            {"x": 600, "y": 600},
+            {"x": 600, "y": 700}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 2,
+          "_eid": "22172761",
+          "x": 1400,
+          "y": 700,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 1400, "y": 600},
+            {"x": 1800, "y": 600},
+            {"x": 1800, "y": 700}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 3,
+          "_eid": "22172761",
+          "x": 600,
+          "y": 200,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 600, "y": 100},
+            {"x": 1400, "y": 100},
+            {"x": 1400, "y": 200}
+          ]
+        }
+      ]
+    }
+  ]
+}

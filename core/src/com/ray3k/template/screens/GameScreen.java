@@ -27,6 +27,7 @@ import com.sun.source.tree.CaseTree;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 import static com.ray3k.template.Core.*;
+import static com.ray3k.template.entities.CameraEntity.*;
 
 public class GameScreen extends JamScreen {
     public static GameScreen gameScreen;
@@ -93,9 +94,6 @@ public class GameScreen extends JamScreen {
         
         cameraEntity = new CameraEntity();
         entityController.add(cameraEntity);
-    
-        backgroundEntity = new BackgroundEntity("space");
-        entityController.add(backgroundEntity);
         
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
@@ -103,7 +101,15 @@ public class GameScreen extends JamScreen {
             @Override
             public void level(String ogmoVersion, int width, int height, int offsetX, int offsetY,
                               ObjectMap<String, OgmoValue> valuesMap) {
+                backgroundEntity = new BackgroundEntity(valuesMap.get("background").asString());
+                entityController.add(backgroundEntity);
                 
+                levelPointsOfInterest.clear();
+                var points = valuesMap.get("focals").asString().split("\\n");
+                for (var point : points) {
+                    var coords = point.split(",");
+                    levelPointsOfInterest.add(new PointOfInterest(Integer.parseInt(coords[0]), Integer.parseInt(coords[1])));
+                }
             }
     
             @Override
@@ -184,7 +190,7 @@ public class GameScreen extends JamScreen {
             }
         });
         
-        ogmoReader.readFile(Gdx.files.internal("levels/stage1.json"));
+        ogmoReader.readFile(Gdx.files.internal("levels/space.json"));
     }
     
     @Override
@@ -209,9 +215,6 @@ public class GameScreen extends JamScreen {
         viewport.apply();
         batch.setProjectionMatrix(camera.combined);
         entityController.draw(paused ? 0 : delta);
-        
-        shapeDrawer.setColor(Color.BLUE);
-        shapeDrawer.rectangle(0, 0, 100, 100);
         batch.end();
         
         vfxManager.endCapture();

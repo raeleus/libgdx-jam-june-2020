@@ -1,8 +1,7 @@
 package com.ray3k.template.entities;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Array;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.FloatArray;
 
 import static com.ray3k.template.screens.GameScreen.*;
 
@@ -13,6 +12,7 @@ public class CameraEntity extends Entity {
     public static final float WINDOW_MAX_X = 3000;
     public static final float WINDOW_MIN_Y = 0;
     public static final float WINDOW_MAX_Y = 3000;
+    public static final Array<PointOfInterest> levelPointsOfInterest = new Array<>();
     
     @Override
     public void create() {
@@ -35,7 +35,8 @@ public class CameraEntity extends Entity {
             if (entity instanceof PerformerEntity) performers.add((PerformerEntity) entity);
         }
         
-        points.add(new PointOfInterest(1000, 1000));
+        points.addAll(levelPointsOfInterest);
+        
         for (int i = 0; i < performers.size; i++) {
             var performer = performers.get(i);
             points.add(new PointOfInterest(performer.x, performer.y));
@@ -87,7 +88,7 @@ public class CameraEntity extends Entity {
     
     }
     
-    private static class PointOfInterest {
+    public static class PointOfInterest {
         float x;
         float y;
     

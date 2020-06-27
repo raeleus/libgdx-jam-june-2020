@@ -1,0 +1,205 @@
+{
+  "ogmoVersion": "3.3.0",
+  "width": 2000,
+  "height": 2000,
+  "offsetX": 0,
+  "offsetY": 0,
+  "values": {"background": "mountain", "focals": "1000,1000"},
+  "layers": [
+    {
+      "name": "decals",
+      "_eid": "14586106",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "decals": [
+        {"x": 150, "y": 500, "texture": "platform-ice.png"},
+        {"x": 250, "y": 500, "texture": "platform-ice.png"},
+        {"x": 350, "y": 500, "texture": "platform-ice.png"},
+        {"x": 450, "y": 500, "texture": "platform-ice.png"},
+        {"x": 550, "y": 500, "texture": "platform-ice.png"},
+        {"x": 1850, "y": 350, "texture": "platform-ice.png"},
+        {"x": 1750, "y": 350, "texture": "platform-ice.png"},
+        {"x": 1650, "y": 350, "texture": "platform-ice.png"},
+        {"x": 1550, "y": 350, "texture": "platform-ice.png"},
+        {"x": 1450, "y": 350, "texture": "platform-ice.png"},
+        {"x": 650, "y": 500, "texture": "platform-ice-small.png"},
+        {"x": 750, "y": 500, "texture": "platform-ice-small.png"},
+        {"x": 1350, "y": 350, "texture": "platform-ice-small.png"},
+        {"x": 1250, "y": 350, "texture": "platform-ice-small.png"},
+        {"x": 1150, "y": 350, "texture": "platform-ice-small.png"},
+        {"x": 700, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 800, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 900, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1000, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1100, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1200, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1300, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1400, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 1500, "y": 950, "texture": "platform-ice-small.png"},
+        {"x": 200, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 300, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 400, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 500, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 600, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 700, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 800, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 900, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1000, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1100, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1200, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1300, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1400, "y": 1450, "texture": "platform-ice.png"},
+        {"x": 1850, "y": 1900, "texture": "platform-ice.png"},
+        {"x": 1750, "y": 1900, "texture": "platform-ice.png"},
+        {"x": 1650, "y": 1900, "texture": "platform-ice.png"}
+      ],
+      "folder": "level"
+    },
+    {
+      "name": "entities",
+      "_eid": "14741566",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "player-spawn",
+          "id": 0,
+          "_eid": "14620666",
+          "x": 300,
+          "y": 1050,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "1"}
+        },
+        {
+          "name": "player-spawn",
+          "id": 1,
+          "_eid": "14620666",
+          "x": 1300,
+          "y": 1050,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "2"}
+        }
+      ]
+    },
+    {
+      "name": "bbox",
+      "_eid": "22160305",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "wall",
+          "id": 0,
+          "_eid": "22165194",
+          "x": 150,
+          "y": 1500,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 150, "y": 1400},
+            {"x": 1450, "y": 1400},
+            {"x": 1450, "y": 1500}
+          ]
+        },
+        {
+          "name": "wall",
+          "id": 1,
+          "_eid": "22165194",
+          "x": 100,
+          "y": 550,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 100, "y": 450},
+            {"x": 600, "y": 450},
+            {"x": 600, "y": 550}
+          ]
+        },
+        {
+          "name": "wall",
+          "id": 2,
+          "_eid": "22165194",
+          "x": 1400,
+          "y": 300,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 1900, "y": 300},
+            {"x": 1900, "y": 400},
+            {"x": 1400, "y": 400}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 3,
+          "_eid": "22172761",
+          "x": 600,
+          "y": 550,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 600, "y": 450},
+            {"x": 800, "y": 450},
+            {"x": 800, "y": 550}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 4,
+          "_eid": "22172761",
+          "x": 1100,
+          "y": 400,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 1100, "y": 300},
+            {"x": 1400, "y": 300},
+            {"x": 1400, "y": 400}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 5,
+          "_eid": "22172761",
+          "x": 650,
+          "y": 1000,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 650, "y": 900},
+            {"x": 1550, "y": 900},
+            {"x": 1550, "y": 1000}
+          ]
+        },
+        {
+          "name": "wall",
+          "id": 6,
+          "_eid": "22165194",
+          "x": 1600,
+          "y": 1950,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 1600, "y": 1850},
+            {"x": 1900, "y": 1850},
+            {"x": 1900, "y": 1950}
+          ]
+        }
+      ]
+    }
+  ]
+}

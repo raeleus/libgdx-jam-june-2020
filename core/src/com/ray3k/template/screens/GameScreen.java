@@ -38,6 +38,7 @@ public class GameScreen extends JamScreen {
     private EarthquakeEffect vfxEffect;
     public boolean paused;
     public static CameraEntity cameraEntity;
+    public static World<Entity> hitBoxWorld;
     
     public GameScreen() {
         gameScreen = this;
@@ -83,12 +84,15 @@ public class GameScreen extends JamScreen {
         camera = new OrthographicCamera();
         viewport = new ExtendViewport(1024, 576, camera);
     
+        vfxManager.addEffect(vfxEffect);
+        
+        hitBoxWorld = new World<>();
+        
         entityController = new EntityController();
         
         cameraEntity = new CameraEntity();
         entityController.add(cameraEntity);
     
-        vfxManager.addEffect(vfxEffect);
         
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
@@ -112,14 +116,14 @@ public class GameScreen extends JamScreen {
                     switch (valuesMap.get("index").asInt()) {
                         case 1:
                             if (player1Skin != null) {
-                                var player = new PerformerEntity(player1Skin, new P1Steering());
+                                var player = new PerformerEntity(player1Skin, new P1Steering(), 3);
                                 player.setPosition(x, y);
                                 entityController.add(player);
                             }
                             break;
                         case 2:
                             if (player2Skin != null) {
-                                var player = new PerformerEntity(player2Skin, new P2Steering());
+                                var player = new PerformerEntity(player2Skin, new P2Steering(), 3);
                                 player.setPosition(x, y);
                                 entityController.add(player);
                             }

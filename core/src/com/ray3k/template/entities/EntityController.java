@@ -69,47 +69,47 @@ public class EntityController {
             //update collisions
             if (entity instanceof Bumpable) {
                 var bump = (Bumpable) entity;
-                var result = world.check(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
-                    @Override
-                    public Response filter(Item item, Item other) {
+                if (bump.isTeleporting()) {
+                    world.update(bump.getItem(), bump.getBumpX(), bump.getBumpY());
+                    bump.setTeleporting(false);
+                } else {
+    
+                    var result = world.check(bump.getItem(), bump.getBumpX(), bump.getBumpY(), (item, other) -> {
                         if (other.userData instanceof PerformerEntity) return null;
                         return Response.slide;
-                    }
-                });
-                var projectedCollisions = result.projectedCollisions;
-                
-                var noCollisions = new Array<Entity>();
-                for (int i = 0; i < projectedCollisions.size(); i++) {
-                    Collision col = projectedCollisions.get(i);
-                    var otherEntity = (Entity) col.other.userData;
-                    if (otherEntity instanceof PlatformEntity) {
-                        
-                        if (col.overlaps) noCollisions.add(otherEntity);
-                        else if (!MathUtils.isZero(col.normal.x)) noCollisions.add(otherEntity);
-                        else if (!MathUtils.isZero(col.normal.y) && col.move.y > 0) noCollisions.add(otherEntity);
-                    }
-                }
+                    });
+                    var projectedCollisions = result.projectedCollisions;
     
-                result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), new CollisionFilter() {
-                    @Override
-                    public Response filter(Item item, Item other) {
+                    var noCollisions = new Array<Entity>();
+                    for (int i = 0; i < projectedCollisions.size(); i++) {
+                        Collision col = projectedCollisions.get(i);
+                        var otherEntity = (Entity) col.other.userData;
+                        if (otherEntity instanceof PlatformEntity) {
+    
+                            if (col.overlaps) noCollisions.add(otherEntity);
+                            else if (!MathUtils.isZero(col.normal.x)) noCollisions.add(otherEntity);
+                            else if (!MathUtils.isZero(col.normal.y) && col.move.y > 0) noCollisions.add(otherEntity);
+                        }
+                    }
+    
+                    result = world.move(bump.getItem(), bump.getBumpX(), bump.getBumpY(), (item, other) -> {
                         if (other.userData instanceof PerformerEntity) return null;
                         return noCollisions.contains((Entity) other.userData, true) ? null : Response.slide;
+                    });
+                    projectedCollisions = result.projectedCollisions;
+                    var rect = world.getRect(bump.getItem());
+                    bump.updateEntityPosition(rect.x, rect.y);
+                    var touched = new Array<Entity>();
+                    var collisions = new Array<Collision>();
+                    for (int i = 0; i < projectedCollisions.size(); i++) {
+                        Collision col = projectedCollisions.get(i);
+                        touched.add((Entity) col.other.userData);
+                        collisions.add(col);
+                        if (!MathUtils.isZero(col.normal.x)) entity.deltaX = 0;
+                        if (!MathUtils.isZero(col.normal.y)) entity.deltaY = 0;
                     }
-                });
-                projectedCollisions = result.projectedCollisions;
-                var rect = world.getRect(bump.getItem());
-                bump.updateEntityPosition(rect.x, rect.y);
-                var  touched = new Array<Entity>();
-                var collisions = new Array<Collision>();
-                for (int i = 0; i < projectedCollisions.size(); i++) {
-                    Collision col = projectedCollisions.get(i);
-                    touched.add((Entity) col.other.userData);
-                    collisions.add(col);
-                    if (!MathUtils.isZero(col.normal.x)) entity.deltaX = 0;
-                    if (!MathUtils.isZero(col.normal.y)) entity.deltaY = 0;
+                    bump.collisions(touched, collisions);
                 }
-                bump.collisions(touched, collisions);
             }
             
             entity.act(delta);

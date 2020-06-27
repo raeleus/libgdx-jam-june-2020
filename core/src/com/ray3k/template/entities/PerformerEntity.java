@@ -1,6 +1,5 @@
 package com.ray3k.template.entities;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -9,6 +8,8 @@ import com.dongbat.jbump.Item;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
 import com.esotericsoftware.spine.Event;
+import com.esotericsoftware.spine.Slot;
+import com.esotericsoftware.spine.attachments.BoundingBoxAttachment;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
@@ -33,30 +34,44 @@ public class PerformerEntity extends Entity implements Bumpable {
     public float width;
     public float height;
     public Item<Entity> item;
-    public static final Color DEBUG_COLOR = new Color(Color.YELLOW.r, Color.YELLOW.g, Color.YELLOW.b, .5f);
+    public Slot hitBoxSlot;
+    public HitboxEntity hitbox;
+    public HurtboxEntity hurtbox;
+    public Slot hurtBoxSlot;
+    public float health;
+    public int lives;
     public enum Mode {
         MOVING, ATTACKING, JUMPING, JUMP_ATTACKING, STANDING, SHIELDING;
     }
     public static final Vector2 temp = new Vector2();
+    private boolean teleporting;
     
-    public PerformerEntity(SkinName skinName, Steering steering) {
+    public PerformerEntity(SkinName skinName, Steering steering, int lives) {
         this.skinName = skinName;
         width = 100;
         height = 300;
         item = new Item<>();
         item.userData = this;
         this.steering = steering;
+        this.lives = lives;
     }
     
     @Override
     public void create() {
         setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
         skeleton.setSkin(skinName.skin);
+        hitBoxSlot = skeleton.findSlot("hitbox");
+        hurtBoxSlot = skeleton.findSlot("bbox");
         moveSet = skinName.moveSet;
         mode = Mode.STANDING;
         currentMove = moveSet.stance;
         currentMove.execute(this);
         touchedGround = true;
+        hitbox = new HitboxEntity();
+        gameScreen.entityController.add(hitbox);
+        hurtbox = new HurtboxEntity();
+        gameScreen.entityController.add(hurtbox);
+        hitBoxWorld.add(new Item<>(hurtbox), 0, 0, 0, 0);
         
         animationState.addListener(new AnimationStateAdapter() {
             @Override
@@ -153,6 +168,26 @@ public class PerformerEntity extends Entity implements Bumpable {
         fireProjectileEvent = false;
         moveEvent = false;
         animationCompleteEvent = false;
+        
+        hitbox.active = hitBoxSlot.getAttachment() != null;
+        if (hitbox.active) {
+            hitbox.rectangle.set(Utils.verticesToAABB(skeletonBounds.getPolygon((BoundingBoxAttachment) hitBoxSlot.getAttachment())));
+        }
+    
+        hurtbox.active = hurtBoxSlot.getAttachment() != null;
+        if (hurtbox.active) {
+            hurtbox.rectangle.set(Utils.verticesToAABB(skeletonBounds.getPolygon((BoundingBoxAttachment) hurtBoxSlot.getAttachment())));
+        }
+        
+        if (y < -400) {
+            lives--;
+            if (lives < 0) destroy = true;
+            else {
+                setPosition(1000, 3000);
+                teleporting = true;
+                deltaY = 0;
+            }
+        }
     }
     
     @Override
@@ -162,11 +197,25 @@ public class PerformerEntity extends Entity implements Bumpable {
 //        var rect = gameScreen.entityController.world.getRect(item);
 //        g.setDefaultLineWidth(5f);
 //        g.rectangle(rect.x, rect.y, rect.w, rect.h);
+        
+//        var g = gameScreen.shapeDrawer;
+//        if (hitBoxSlot.getAttachment() != null) {
+//            var hitbox = (BoundingBoxAttachment) hitBoxSlot.getAttachment();
+//            g.setColor(Color.RED);
+//            g.filledRectangle(Utils.verticesToAABB(skeletonBounds.getPolygon(hitbox)));
+//        }
+        
+//        if (hurtBoxSlot.getAttachment() != null) {
+//            var hurtbox = (BoundingBoxAttachment) hurtBoxSlot.getAttachment();
+//            g.setColor(Color.GREEN);
+//            g.filledRectangle(Utils.verticesToAABB(skeletonBounds.getPolygon(hurtbox)));
+//        }
     }
     
     @Override
     public void destroy() {
-    
+        hitbox.destroy = true;
+        hurtbox.destroy = true;
     }
     
     public boolean facingRight() {
@@ -217,5 +266,15 @@ public class PerformerEntity extends Entity implements Bumpable {
                 gravityY = 0;
             }
         }
+    }
+    
+    @Override
+    public boolean isTeleporting() {
+        return teleporting;
+    }
+    
+    @Override
+    public void setTeleporting(boolean teleporting) {
+        this.teleporting = teleporting;
     }
 }

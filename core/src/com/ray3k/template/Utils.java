@@ -18,6 +18,7 @@ import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.ShortArray;
 import com.dongbat.jbump.Rect;
 import com.esotericsoftware.spine.SkeletonBounds;
+import com.esotericsoftware.spine.attachments.BoundingBoxAttachment;
 import com.ray3k.template.JamScreen.*;
 import regexodus.Matcher;
 import regexodus.Pattern;
@@ -58,6 +59,31 @@ public class Utils {
             }
         }
         return floatArray.items;
+    }
+    
+    public static float[] boundingBoxAttachmentToTriangles(SkeletonBounds skeletonBounds, BoundingBoxAttachment boundingBoxAttachment) {
+        floatArray.clear();
+        var points = skeletonBounds.getPolygon(boundingBoxAttachment);
+        ShortArray shortArray = earClippingTriangulator.computeTriangles(points);
+        for (int i = 0; i < shortArray.size; i++) {
+            floatArray.add(points.get(shortArray.get(i) * 2));
+            floatArray.add(points.get(shortArray.get(i) * 2 + 1));
+        }
+        return floatArray.items;
+    }
+    
+    public static Rectangle verticesToAABB(FloatArray vertices) {
+        float minX = vertices.get(0), maxX = vertices.get(0), minY = vertices.get(1), maxY = vertices.get(1);
+        for (int i = 2; i + 1 < vertices.size; i += 2) {
+            if (vertices.get(i) < minX) minX = vertices.get(i);
+            if (vertices.get(i+1) < minY) minY = vertices.get(i+1);
+        
+            if (vertices.get(i) > maxX) maxX = vertices.get(i);
+            if (vertices.get(i+1) > maxY) maxY = vertices.get(i+1);
+        }
+        
+        tempRectangle1.set(minX, minY, maxX - minX, maxY - minY);
+        return tempRectangle1;
     }
     
     public static Color inverseColor(Color color) {

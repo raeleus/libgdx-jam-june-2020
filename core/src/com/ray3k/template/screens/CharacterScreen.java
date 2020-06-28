@@ -50,6 +50,7 @@ public class CharacterScreen extends JamScreen {
         for (var child : table.getChildren()) {
             if (child instanceof ImageButton) {
                 var imageButton = (ImageButton) child;
+                imageButton.addListener(sndChangeListener);
                 imageButton.addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
@@ -60,7 +61,7 @@ public class CharacterScreen extends JamScreen {
                                 break;
                             case 2:
                                 GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
-                                core.transition(new GameScreen());
+                                core.transition(new LevelScreen());
                                 break;
                         }
                     }

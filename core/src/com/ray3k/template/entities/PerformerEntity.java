@@ -341,4 +341,8 @@ public class PerformerEntity extends Entity implements Bumpable {
             moveSet.soundHurt.play();
         }
     }
+    
+    public void hitEnemy() {
+    
+    }
 }

@@ -30,6 +30,7 @@ public class Projectile extends Entity {
     public float damage = 10f;
     public float force = 2000f;
     public float forceAngle = 30f;
+    public boolean killOnContact = true;
     
     @Override
     public void create() {
@@ -46,6 +47,7 @@ public class Projectile extends Entity {
         hitBoxSlot = skeleton.findSlot("hitbox");
         hitbox = new HitboxEntity();
         hitbox.parent = parent;
+        hitbox.projectileParent = this;
         gameScreen.entityController.add(hitbox);
     }
     
@@ -107,5 +109,9 @@ public class Projectile extends Entity {
     
     public boolean facingRight() {
         return skeleton.getRootBone().getScaleX() > 0;
+    }
+    
+    public void hitEnemy() {
+        if (killOnContact) destroy = true;
     }
 }

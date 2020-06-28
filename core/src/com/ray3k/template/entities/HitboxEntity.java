@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Rectangle;
 import com.dongbat.jbump.Item;
 import com.dongbat.jbump.Response;
+import com.ray3k.template.entities.projectiles.*;
 
 import static com.ray3k.template.screens.GameScreen.*;
 
@@ -12,6 +13,7 @@ public class HitboxEntity extends Entity {
     public boolean active;
     public Item<Entity> item = new Item<>(this);
     public PerformerEntity parent;
+    public Projectile projectileParent;
     public float damage;
     public float force;
     public float forceAngle;
@@ -39,6 +41,8 @@ public class HitboxEntity extends Entity {
             for (int i = 0; i < result.projectedCollisions.size(); i++) {
                 var col = result.projectedCollisions.get(i);
                 ((HurtboxEntity) col.other.userData).parent.hurt(damage, force, forceAngle);
+                parent.hitEnemy();
+                if (projectileParent != null) projectileParent.hitEnemy();
             }
         }
     }

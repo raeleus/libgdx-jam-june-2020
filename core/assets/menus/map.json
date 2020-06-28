@@ -15,7 +15,7 @@
       "gridCellsX": 128,
       "gridCellsY": 72,
       "decals": [
-        {"x": 248, "y": 192, "texture": "Peanut-Panda.png"}
+        {"x": 512, "y": 288, "texture": "map.png"}
       ],
       "folder": ""
     },
@@ -31,86 +31,86 @@
       "entities": [
         {
           "name": "button",
-          "id": 4,
-          "_eid": "30922521",
-          "x": 200,
-          "y": 240,
-          "width": 316,
-          "height": 96,
-          "originX": 0,
-          "originY": 96,
-          "values": {"level": "city"}
-        },
-        {
-          "name": "button",
-          "id": 5,
-          "_eid": "30922521",
-          "x": 630,
-          "y": 330,
-          "width": 226,
-          "height": 106,
-          "originX": 0,
-          "originY": 106,
-          "values": {"level": "highway"}
-        },
-        {
-          "name": "button",
           "id": 7,
           "_eid": "30922521",
-          "x": 10,
-          "y": 570,
-          "width": 206,
-          "height": 166,
+          "x": 40,
+          "y": 540,
+          "width": 80,
+          "height": 70,
           "originX": 0,
-          "originY": 166,
-          "values": {"level": "boat"}
+          "originY": 70,
+          "values": {"level": "city"}
         },
         {
           "name": "button",
           "id": 8,
           "_eid": "30922521",
-          "x": 330,
-          "y": 530,
-          "width": 226,
-          "height": 106,
+          "x": 326,
+          "y": 547,
+          "width": 80,
+          "height": 70,
           "originX": 0,
-          "originY": 106,
-          "values": {"level": "mountain"}
+          "originY": 70,
+          "values": {"level": "highway"}
         },
         {
           "name": "button",
           "id": 9,
           "_eid": "30922521",
-          "x": 610,
-          "y": 520,
-          "width": 226,
-          "height": 106,
+          "x": 298,
+          "y": 287,
+          "width": 80,
+          "height": 70,
           "originX": 0,
-          "originY": 106,
-          "values": {"level": "ocean"}
+          "originY": 70,
+          "values": {"level": "boat"}
         },
         {
           "name": "button",
           "id": 10,
           "_eid": "30922521",
-          "x": 640,
-          "y": 160,
-          "width": 226,
-          "height": 106,
+          "x": 480,
+          "y": 562,
+          "width": 80,
+          "height": 70,
           "originX": 0,
-          "originY": 106,
+          "originY": 70,
           "values": {"level": "pupper"}
         },
         {
           "name": "button",
           "id": 11,
           "_eid": "30922521",
-          "x": 330,
-          "y": 120,
-          "width": 226,
-          "height": 106,
+          "x": 915,
+          "y": 457,
+          "width": 80,
+          "height": 70,
           "originX": 0,
-          "originY": 106,
+          "originY": 70,
+          "values": {"level": "ocean"}
+        },
+        {
+          "name": "button",
+          "id": 12,
+          "_eid": "30922521",
+          "x": 761,
+          "y": 353,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "mountain"}
+        },
+        {
+          "name": "button",
+          "id": 13,
+          "_eid": "30922521",
+          "x": 546,
+          "y": 93,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
           "values": {"level": "space"}
         }
       ]

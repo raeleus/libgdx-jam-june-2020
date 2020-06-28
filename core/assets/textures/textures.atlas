@@ -2028,329 +2028,336 @@ filter: Linear,Linear
 repeat: none
 Ace-Skeleton
   rotate: false
-  xy: 1008, 1926
+  xy: 1672, 1314
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Ali
   rotate: false
-  xy: 1110, 1926
+  xy: 1774, 1225
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Dragon-Queen
   rotate: false
-  xy: 1212, 1926
+  xy: 1672, 1212
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Evilentity
   rotate: false
-  xy: 1314, 1926
+  xy: 1876, 1225
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Ferocious-Zebra
   rotate: false
-  xy: 1416, 1926
+  xy: 1774, 1123
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Goodentity
   rotate: false
-  xy: 1518, 1926
+  xy: 1876, 1123
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 John-the-Developer
   rotate: false
-  xy: 1620, 1926
+  xy: 879, 1368
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Lyze
   rotate: false
-  xy: 1722, 1926
+  xy: 879, 1266
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 MGSX
   rotate: false
-  xy: 1824, 1926
+  xy: 1297, 1229
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Mister-Stahlfelge
   rotate: false
-  xy: 1926, 1926
+  xy: 1297, 1127
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Payne
   rotate: false
-  xy: 1, 1897
+  xy: 1399, 1112
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Peanut-Panda
   rotate: false
-  xy: 103, 1867
+  xy: 1501, 1112
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Raeleus
   rotate: false
-  xy: 205, 1867
+  xy: 1603, 1110
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Skin-Composer
   rotate: false
-  xy: 307, 1867
+  xy: 508, 1189
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Snehks
   rotate: false
-  xy: 409, 1836
+  xy: 610, 1189
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Tann
   rotate: false
-  xy: 511, 1836
+  xy: 712, 1189
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Template
   rotate: false
-  xy: 613, 1836
+  xy: 814, 1164
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Tettinger
   rotate: false
-  xy: 715, 1836
+  xy: 508, 1087
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 Tom-Ski
   rotate: false
-  xy: 817, 1836
+  xy: 610, 1087
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 bg
   rotate: false
-  xy: 1638, 1617
+  xy: 1457, 1214
   size: 213, 200
   orig: 213, 200
   offset: 0, 0
   index: -1
 button-credits
   rotate: false
-  xy: 524, 1500
+  xy: 1550, 1869
   size: 479, 177
   orig: 479, 177
   offset: 0, 0
   index: -1
 button-credits-over
   rotate: false
-  xy: 1005, 1463
+  xy: 1550, 1690
   size: 479, 177
   orig: 479, 177
   offset: 0, 0
   index: -1
 button-multiplayer
   rotate: false
-  xy: 1486, 1438
+  xy: 1, 1291
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-multiplayer-over
   rotate: false
-  xy: 1, 1359
+  xy: 440, 1291
   size: 437, 177
   orig: 437, 177
   offset: 0, 0
   index: -1
 button-normal
   rotate: false
-  xy: 1225, 1819
+  xy: 981, 1313
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
   index: -1
 button-normal-over
   rotate: false
-  xy: 1541, 1819
+  xy: 981, 1206
   size: 314, 105
   orig: 314, 105
   offset: 0, 0
   index: -1
 button-options
   rotate: false
-  xy: 440, 1226
+  xy: 1027, 1420
   size: 307, 272
   orig: 307, 272
   offset: 0, 0
   index: -1
 button-options-over
   rotate: false
-  xy: 749, 1189
+  xy: 1548, 1416
   size: 307, 272
   orig: 307, 272
   offset: 0, 0
   index: -1
 button-play
   rotate: false
-  xy: 1115, 1642
+  xy: 1027, 1871
   size: 521, 175
   orig: 521, 175
   offset: 0, 0
   index: -1
 button-play-over
   rotate: false
-  xy: 1, 1538
+  xy: 1027, 1694
   size: 521, 175
   orig: 521, 175
   offset: 0, 0
   index: -1
 button-small
   rotate: false
-  xy: 21, 1999
+  xy: 1458, 1665
   size: 88, 27
   orig: 88, 27
   offset: 0, 0
   index: -1
 button-small-over
   rotate: false
-  xy: 111, 1999
+  xy: 1458, 1636
   size: 87, 27
   orig: 87, 27
   offset: 0, 0
   index: -1
 font
   rotate: false
-  xy: 608, 1679
+  xy: 1, 1146
   size: 505, 143
   orig: 505, 143
   offset: 0, 0
   index: -1
 font-small
   rotate: false
-  xy: 500, 1938
+  xy: 1018, 1022
   size: 506, 88
   orig: 506, 88
   offset: 0, 0
   index: -1
 icefill
   rotate: false
-  xy: 919, 1824
+  xy: 712, 1087
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
+map
+  rotate: false
+  xy: 1, 1470
+  size: 1024, 576
+  orig: 1024, 576
+  offset: 0, 0
+  index: -1
 mario
   rotate: false
-  xy: 1021, 1824
+  xy: 916, 1104
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 nate
   rotate: false
-  xy: 1123, 1824
+  xy: 814, 1062
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 portrait_0
   rotate: false
-  xy: 1857, 1805
+  xy: 1857, 1448
   size: 119, 119
   orig: 119, 119
   offset: 0, 0
   index: -1
 portrait_1
   rotate: false
-  xy: 1, 1746
+  xy: 1336, 1573
   size: 120, 119
   orig: 120, 119
   offset: 0, 0
   index: -1
 portrait_2
   rotate: false
-  xy: 123, 1746
+  xy: 1857, 1569
   size: 120, 119
   orig: 120, 119
   offset: 0, 0
   index: -1
 portrait_3
   rotate: false
-  xy: 245, 1746
+  xy: 1857, 1327
   size: 119, 119
   orig: 119, 119
   offset: 0, 0
   index: -1
 portrait_4
   rotate: false
-  xy: 366, 1715
+  xy: 1336, 1452
   size: 119, 119
   orig: 119, 119
   offset: 0, 0
   index: -1
 portrait_5
   rotate: false
-  xy: 487, 1715
+  xy: 1336, 1331
   size: 119, 119
   orig: 119, 119
   offset: 0, 0
   index: -1
 scrollbar-knob
   rotate: false
-  xy: 4, 2011
+  xy: 2031, 1972
   size: 15, 15
   orig: 15, 15
   offset: 0, 0
   index: -1
 slider
   rotate: false
-  xy: 200, 1969
+  xy: 1705, 1064
   size: 281, 57
   orig: 281, 57
   offset: 0, 0
   index: -1
 slider-knob
   rotate: false
-  xy: 483, 1969
+  xy: 2031, 1989
   size: 15, 57
   orig: 15, 57
   offset: 0, 0
   index: -1
 white
   rotate: false
-  xy: 1, 2025
+  xy: 2031, 1969
   size: 1, 1
   orig: 1, 1
   offset: 0, 0

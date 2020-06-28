@@ -102,6 +102,7 @@ public class Projectile extends Entity {
             parentMove.projectileCount--;
             if (parentMove.projectileCount < 0) parentMove.projectileCount = 0;
         }
+        hitbox.destroy = true;
     }
     
     public boolean facingRight() {

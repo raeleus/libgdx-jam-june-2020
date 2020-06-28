@@ -10,13 +10,13 @@ public class MoveSetMisterStahlfelge extends MoveSet {
         goRight = new MoveGoRight();
         jump = new MoveJump();
         jumpAttack = new MoveAirPunch();
-        attackNeutral = new MoveJab();
+        attackNeutral = new MoveStraight();
         attackSide = new MoveSpinKick();
-        attackUp = new MoveDoubleAxeHandle();
-        attackDown = new MoveLowKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        attackUp = new MoveUppercut();
+        attackDown = new MoveSweepKick();
+        specialNeutral = new MoveStahlfelgeSkull();
+        specialSide = new MoveStahlfelgeSpear();
+        specialUp = new MoveStahlfelgeTeleportPunch();
+        specialDown = new MoveTannAxe();
     }
 }

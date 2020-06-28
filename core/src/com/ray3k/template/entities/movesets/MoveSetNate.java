@@ -11,12 +11,12 @@ public class MoveSetNate extends MoveSet {
         jump = new MoveJump();
         jumpAttack = new MoveAirPunch();
         attackNeutral = new MoveJab();
-        attackSide = new MoveSpinKick();
-        attackUp = new MoveDoubleAxeHandle();
-        attackDown = new MoveLowKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        attackSide = new MoveLowKick();
+        attackUp = new MoveUpKick();
+        attackDown = new MoveSweepKick();
+        specialNeutral = new MoveNateBlast();
+        specialSide = new MoveMarioHelicopter();
+        specialUp = new MoveMarioFlyingUppercut();
+        specialDown = new MoveMarioUnblockablePunch();
     }
 }

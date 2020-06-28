@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "p0+EG/akZWqknNVStMh5NweulWo",
+	"hash": "zP15BAO5/Q7TYjrVSIPUe/A/9kw",
 	"spine": "3.8.95",
-	"x": -89.2,
-	"y": -30,
-	"width": 123,
-	"height": 61,
+	"x": -166.48,
+	"y": -14.03,
+	"width": 293,
+	"height": 31,
 	"images": "../output/",
 	"audio": ""
 },
@@ -14,18 +14,10 @@
 	{ "name": "projectile", "parent": "root", "length": 117.11 }
 ],
 "slots": [
-	{ "name": "projectile", "bone": "projectile", "attachment": "dragon-queen/drag-fireball" },
+	{ "name": "projectile", "bone": "projectile", "attachment": "projectile" },
 	{ "name": "hitbox", "bone": "root", "attachment": "hitbox" }
 ],
 "skins": [
-	{
-		"name": "default",
-		"attachments": {
-			"projectile": {
-				"dragon-queen/drag-fireball": { "x": -27.7, "y": 0.5, "width": 123, "height": 61 }
-			}
-		}
-	},
 	{
 		"name": "ace-bone",
 		"attachments": {
@@ -63,11 +55,11 @@
 				"hitbox": {
 					"type": "boundingbox",
 					"vertexCount": 4,
-					"vertices": [ -211.41, 35.91, 44.14, 35.06, 43.29, -40.5, -207.17, -43.9 ]
+					"vertices": [ -85.97, 30.42, 44.14, 35.06, 43.29, -40.5, -88, -40.76 ]
 				}
 			},
 			"projectile": {
-				"projectile": { "name": "icefill/icefill-iceball", "x": -86.95, "y": -3.4, "width": 283, "height": 90 }
+				"projectile": { "name": "dragon-queen/drag-fireball", "x": -21.88, "y": -3.4, "width": 123, "height": 61 }
 			}
 		}
 	},
@@ -325,6 +317,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "snehks/snehks-venom", "x": -42.48, "y": 1.13, "width": 210, "height": 81 }
+			}
+		}
+	},
+	{
+		"name": "stahlfelge-spear",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -99.34, -8.24, 123.09, -9.09, 123.94, 14.68, -99.34, 13.83 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "stahlfelge/stahlfelge-spear", "x": -19.98, "y": 1.47, "width": 293, "height": 31 }
 			}
 		}
 	},

@@ -23,7 +23,13 @@ public enum ProjectileSkinName {
     TANN_AXE("tann-axe"),
     TETTINGER_NET("tettinger-net"),
     TETTINGER_YARN("tettinger-yarn"),
-    TOM_SKI_BOLT("tom-ski-bolt");
+    TOM_SKI_BOLT("tom-ski-bolt"),
+    DRAGON_FIREBALL("dragon-fireball"),
+    ICEFILL_ICEBALL("icefill-iceball"),
+    MARIO_FIREBALL("mario-fireball"),
+    NATE_FIREBALL("nate-fireball"),
+    ZEBRA_BULLET("zebra-bullet"),
+    STAHLFELGE_SPEAR("stahlfelge-spear");
     
     public String name;
     public Skin skin;

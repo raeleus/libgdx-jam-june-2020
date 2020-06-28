@@ -13,9 +13,9 @@ public class MoveSetFerociousZebra extends MoveSet {
         attackSide = new MoveHeadbutt();
         attackUp = new MoveUpKick();
         attackDown = new MoveSweepKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        specialNeutral = new MoveZebraShotgun();
+        specialSide = new MoveZebraRifle();
+        specialUp = new MoveZebraJetPack();
+        specialDown = new MoveLyzeDive();
     }
 }

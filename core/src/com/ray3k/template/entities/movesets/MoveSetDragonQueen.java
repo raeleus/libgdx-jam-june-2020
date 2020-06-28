@@ -11,12 +11,12 @@ public class MoveSetDragonQueen extends MoveSet {
         jump = new MoveJump();
         jumpAttack = new MoveAirPunch();
         attackNeutral = new MoveJab();
-        attackSide = new MoveSpinKick();
-        attackUp = new MoveDoubleAxeHandle();
-        attackDown = new MoveLowKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
-        specialDown = new MoveAceSlide();
+        attackSide = new MoveLowPunch();
+        attackUp = new MoveUpKick();
+        attackDown = new MovePlank();
+        specialNeutral = new MoveDragonChargeKick();
+        specialSide = new MoveDragonBlast();
+        specialUp = new MoveDragonQueenSpirit();
+        specialDown = new MoveDragonLowBlast();
     }
 }

@@ -10,13 +10,13 @@ public class MoveSetIcefill extends MoveSet {
         goRight = new MoveGoRight();
         jump = new MoveJump();
         jumpAttack = new MoveAirPunch();
-        attackNeutral = new MoveJab();
+        attackNeutral = new MoveStraight();
         attackSide = new MoveSpinKick();
-        attackUp = new MoveDoubleAxeHandle();
-        attackDown = new MoveLowKick();
-        specialNeutral = new MoveAcePunch();
-        specialSide = new MoveAceBone();
-        specialUp = new MoveAceFlyingUppercut();
+        attackUp = new MoveUppercut();
+        attackDown = new MoveSweepKick();
+        specialNeutral = new MoveIcefillSword();
+        specialSide = new MoveIcefillBlast();
+        specialUp = new MoveIcefillMeteor();
         specialDown = new MoveAceSlide();
     }
 }

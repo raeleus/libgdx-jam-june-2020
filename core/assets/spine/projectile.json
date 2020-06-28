@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "lYIHMwIPp3JUCOg36bocw7QwLLM",
+	"hash": "p0+EG/akZWqknNVStMh5NweulWo",
 	"spine": "3.8.95",
-	"x": -27.58,
-	"y": -130.75,
-	"width": 52,
-	"height": 253,
+	"x": -89.2,
+	"y": -30,
+	"width": 123,
+	"height": 61,
 	"images": "../output/",
 	"audio": ""
 },
@@ -14,10 +14,18 @@
 	{ "name": "projectile", "parent": "root", "length": 117.11 }
 ],
 "slots": [
-	{ "name": "projectile", "bone": "projectile", "attachment": "projectile" },
+	{ "name": "projectile", "bone": "projectile", "attachment": "dragon-queen/drag-fireball" },
 	{ "name": "hitbox", "bone": "root", "attachment": "hitbox" }
 ],
 "skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"projectile": {
+				"dragon-queen/drag-fireball": { "x": -27.7, "y": 0.5, "width": 123, "height": 61 }
+			}
+		}
+	},
 	{
 		"name": "ace-bone",
 		"attachments": {
@@ -45,6 +53,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "ali/ali-keyboard", "x": 0.5, "y": 2.42, "width": 131, "height": 93 }
+			}
+		}
+	},
+	{
+		"name": "dragon-fireball",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -211.41, 35.91, 44.14, 35.06, 43.29, -40.5, -207.17, -43.9 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "icefill/icefill-iceball", "x": -86.95, "y": -3.4, "width": 283, "height": 90 }
 			}
 		}
 	},
@@ -111,6 +134,21 @@
 		}
 	},
 	{
+		"name": "icefill-iceball",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -211.41, 35.91, 44.14, 35.06, 43.29, -40.5, -207.17, -43.9 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "icefill/icefill-iceball", "x": -86.95, "y": -3.4, "width": 283, "height": 90 }
+			}
+		}
+	},
+	{
 		"name": "john-arrow",
 		"attachments": {
 			"hitbox": {
@@ -156,6 +194,21 @@
 		}
 	},
 	{
+		"name": "mario-fireball",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -211.41, 69.02, 44.99, 68.17, 43.29, -67.67, -212.26, -72.76 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "mario/mario-fireball", "x": -86.95, "y": -3.4, "width": 283, "height": 210 }
+			}
+		}
+	},
+	{
 		"name": "mgsx-arrow",
 		"attachments": {
 			"hitbox": {
@@ -182,6 +235,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "mgsx/mgsx-logo", "x": 5.56, "y": 14.4, "width": 201, "height": 104 }
+			}
+		}
+	},
+	{
+		"name": "nate-fireball",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -211.41, 69.02, 44.99, 68.17, 43.29, -67.67, -212.26, -72.76 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "nate/nate-fireball", "x": -86.95, "y": -3.4, "width": 283, "height": 210 }
 			}
 		}
 	},
@@ -317,6 +385,21 @@
 			},
 			"projectile": {
 				"projectile": { "name": "tom-ski/tomski-bolt", "x": 0.5, "y": 3.81, "width": 119, "height": 46 }
+			}
+		}
+	},
+	{
+		"name": "zebra-bullet",
+		"attachments": {
+			"hitbox": {
+				"hitbox": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -99.34, -8.24, 123.09, -9.09, 123.94, 14.68, -99.34, 13.83 ]
+				}
+			},
+			"projectile": {
+				"projectile": { "name": "ferocious-zebra/zebra-bullet", "x": 12.72, "y": 1.95, "width": 243, "height": 14 }
 			}
 		}
 	}

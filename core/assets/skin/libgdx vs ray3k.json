@@ -308,6 +308,26 @@
 	"portrait-tom-ski": {
 		"parent": "portrait",
 		"imageUp": "Tom-Ski"
+	},
+	"portrait-dragon-queen": {
+		"parent": "portrait",
+		"imageUp": "Dragon-Queen"
+	},
+	"portrait-ice-fill": {
+		"parent": "portrait",
+		"imageUp": "icefill"
+	},
+	"portrait-mario": {
+		"parent": "portrait",
+		"imageUp": "mario"
+	},
+	"portrait-nate": {
+		"parent": "portrait",
+		"imageUp": "nate"
+	},
+	"portrait-mister-stahlfelge": {
+		"parent": "portrait",
+		"imageUp": "Mister-Stahlfelge"
 	}
 },
 "com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle": {

@@ -1,6 +1,7 @@
 package com.ray3k.template;
 
 import com.esotericsoftware.spine.Skin;
+import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 
 public enum SkinName {
@@ -21,7 +22,12 @@ public enum SkinName {
     TANN("tann", new MoveSetTann()),
     TEMPLATE("template", new MoveSetTemplate()),
     TETTINGER("tettinger", new MoveSetTettinger()),
-    TOM_SKI("tom-ski", new MoveSetTomSki());
+    TOM_SKI("tom-ski", new MoveSetTomSki()),
+    DRAGON_QUEEN("dragon-queen", new MoveSetDragonQueen()),
+    MARIO("mario", new MoveSetMario()),
+    NATE("nate", new MoveSetNate()),
+    ICEFILL("icefill", new MoveSetIcefill()),
+    MISTER_STAHLFELGE("mister-stahlfelge", new MoveSetMisterStahlfelge());
     
     public String name;
     public MoveSet moveSet;

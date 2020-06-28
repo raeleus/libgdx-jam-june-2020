@@ -81,7 +81,13 @@ public enum AnimationName {
     SNEHKS_VENOM("snehks/snehks-venom"),
     TETTINGER_BALLOON("tettinger/tettinger-balloon"),
     TETTINGER_COUNTER_ATTACK("tettinger/tettinger-counter-attack"),
-    TOMSKI_LIGHTNING("tomski/tomski-lightning");
+    TOMSKI_LIGHTNING("tomski/tomski-lightning"),
+    DRAGON_BLAST_DOWN("dragon-queen/dragon-blast-down"),
+    DRAGON_CHARGE_KICK("dragon-queen/dragon-charge-kick"),
+    DRAGON_QUEEN_SPIRIT("dragon-queen/dragon-queen-spirit"),
+    ZEBRA_JET_PACK("ferocious-zebra/zebra-jet-pack"),
+    ZEBRA_RIFLE("ferocious-zebra/zebra-rifle"),
+    ZEBRA_SHOTGUN("ferocious-zebra/zebra-shotgun");
     
     public String name;
     public Animation animation;

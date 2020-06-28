@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveJohnBoomerang extends MoveSpecialTemplate {
     public MoveJohnBoomerang() {
@@ -38,6 +40,11 @@ public class MoveJohnBoomerang extends MoveSpecialTemplate {
                 projectile.accelerationH = -2000f;
             }
             projectile.setPosition(performer.projectileX, performer.projectileY);
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/woosh1.mp3");
+            sound.play();
         }
     }
 }

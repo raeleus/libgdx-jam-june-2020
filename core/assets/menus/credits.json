@@ -11,7 +11,7 @@
 						"clazz": "com.badlogic.gdx.scenes.scene2d.ui.Label",
 						"name": "default"
 					},
-					"text": "UI and game design by Raeleus.\\nArtwork by ZaidaZadkiel.\\nAdditional artwork by Raeleus.\\nCopyright Raymond \"Raeleus\" Buckley © 2020\\n\\nMusic by Devynn LaShure, Echo Blue Music\\nhttps://www.echobluemusic.com",
+					"text": "UI and game design by Raeleus.\\nArtwork by ZaidaZadkiel.\\nAdditional artwork by Raeleus.\\nCopyright Raymond \"Raeleus\" Buckley © 2020\\n\\nWelcome to the Show by Kevin MacLeod\\nLink: https://incompetech.filmmusic.io/song/4614-welcome-to-the-show\\nLicense: http://creativecommons.org/licenses/by/4.0/\\n\\nOuroboros by Kevin MacLeod\\nLink: https://incompetech.filmmusic.io/song/4996-ouroboros\\nLicense: http://creativecommons.org/licenses/by/4.0/",
 					"textAlignment": 1,
 					"ellipsis": false,
 					"ellipsisString": "...",

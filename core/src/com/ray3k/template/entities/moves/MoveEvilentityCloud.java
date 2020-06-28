@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 import static com.ray3k.template.ProjectileSkinName.*;
 
 public class MoveEvilentityCloud extends MoveSpecialTemplate {
@@ -47,6 +49,11 @@ public class MoveEvilentityCloud extends MoveSpecialTemplate {
             projectile.acceleration = PROJECTILE_ACCELERATION;
             projectile.setPosition(performer.projectileX, performer.projectileY);
             projectileCount++;
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/smoke.mp3");
+            sound.play();
         }
     }
 }

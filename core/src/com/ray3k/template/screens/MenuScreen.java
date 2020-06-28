@@ -1,13 +1,11 @@
 package com.ray3k.template.screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.ray3k.template.*;
@@ -21,12 +19,14 @@ public class MenuScreen extends JamScreen {
     @Override
     public void show() {
         super.show();
+        
+        if (gameMusic != null) gameMusic.stop();
     
-        final Music bgm = assetManager.get("bgm/music-test.mp3");
-        if (!bgm.isPlaying()) {
-            bgm.play();
-            bgm.setVolume(core.bgm);
-            bgm.setLooping(true);
+        bgmMusic = assetManager.get("bgm/music-test.mp3");
+        if (!bgmMusic.isPlaying()) {
+            bgmMusic.play();
+            bgmMusic.setVolume(core.bgm);
+            bgmMusic.setLooping(true);
         }
         
         stage = new Stage(new ScreenViewport(), batch);

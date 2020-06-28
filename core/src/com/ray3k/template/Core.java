@@ -25,6 +25,9 @@ public class Core extends JamGame {
     public static SkeletonRenderer skeletonRenderer;
     public static ChangeListener sndChangeListener;
     public static CrossPlatformWorker crossPlatformWorker;
+    public static Music bgmMusic;
+    public static Music gameMusic;
+    
     public enum Binding {
         P1_LEFT, P1_RIGHT, P1_UP, P1_DOWN, P1_JUMP, P1_ATTACK, P1_SHIELD, P1_SPECIAL, P2_LEFT, P2_RIGHT, P2_UP, P2_DOWN, P2_JUMP, P2_ATTACK, P2_SHIELD, P2_SPECIAL;
     }

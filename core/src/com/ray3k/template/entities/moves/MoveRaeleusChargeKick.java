@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveRaeleusChargeKick extends MoveSpecialTemplate {
     public MoveRaeleusChargeKick() {
@@ -25,6 +27,11 @@ public class MoveRaeleusChargeKick extends MoveSpecialTemplate {
         
         if (performer.moveEvent) {
             performer.deltaY = -2000f;
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/move-hammer.mp3");
+            sound.play();
         }
     }
 }

@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MovePayneGrenade extends MoveSpecialTemplate {
     private static final float PROJECTILE_ANGLE = 25;
@@ -45,6 +47,11 @@ public class MovePayneGrenade extends MoveSpecialTemplate {
             projectile.groundFriction = 800f;
             projectile.lifeTimer = 2f;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/woosh1.mp3");
+            sound.play();
         }
     }
 }

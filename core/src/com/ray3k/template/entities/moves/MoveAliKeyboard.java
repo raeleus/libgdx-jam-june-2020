@@ -23,6 +23,12 @@ public class MoveAliKeyboard extends MoveSpecialTemplate {
     }
     
     @Override
+    public void execute(PerformerEntity performer) {
+        super.execute(performer);
+        performer.moveSet.soundGrunt.play();
+    }
+    
+    @Override
     public void update(PerformerEntity performer, float delta) {
         super.update(performer, delta);
         

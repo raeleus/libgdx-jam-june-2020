@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveSkincomposerRollUp extends MoveSpecialTemplate {
     int mode;
@@ -50,6 +52,11 @@ public class MoveSkincomposerRollUp extends MoveSpecialTemplate {
             } else {
                 performer.deltaX += 10000f * delta;
             }
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/move-hammer.mp3");
+            sound.play();
         }
     }
 }

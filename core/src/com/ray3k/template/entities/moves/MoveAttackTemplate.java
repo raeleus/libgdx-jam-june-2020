@@ -26,6 +26,7 @@ public class MoveAttackTemplate implements Move {
         performer.damage = damage;
         performer.force = force;
         performer.forceAngle = forceAngle;
+        performer.moveSet.soundWoosh.play();
     }
     
     @Override

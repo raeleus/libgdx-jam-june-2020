@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveStahlfelgeTeleportPunch extends MoveSpecialTemplate {
     private float timer;
@@ -34,6 +36,11 @@ public class MoveStahlfelgeTeleportPunch extends MoveSpecialTemplate {
         }
         if (performer.moveEvent) {
             performer.skeleton.getRootBone().setScaleX(-1 * performer.skeleton.getRootBone().getScaleX());
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/woosh.mp3");
+            sound.play();
         }
     }
 }

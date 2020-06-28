@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveIcefillMeteor extends MoveSpecialTemplate {
     public MoveIcefillMeteor() {
@@ -31,6 +33,11 @@ public class MoveIcefillMeteor extends MoveSpecialTemplate {
             GameScreen.gameScreen.entityController.add(projectile);
             projectile.lifeTimer = 1f;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/ice.mp3");
+            sound.play();
         }
     }
 }

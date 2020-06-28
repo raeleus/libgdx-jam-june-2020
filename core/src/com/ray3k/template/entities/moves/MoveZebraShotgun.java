@@ -1,5 +1,6 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.MathUtils;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
@@ -7,6 +8,7 @@ import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveZebraShotgun extends MoveSpecialTemplate {
     private static final float PROJECTILE_SPEED = 2000f;
@@ -42,6 +44,11 @@ public class MoveZebraShotgun extends MoveSpecialTemplate {
                 projectile.acceleration = PROJECTILE_ACCELERATION;
                 projectile.setPosition(performer.projectileX, performer.projectileY);
             }
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/shotgun.mp3");
+            sound.play();
         }
     }
 }

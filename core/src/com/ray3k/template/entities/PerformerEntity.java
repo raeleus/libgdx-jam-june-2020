@@ -1,5 +1,6 @@
 package com.ray3k.template.entities;
 
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -16,6 +17,7 @@ import com.ray3k.template.entities.moves.*;
 import com.ray3k.template.entities.movesets.*;
 import com.ray3k.template.entities.steering.*;
 
+import static com.ray3k.template.JamGame.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 import static com.ray3k.template.screens.GameScreen.*;
 
@@ -31,6 +33,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     public float projectileX;
     public float projectileY;
     public boolean moveEvent;
+    public boolean soundEvent;
     public boolean animationCompleteEvent;
     public float width;
     public float height;
@@ -60,6 +63,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     private boolean teleporting;
     public float hurtableTimer;
     public static final float HURTABLE_DELAY = .2f;
+    public static final Sound soundPunch = assetManager.get("sfx/punch.mp3");
     
     public PerformerEntity(SkinName skinName, Steering steering, int lives) {
         this.skinName = skinName;
@@ -73,7 +77,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     
     @Override
     public void create() {
-        setSkeletonData(Core.assetManager.get("spine/fighter.json"), Core.assetManager.get("spine/fighter.json-animation"));
+        setSkeletonData(assetManager.get("spine/fighter.json"), assetManager.get("spine/fighter.json-animation"));
         skeleton.setSkin(skinName.skin);
         hitBoxSlot = skeleton.findSlot("hitbox");
         hurtBoxSlot = skeleton.findSlot("bbox");
@@ -110,6 +114,9 @@ public class PerformerEntity extends Entity implements Bumpable {
                         break;
                     case "move":
                         moveEvent = true;
+                        break;
+                    case "sound":
+                        soundEvent = true;
                         break;
                 }
             }
@@ -200,6 +207,7 @@ public class PerformerEntity extends Entity implements Bumpable {
         currentMove.update(this, delta);
         fireProjectileEvent = false;
         moveEvent = false;
+        soundEvent = false;
         animationCompleteEvent = false;
         
         hitbox.active = hitBoxSlot.getAttachment() != null;
@@ -217,8 +225,11 @@ public class PerformerEntity extends Entity implements Bumpable {
         }
         
         if (y < -400) {
+            moveSet.soundDeath.play();
             lives--;
-            if (lives < 0) destroy = true;
+            if (lives < 0) {
+                destroy = true;
+            }
             else {
                 setPosition(1000, 3500);
                 teleporting = true;
@@ -321,11 +332,13 @@ public class PerformerEntity extends Entity implements Bumpable {
     }
     
     public void hurt(float damage, float force, float forceAngle) {
+        soundPunch.play();
         if (mode != HURTING && mode != SHIELDING) {
             health += damage;
             mode = HURTING;
             hurtableTimer = HURTABLE_DELAY;
             setMotion(force, forceAngle);
+            moveSet.soundHurt.play();
         }
     }
 }

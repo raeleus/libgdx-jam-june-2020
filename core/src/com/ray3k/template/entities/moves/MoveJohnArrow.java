@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveJohnArrow extends MoveSpecialTemplate {
     public MoveJohnArrow() {
@@ -35,6 +37,11 @@ public class MoveJohnArrow extends MoveSpecialTemplate {
             else projectile.setMotion(projectileSpeed, 0);
             projectile.acceleration = 0;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/bow.mp3");
+            sound.play();
         }
     }
 }

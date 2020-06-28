@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveSnehksInvisible extends MoveSpecialTemplate {
     @Override
@@ -22,5 +24,15 @@ public class MoveSnehksInvisible extends MoveSpecialTemplate {
         super.execute(performer);
         performer.animationState.setAnimation(1, SNEHKS_INVISIBLE_TIMED.animation, false);
         performer.animationState.addEmptyAnimation(1, 0, 0);
+    }
+    
+    @Override
+    public void update(PerformerEntity performer, float delta) {
+        super.update(performer, delta);
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/smoke.mp3");
+            sound.play();
+        }
     }
 }

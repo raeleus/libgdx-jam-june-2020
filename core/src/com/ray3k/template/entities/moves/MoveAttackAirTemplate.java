@@ -23,6 +23,7 @@ public class MoveAttackAirTemplate implements Move {
     public void execute(PerformerEntity performer) {
         performer.animationState.setAnimation(0, attackAnim, false);
         jumpTime = jumpDelay;
+        performer.moveSet.soundWoosh.play();
     }
     
     @Override

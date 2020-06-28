@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveEvilentityTeleportUppercut extends MoveSpecialTemplate {
     private float timer;
@@ -31,6 +33,11 @@ public class MoveEvilentityTeleportUppercut extends MoveSpecialTemplate {
                 if (performer.skeleton.getRootBone().getScaleX() < 0) performer.x -= DISTANCE;
                 else performer.x += DISTANCE;
             }
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/woosh.mp3");
+            sound.play();
         }
     }
 }

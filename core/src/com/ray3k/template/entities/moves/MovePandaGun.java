@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MovePandaGun extends MoveSpecialTemplate {
     public MovePandaGun() {
@@ -44,6 +46,11 @@ public class MovePandaGun extends MoveSpecialTemplate {
             projectile.acceleration = 0;
             projectile.setPosition(performer.projectileX, performer.projectileY);
             projectileCount++;
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/gun.mp3");
+            sound.play();
         }
     }
 }

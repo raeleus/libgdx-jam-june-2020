@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "LqC33xPNkUgvTgt8nxiRgFEUvUk",
+	"hash": "dWK3hHkDEeWFPYAT0MtsQ1Pr7i0",
 	"spine": "3.8.95",
 	"x": -48.7,
 	"y": -8.08,
@@ -2214,7 +2214,8 @@
 ],
 "events": {
 	"fire-projectile": {},
-	"move": {}
+	"move": {},
+	"sound": {}
 },
 "animations": {
 	"ace-skeleton/ace-flying-uppercut": {
@@ -2394,6 +2395,9 @@
 					{ "slot": "prop", "offset": -16 }
 				]
 			}
+		],
+		"events": [
+			{ "name": "sound" }
 		]
 	},
 	"ace-skeleton/ace-grab": {
@@ -2475,20 +2479,20 @@
 		"slots": {
 			"hitbox": {
 				"attachment": [
-					{ "time": 0.5667, "name": "hitbox" },
-					{ "time": 0.8667, "name": null }
+					{ "time": 1, "name": "hitbox" },
+					{ "time": 1.3, "name": null }
 				]
 			},
 			"prop": {
 				"color": [
-					{ "time": 0.5667, "color": "ffffff00" },
-					{ "time": 0.6, "color": "ffffffff", "curve": "stepped" },
-					{ "time": 0.8333, "color": "ffffffff" },
-					{ "time": 0.9333, "color": "ffffff00" }
+					{ "time": 1, "color": "ffffff00" },
+					{ "time": 1.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.2667, "color": "ffffffff" },
+					{ "time": 1.3667, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "time": 0.5667, "name": "prop1" },
-					{ "time": 0.9333, "name": null }
+					{ "time": 1, "name": "prop1" },
+					{ "time": 1.3667, "name": null }
 				]
 			}
 		},
@@ -2497,58 +2501,58 @@
 				"rotate": [
 					{},
 					{ "time": 0.0667, "angle": 4.02 },
-					{ "time": 0.5, "angle": 15.67 },
-					{ "time": 0.5667, "angle": -18.55, "curve": "stepped" },
-					{ "time": 0.8333, "angle": -18.55 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "angle": 15.67 },
+					{ "time": 1, "angle": -18.55, "curve": "stepped" },
+					{ "time": 1.2667, "angle": -18.55 },
+					{ "time": 1.4 }
 				]
 			},
 			"arm-left-target": {
 				"translate": [
 					{ "x": -18.2, "y": 6.07 },
 					{ "time": 0.0667, "x": -52.56, "y": -1.13 },
-					{ "time": 0.5, "x": -68.59, "y": -33.19 },
-					{ "time": 0.5667, "x": -35.51, "y": -17.9 },
-					{ "time": 0.8333, "x": -33.91, "y": -24.3 },
-					{ "time": 0.9667, "x": -18.2, "y": 6.07 }
+					{ "time": 0.9333, "x": -68.59, "y": -33.19 },
+					{ "time": 1, "x": -35.51, "y": -17.9 },
+					{ "time": 1.2667, "x": -33.91, "y": -24.3 },
+					{ "time": 1.4, "x": -18.2, "y": 6.07 }
 				]
 			},
 			"arm-right-target": {
 				"translate": [
 					{ "x": 8.76, "y": 39.77 },
 					{ "time": 0.0667, "x": -20.8, "y": 34.97 },
-					{ "time": 0.5, "x": -53.87, "y": 29.96 },
-					{ "time": 0.5667, "x": 112.63, "y": 66.93 },
-					{ "time": 0.8333, "x": 117.43, "y": 64.27 },
-					{ "time": 0.9, "x": 26.34, "y": 46.16 },
-					{ "time": 0.9667, "x": 8.76, "y": 39.77 }
+					{ "time": 0.9333, "x": -53.87, "y": 29.96 },
+					{ "time": 1, "x": 112.63, "y": 66.93 },
+					{ "time": 1.2667, "x": 117.43, "y": 64.27 },
+					{ "time": 1.3333, "x": 26.34, "y": 46.16 },
+					{ "time": 1.4, "x": 8.76, "y": 39.77 }
 				]
 			},
 			"hip": {
 				"translate": [
 					{},
 					{ "time": 0.0667, "x": -13.58, "y": -17.58, "curve": "stepped" },
-					{ "time": 0.5, "x": -13.58, "y": -17.58 },
-					{ "time": 0.5667, "x": 14.38, "y": -7.99 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "x": -13.58, "y": -17.58 },
+					{ "time": 1, "x": 14.38, "y": -7.99 },
+					{ "time": 1.4 }
 				]
 			},
 			"leg-left-target": {
 				"translate": [
 					{},
 					{ "time": 0.0667, "x": 13.58, "y": 17.58, "curve": "stepped" },
-					{ "time": 0.5, "x": 13.58, "y": 17.58 },
-					{ "time": 0.5667, "x": -14.38, "y": 7.99 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "x": 13.58, "y": 17.58 },
+					{ "time": 1, "x": -14.38, "y": 7.99 },
+					{ "time": 1.4 }
 				]
 			},
 			"leg-right-target": {
 				"translate": [
 					{},
 					{ "time": 0.0667, "x": 13.58, "y": 17.58, "curve": "stepped" },
-					{ "time": 0.5, "x": 13.58, "y": 17.58 },
-					{ "time": 0.5667, "x": -14.38, "y": 7.99 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "x": 13.58, "y": 17.58 },
+					{ "time": 1, "x": -14.38, "y": 7.99 },
+					{ "time": 1.4 }
 				]
 			},
 			"foot-right": {
@@ -2556,20 +2560,20 @@
 					{},
 					{ "time": 0.0333, "angle": 15.04 },
 					{ "time": 0.0667, "angle": 22.36, "curve": "stepped" },
-					{ "time": 0.5, "angle": 22.36 },
-					{ "time": 0.5333, "angle": 21.11 },
-					{ "time": 0.5667, "angle": 12.98 },
-					{ "time": 0.8333, "angle": 9.41 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "angle": 22.36 },
+					{ "time": 0.9667, "angle": 21.11 },
+					{ "time": 1, "angle": 12.98 },
+					{ "time": 1.2667, "angle": 9.41 },
+					{ "time": 1.4 }
 				],
 				"translate": [
 					{ "time": 0.0333, "x": -0.45, "y": 1.18 },
 					{ "time": 0.0667, "x": -0.78, "y": 1.7, "curve": "stepped" },
-					{ "time": 0.5, "x": -0.78, "y": 1.7 },
-					{ "time": 0.5333, "x": -0.72, "y": 1.62 },
-					{ "time": 0.5667, "x": -0.37, "y": 1.03 },
-					{ "time": 0.8333, "x": -0.25, "y": 0.75 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "x": -0.78, "y": 1.7 },
+					{ "time": 0.9667, "x": -0.72, "y": 1.62 },
+					{ "time": 1, "x": -0.37, "y": 1.03 },
+					{ "time": 1.2667, "x": -0.25, "y": 0.75 },
+					{ "time": 1.4 }
 				]
 			},
 			"foot-left": {
@@ -2577,41 +2581,41 @@
 					{},
 					{ "time": 0.0333, "angle": 7.55 },
 					{ "time": 0.0667, "angle": 9.68, "curve": "stepped" },
-					{ "time": 0.5, "angle": 9.68 },
-					{ "time": 0.5333, "angle": 17.13 },
-					{ "time": 0.5667, "angle": 22 },
-					{ "time": 0.8333, "angle": 15.87 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "angle": 9.68 },
+					{ "time": 0.9667, "angle": 17.13 },
+					{ "time": 1, "angle": 22 },
+					{ "time": 1.2667, "angle": 15.87 },
+					{ "time": 1.4 }
 				],
 				"translate": [
 					{ "time": 0.0333, "x": 0.03, "y": 0.71 },
 					{ "time": 0.0667, "x": 0.02, "y": 0.91, "curve": "stepped" },
-					{ "time": 0.5, "x": 0.02, "y": 0.91 },
-					{ "time": 0.5333, "x": -0.07, "y": 1.61 },
-					{ "time": 0.5667, "x": -0.17, "y": 2.06 },
-					{ "time": 0.8333, "x": -0.04, "y": 1.49 },
-					{ "time": 0.9667 }
+					{ "time": 0.9333, "x": 0.02, "y": 0.91 },
+					{ "time": 0.9667, "x": -0.07, "y": 1.61 },
+					{ "time": 1, "x": -0.17, "y": 2.06 },
+					{ "time": 1.2667, "x": -0.04, "y": 1.49 },
+					{ "time": 1.4 }
 				]
 			},
 			"arm-right": {
 				"scale": [
-					{ "time": 0.5333 },
-					{ "time": 0.5667, "x": 1.095, "curve": "stepped" },
-					{ "time": 0.8333, "x": 1.095 },
-					{ "time": 0.9667 }
+					{ "time": 0.9667 },
+					{ "time": 1, "x": 1.095, "curve": "stepped" },
+					{ "time": 1.2667, "x": 1.095 },
+					{ "time": 1.4 }
 				]
 			},
 			"forearm-right": {
 				"scale": [
-					{ "time": 0.5333 },
-					{ "time": 0.5667, "x": 1.095, "curve": "stepped" },
-					{ "time": 0.8333, "x": 1.095 },
-					{ "time": 0.9667 }
+					{ "time": 0.9667 },
+					{ "time": 1, "x": 1.095, "curve": "stepped" },
+					{ "time": 1.2667, "x": 1.095 },
+					{ "time": 1.4 }
 				]
 			},
 			"prop": {
 				"translate": [
-					{ "time": 0.5667, "x": 34.07, "y": 15.03 }
+					{ "time": 1, "x": 34.07, "y": 15.03 }
 				]
 			}
 		},
@@ -2621,31 +2625,34 @@
 					"hurtbox": [
 						{},
 						{
-							"time": 0.4,
+							"time": 0.8333,
 							"vertices": [ -64.194, 0, -64.194 ]
 						},
 						{
-							"time": 0.6333,
+							"time": 1.0667,
 							"vertices": [ 4.93802, 0, 4.93802, 0, 32.09703, 0, 32.09703 ]
 						},
-						{ "time": 0.9667 }
+						{ "time": 1.4 }
 					]
 				},
 				"hitbox": {
 					"hitbox": [
 						{
-							"time": 0.5667,
+							"time": 1,
 							"offset": 1,
 							"vertices": [ 13.168, 0, 13.168, 1.0E-5, -3.29202, 0, -3.29199 ]
 						},
 						{
-							"time": 0.6955,
+							"time": 1.1333,
 							"vertices": [ 4.11499, 106.98996, 50.20297, 111.92798, 54.31802, -51.84904, -0.823, -46.91103 ]
 						}
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"ace-skeleton/ace-slide": {
 		"slots": {
@@ -2743,7 +2750,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"general/air": {
 		"bones": {
@@ -3481,7 +3491,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.3667, "name": "sound" }
+		]
 	},
 	"ali/ali-laser": {
 		"slots": {
@@ -3548,7 +3561,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.4333, "name": "sound" }
+		]
 	},
 	"ali/ali-toss": {
 		"bones": {
@@ -3574,6 +3590,7 @@
 			}
 		},
 		"events": [
+			{ "name": "sound" },
 			{ "time": 0.4, "name": "fire-projectile" }
 		]
 	},
@@ -4249,7 +4266,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.2667, "name": "fire-projectile" }
+			{ "time": 0.2667, "name": "fire-projectile" },
+			{ "time": 0.2667, "name": "sound" }
 		]
 	},
 	"dragon-queen/dragon-charge-kick": {
@@ -4380,6 +4398,7 @@
 			}
 		},
 		"events": [
+			{ "name": "sound" },
 			{ "time": 0.5, "name": "move" },
 			{ "time": 1.5667, "name": "move" }
 		]
@@ -4693,6 +4712,9 @@
 					{ "slot": "prop", "offset": -16 }
 				]
 			}
+		],
+		"events": [
+			{ "name": "sound" }
 		]
 	},
 	"evilentity/evilentity-teleport-uppercut": {
@@ -4956,7 +4978,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.7333, "name": "sound" }
+		]
 	},
 	"general/front-flip": {
 		"slots": {
@@ -5569,7 +5594,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.2667, "name": "fire-projectile" }
+			{ "time": 0.2667, "name": "fire-projectile" },
+			{ "time": 0.2667, "name": "sound" }
 		]
 	},
 	"icefill/icefill-sword": {
@@ -5744,7 +5770,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.1333, "name": "sound" }
+		]
 	},
 	"general/jab": {
 		"slots": {
@@ -5930,6 +5959,7 @@
 			}
 		],
 		"events": [
+			{ "time": 0.5333, "name": "sound" },
 			{ "time": 0.5667, "name": "fire-projectile" }
 		]
 	},
@@ -6001,7 +6031,10 @@
 					{ "time": 2.1 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "sound" }
+		]
 	},
 	"general/jump": {
 		"bones": {
@@ -6598,10 +6631,18 @@
 			}
 		},
 		"events": [
-			{ "time": 0.5333, "name": "move" }
+			{ "time": 0.5333, "name": "move" },
+			{ "time": 0.5333, "name": "sound" }
 		]
 	},
 	"lyze/lyze-force-push": {
+		"slots": {
+			"hitbox": {
+				"attachment": [
+					{ "time": 0.5, "name": "hitbox" }
+				]
+			}
+		},
 		"bones": {
 			"body": {
 				"rotate": [
@@ -6678,9 +6719,20 @@
 						},
 						{ "time": 0.5 }
 					]
+				},
+				"hitbox": {
+					"hitbox": [
+						{
+							"time": 0.5,
+							"vertices": [ -5.30005, 22.52502, 555.1749, 22.52502, 553.85, -190.79997, -6.62503, -190.79997 ]
+						}
+					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.4333, "name": "sound" }
+		]
 	},
 	"lyze/lyze-tackle": {
 		"slots": {
@@ -6862,6 +6914,7 @@
 		},
 		"events": [
 			{ "time": 0.4, "name": "move" },
+			{ "time": 0.4, "name": "sound" },
 			{ "time": 0.7333, "name": "move" }
 		]
 	},
@@ -6978,7 +7031,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.2667, "name": "fire-projectile" }
+			{ "time": 0.2667, "name": "fire-projectile" },
+			{ "time": 0.2667, "name": "sound" }
 		]
 	},
 	"mario/mario-flying-uppercut": {
@@ -7144,7 +7198,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"mario/mario-helicopter": {
 		"slots": {
@@ -7302,6 +7359,7 @@
 		},
 		"events": [
 			{ "time": 0.4, "name": "move" },
+			{ "time": 0.4, "name": "sound" },
 			{ "time": 1.2667, "name": "move" }
 		]
 	},
@@ -7430,7 +7488,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 1.2333, "name": "sound" }
+		]
 	},
 	"mgsx/mgsx-arrow": {
 		"slots": {
@@ -7473,7 +7534,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.3333, "name": "fire-projectile" }
+			{ "time": 0.3333, "name": "fire-projectile" },
+			{ "time": 0.3333, "name": "sound" }
 		]
 	},
 	"mgsx/mgsx-logo-attack": {
@@ -7533,7 +7595,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.2667, "name": "fire-projectile" }
+			{ "time": 0.2667, "name": "fire-projectile" },
+			{ "time": 0.2667, "name": "sound" }
 		]
 	},
 	"mgsx/mgsx-metamorph": {
@@ -7730,6 +7793,7 @@
 			}
 		},
 		"events": [
+			{ "time": 0.2333, "name": "sound" },
 			{ "time": 0.3333, "name": "move" }
 		]
 	},
@@ -7828,6 +7892,7 @@
 			}
 		},
 		"events": [
+			{ "name": "sound" },
 			{ "time": 0.3, "name": "move" },
 			{ "time": 0.7667, "name": "move" }
 		]
@@ -8015,7 +8080,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"peanut-panda/panda-propeller": {
 		"slots": {
@@ -8119,6 +8187,9 @@
 					{ "slot": "prop", "offset": -9 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.2, "name": "sound" }
 		]
 	},
 	"payne/payne-mortar": {
@@ -8228,7 +8299,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.8, "name": "fire-projectile" }
+			{ "time": 0.8, "name": "fire-projectile" },
+			{ "time": 0.8, "name": "sound" }
 		]
 	},
 	"payne/payne-nikita": {
@@ -8339,7 +8411,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.3, "name": "fire-projectile" }
+			{ "time": 0.3, "name": "fire-projectile" },
+			{ "time": 0.3, "name": "sound" }
 		]
 	},
 	"payne/payne-uav": {
@@ -8373,7 +8446,10 @@
 					{ "time": 0.2333, "x": -127.28, "y": 138.98 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.2667, "name": "sound" }
+		]
 	},
 	"general/plank": {
 		"slots": {
@@ -8634,7 +8710,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.6667, "name": "move" }
+			{ "time": 0.6667, "name": "move" },
+			{ "time": 0.6667, "name": "sound" }
 		]
 	},
 	"raeleus/raeleus-charge-punch": {
@@ -8808,6 +8885,7 @@
 		},
 		"events": [
 			{ "time": 0.3667, "name": "move" },
+			{ "time": 0.3667, "name": "sound" },
 			{ "time": 0.7333, "name": "move" }
 		]
 	},
@@ -8983,7 +9061,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"raeleus/raeleus-knee-uppercut": {
 		"slots": {
@@ -9082,7 +9163,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"general/roll": {
 		"bones": {
@@ -9455,6 +9539,9 @@
 					{ "slot": "prop", "offset": -16 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.2333, "name": "sound" }
 		]
 	},
 	"skin-composer/skin-composer-roll": {
@@ -9578,6 +9665,7 @@
 			}
 		},
 		"events": [
+			{ "name": "sound" },
 			{ "time": 0.2, "name": "move" },
 			{ "time": 0.7667, "name": "move" }
 		]
@@ -9796,6 +9884,7 @@
 			}
 		},
 		"events": [
+			{ "name": "sound" },
 			{ "time": 0.1333, "name": "move" },
 			{ "time": 0.8333, "name": "move" }
 		]
@@ -9941,6 +10030,7 @@
 		},
 		"events": [
 			{ "time": 0.1667, "name": "move" },
+			{ "time": 0.2, "name": "sound" },
 			{ "time": 0.8333, "name": "move" }
 		]
 	},
@@ -10051,7 +10141,10 @@
 					{ "time": 0.4333, "x": -138.46, "y": -213.51 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.5, "name": "sound" }
+		]
 	},
 	"snehks/snehks-invisible-timed": {
 		"slots": {
@@ -10226,7 +10319,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.2333, "name": "sound" }
+		]
 	},
 	"snehks/snehks-venom": {
 		"bones": {
@@ -10301,7 +10397,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.3333, "name": "fire-projectile" }
+			{ "time": 0.3333, "name": "fire-projectile" },
+			{ "time": 0.3333, "name": "sound" }
 		]
 	},
 	"general/spin-kick": {
@@ -10709,7 +10806,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.3333, "name": "fire-projectile" }
+			{ "time": 0.3333, "name": "fire-projectile" },
+			{ "time": 0.3333, "name": "sound" }
 		]
 	},
 	"mister-stahlfelge/stahlfelge-teleport-punch": {
@@ -10992,6 +11090,7 @@
 			}
 		},
 		"events": [
+			{ "time": 0.7333, "name": "sound" },
 			{ "time": 1.1, "name": "move" }
 		]
 	},
@@ -11542,6 +11641,9 @@
 					{ "slot": "prop", "offset": -9 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.2, "name": "sound" }
 		]
 	},
 	"tettinger/tettinger-counter-attack": {
@@ -11580,7 +11682,10 @@
 					{ "time": 1.7, "x": 8.76, "y": 39.77 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "name": "sound" }
+		]
 	},
 	"tomski/tomski-lightning": {
 		"slots": {
@@ -11634,7 +11739,10 @@
 					]
 				}
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.3667, "name": "sound" }
+		]
 	},
 	"general/up-kick": {
 		"slots": {
@@ -12096,6 +12204,9 @@
 					{ "slot": "prop", "offset": -9 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.2, "name": "sound" }
 		]
 	},
 	"ferocious-zebra/zebra-rifle": {
@@ -12180,6 +12291,7 @@
 		},
 		"events": [
 			{ "time": 0.5, "name": "fire-projectile" },
+			{ "time": 0.5, "name": "sound" },
 			{ "time": 0.6667, "name": "fire-projectile" },
 			{ "time": 0.8667, "name": "fire-projectile" }
 		]
@@ -12249,7 +12361,8 @@
 			}
 		},
 		"events": [
-			{ "time": 0.5, "name": "fire-projectile" }
+			{ "time": 0.5, "name": "fire-projectile" },
+			{ "time": 0.5, "name": "sound" }
 		]
 	}
 }

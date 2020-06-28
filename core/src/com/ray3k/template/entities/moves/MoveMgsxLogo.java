@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveMgsxLogo extends MoveSpecialTemplate {
     public MoveMgsxLogo() {
@@ -32,6 +34,11 @@ public class MoveMgsxLogo extends MoveSpecialTemplate {
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.skeleton.getRootBone().setScaleX(-1);
             }
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/energy-sword.mp3");
+            sound.play();
         }
     }
 }

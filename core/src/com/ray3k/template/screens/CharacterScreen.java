@@ -3,6 +3,7 @@ package com.ray3k.template.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -30,13 +31,7 @@ public class CharacterScreen extends JamScreen {
     @Override
     public void show() {
         super.show();
-    
-        final Music bgm = assetManager.get("bgm/music-test.mp3");
-        if (!bgm.isPlaying()) {
-            bgm.play();
-            bgm.setVolume(Core.bgm);
-            bgm.setLooping(true);
-        }
+        if (bgmMusic != null) bgmMusic.setVolume(bgm * .25f);
         
         stage = new Stage(new ScreenViewport(), batch);
         Gdx.input.setInputProcessor(stage);
@@ -54,13 +49,17 @@ public class CharacterScreen extends JamScreen {
                 imageButton.addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
+                        String name = imageButton.getName();
+                        Sound sound = assetManager.get("sfx/name-" + name + ".mp3");
+                        sound.play();
+                        
                         switch (playerIndex) {
                             case 1:
-                                GameScreen.player1Skin = SkinName.getByName(imageButton.getName());
+                                GameScreen.player1Skin = SkinName.getByName(name);
                                 core.transition(new CharacterScreen("P2 Choose Your GDX Fighter", 2));
                                 break;
                             case 2:
-                                GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
+                                GameScreen.player2Skin = SkinName.getByName(name);
                                 core.transition(new LevelScreen());
                                 break;
                         }

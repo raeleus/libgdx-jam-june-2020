@@ -1,8 +1,10 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveDragonChargeKick extends MoveSpecialTemplate {
     int mode;
@@ -43,6 +45,11 @@ public class MoveDragonChargeKick extends MoveSpecialTemplate {
             }
             
             mode++;
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/move-bicycle-kick.mp3");
+            sound.play();
         }
     }
 }

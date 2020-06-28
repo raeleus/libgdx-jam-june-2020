@@ -27,6 +27,7 @@ public class MoveJump implements Move {
         if (performer.animationState.getCurrent(0).getAnimation() != GENERAL_JUMP.animation) {
             performer.animationState.setAnimation(0, GENERAL_JUMP.animation, false);
             performer.animationState.addAnimation(0, GENERAL_AIR.animation, true, 0);
+            performer.moveSet.soundGrunt.play();
         }
         
         performer.deltaY = JUMP_SPEED;

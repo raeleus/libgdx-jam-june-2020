@@ -3,6 +3,7 @@ package com.ray3k.template.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -44,6 +45,15 @@ public class GameScreen extends JamScreen {
     public BackgroundEntity backgroundEntity;
     
     public GameScreen() {
+        if (bgmMusic != null) bgmMusic.stop();
+    
+        gameMusic = assetManager.get("bgm/game.mp3");
+        if (!gameMusic.isPlaying()) {
+            gameMusic.play();
+            gameMusic.setVolume(core.bgm * .25f);
+            gameMusic.setLooping(true);
+        }
+        
         gameScreen = this;
         vfxEffect = new EarthquakeEffect();
         vfxEffect.setAmount(0);
@@ -99,6 +109,9 @@ public class GameScreen extends JamScreen {
     
     @Override
     public void show() {
+        Sound sound = assetManager.get("sfx/fight.mp3");
+        sound.play();
+        
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
             String layerName;

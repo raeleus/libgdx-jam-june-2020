@@ -5,7 +5,6 @@ import com.ray3k.template.entities.moves.*;
 public class MoveSetAceSkeleton extends MoveSet {
     public MoveSetAceSkeleton() {
         stance = new MoveStance();
-        shield = new MoveShield();
         goLeft = new MoveGoLeft();
         goRight = new MoveGoRight();
         jump = new MoveJump();

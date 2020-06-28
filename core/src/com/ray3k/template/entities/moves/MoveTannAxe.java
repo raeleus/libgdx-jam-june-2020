@@ -1,11 +1,13 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.projectiles.*;
 import com.ray3k.template.screens.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 
 public class MoveTannAxe extends MoveSpecialTemplate {
     private static final float PROJECTILE_ANGLE = 70;
@@ -44,6 +46,11 @@ public class MoveTannAxe extends MoveSpecialTemplate {
             projectile.acceleration = PROJECTILE_ACCELERATION;
             projectile.gravity = PROJECTILE_GRAVITY;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/sword.mp3");
+            sound.play();
         }
     }
 }

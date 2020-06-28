@@ -1,9 +1,11 @@
 package com.ray3k.template.entities.moves;
 
+import com.badlogic.gdx.audio.Sound;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.PerformerEntity.*;
 
 import static com.ray3k.template.AnimationName.*;
+import static com.ray3k.template.JamGame.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveLyzeDive extends MoveSpecialTemplate {
@@ -25,6 +27,11 @@ public class MoveLyzeDive extends MoveSpecialTemplate {
         
         if (performer.moveEvent) {
             performer.deltaY = -2000f;
+        }
+    
+        if (performer.soundEvent) {
+            Sound sound = assetManager.get("sfx/jet.mp3");
+            sound.play();
         }
     }
 }

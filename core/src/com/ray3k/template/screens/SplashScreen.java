@@ -39,9 +39,7 @@ public class SplashScreen extends JamScreen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 Gdx.input.setInputProcessor(null);
-                var gameScreen = new GameScreen();
-                var p2Screen = new CharacterScreen("P2 Choose Your GDX Fighter", 2, gameScreen);
-                core.transition(new CharacterScreen("P1 Choose Your GDX Fighter", 1, p2Screen));
+                core.transition(new CharacterScreen("P1 Choose Your GDX Fighter", 1));
             }
         });
     }

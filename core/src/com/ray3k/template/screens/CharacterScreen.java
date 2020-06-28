@@ -21,12 +21,10 @@ public class CharacterScreen extends JamScreen {
     private final static Color BG_COLOR = new Color(Color.BLACK);
     public String title;
     public int playerIndex;
-    public JamScreen nextScreen;
     
-    public CharacterScreen(String title, int playerIndex, JamScreen nextScreen) {
+    public CharacterScreen(String title, int playerIndex) {
         this.title = title;
         this.playerIndex = playerIndex;
-        this.nextScreen = nextScreen;
     }
     
     @Override
@@ -58,12 +56,13 @@ public class CharacterScreen extends JamScreen {
                         switch (playerIndex) {
                             case 1:
                                 GameScreen.player1Skin = SkinName.getByName(imageButton.getName());
+                                core.transition(new CharacterScreen("P2 Choose Your GDX Fighter", 2));
                                 break;
                             case 2:
                                 GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
+                                core.transition(new GameScreen());
                                 break;
                         }
-                        core.transition(nextScreen);
                     }
                 });
             }

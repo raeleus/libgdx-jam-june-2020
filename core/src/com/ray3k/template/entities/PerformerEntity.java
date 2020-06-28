@@ -3,6 +3,7 @@ package com.ray3k.template.entities;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Array;
 import com.dongbat.jbump.Collision;
 import com.dongbat.jbump.Item;
@@ -64,6 +65,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     public float hurtableTimer;
     public static final float HURTABLE_DELAY = .2f;
     public static final Sound soundPunch = assetManager.get("sfx/punch.mp3");
+    public Label label;
     
     public PerformerEntity(SkinName skinName, Steering steering, int lives) {
         this.skinName = skinName;
@@ -134,7 +136,7 @@ public class PerformerEntity extends Entity implements Bumpable {
     
         if (hurtableTimer > 0) {
             hurtableTimer -= delta;
-            if (hurtableTimer <= 0) {
+            if (hurtableTimer <= 0 && mode == HURTING) {
                 mode = STANDING;
             }
         }
@@ -229,9 +231,11 @@ public class PerformerEntity extends Entity implements Bumpable {
             lives--;
             if (lives < 0) {
                 destroy = true;
+                label.setText("Dead!");
             }
             else {
                 setPosition(1000, 3500);
+                updateLabel();
                 teleporting = true;
                 deltaX = 0;
                 deltaY = 0;
@@ -332,17 +336,23 @@ public class PerformerEntity extends Entity implements Bumpable {
     }
     
     public void hurt(float damage, float force, float forceAngle) {
-        soundPunch.play();
+        if (hurtableTimer <= 0) soundPunch.play();
+        hurtableTimer = HURTABLE_DELAY;
+        
         if (mode != HURTING && mode != SHIELDING) {
-            health += damage;
             mode = HURTING;
-            hurtableTimer = HURTABLE_DELAY;
-            setMotion(force, forceAngle);
+            health += damage;
+            setMotion(force * (health + 10) / 100f, forceAngle);
             moveSet.soundHurt.play();
+            updateLabel();
         }
     }
     
     public void hitEnemy() {
     
+    }
+    
+    private void updateLabel() {
+        label.setText(lives + " lives\n" + ((int) health) + "%");
     }
 }

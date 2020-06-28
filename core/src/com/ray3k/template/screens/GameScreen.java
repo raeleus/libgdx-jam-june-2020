@@ -10,21 +10,19 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
-import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
 import com.crashinvaders.vfx.effects.EarthquakeEffect;
-import com.dongbat.jbump.Item;
 import com.dongbat.jbump.World;
 import com.ray3k.template.*;
 import com.ray3k.template.OgmoReader.*;
 import com.ray3k.template.entities.*;
 import com.ray3k.template.entities.steering.*;
 import com.ray3k.template.screens.DialogPause.*;
-import com.sun.source.tree.CaseTree;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 import static com.ray3k.template.Core.*;
@@ -43,6 +41,8 @@ public class GameScreen extends JamScreen {
     public static CameraEntity cameraEntity;
     public static World<Entity> hitBoxWorld;
     public BackgroundEntity backgroundEntity;
+    public Label p1Health;
+    public Label p2Health;
     
     public GameScreen() {
         if (bgmMusic != null) bgmMusic.stop();
@@ -87,6 +87,16 @@ public class GameScreen extends JamScreen {
                 return super.keyDown(event, keycode);
             }
         });
+        
+        var root = new Table();
+        root.setFillParent(true);
+        stage.addActor(root);
+        
+        p1Health = new Label("3 Lives\n0%", skin);
+        root.add(p1Health).expand().bottom();
+        
+        p2Health = new Label("3 Lives\n0%", skin);
+        root.add(p2Health).expand().bottom();
         
         shapeDrawer = new ShapeDrawer(batch, skin.getRegion("white"));
         shapeDrawer.setPixelSize(.5f);
@@ -144,6 +154,7 @@ public class GameScreen extends JamScreen {
                             if (player1Skin != null) {
                                 var player = new PerformerEntity(player1Skin, new P1Steering(), 3);
                                 player.setPosition(x, y);
+                                player.label = p1Health;
                                 entityController.add(player);
                             }
                             break;
@@ -151,6 +162,7 @@ public class GameScreen extends JamScreen {
                             if (player2Skin != null) {
                                 var player = new PerformerEntity(player2Skin, new P2Steering(), 3);
                                 player.setPosition(x, y);
+                                player.label = p2Health;
                                 entityController.add(player);
                             }
                             break;

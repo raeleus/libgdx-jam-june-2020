@@ -10,7 +10,7 @@ public class MoveJump implements Move {
     public final static float H_SPEED = 800f;
     public final static float H_ACCELERATION = 2400f;
     public final static float JUMP_SPEED = 1200f;
-    public final static float EXTRA_JUMP_SPEED = 900f;
+    public final static float EXTRA_JUMP_SPEED = 1200f;
     public final static float GRAVITY = 2000f;
     public final int TOTAL_JUMPS = 2;
     public final float EXTRA_JUMP_DELAY = .25f;

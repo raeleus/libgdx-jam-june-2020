@@ -7,7 +7,7 @@ import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveGoRight implements Move {
-    public final static float MOVE_SPEED = 400f;
+    public final static float MOVE_SPEED = 800f;
     public final static float ACCELERATION = 2400f;
     public static float GRAVITY = 2000f;
     

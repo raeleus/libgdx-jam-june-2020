@@ -4,7 +4,7 @@ import com.badlogic.gdx.utils.Array;
 import com.dongbat.jbump.Collision;
 import com.dongbat.jbump.Item;
 
-interface Bumpable {
+public interface Bumpable {
     float getBumpX();
     float getBumpY();
     float getBumpWidth();

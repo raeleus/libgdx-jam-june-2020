@@ -33,6 +33,7 @@ public class GameScreen extends JamScreen {
     public static GameScreen gameScreen;
     public static final Color BG_COLOR = new Color();
     public static SkinName player1Skin, player2Skin;
+    public static String levelPath = "levels/space.json";
     public Stage stage;
     public ShapeDrawer shapeDrawer;
     public EntityController entityController;
@@ -94,7 +95,10 @@ public class GameScreen extends JamScreen {
         
         cameraEntity = new CameraEntity();
         entityController.add(cameraEntity);
-        
+    }
+    
+    @Override
+    public void show() {
         var ogmoReader = new OgmoReader();
         ogmoReader.addListener(new OgmoAdapter() {
             String layerName;
@@ -103,7 +107,7 @@ public class GameScreen extends JamScreen {
                               ObjectMap<String, OgmoValue> valuesMap) {
                 backgroundEntity = new BackgroundEntity(valuesMap.get("background").asString());
                 entityController.add(backgroundEntity);
-                
+            
                 levelPointsOfInterest.clear();
                 var points = valuesMap.get("focals").asString().split("\\n");
                 for (var point : points) {
@@ -111,12 +115,12 @@ public class GameScreen extends JamScreen {
                     levelPointsOfInterest.add(new PointOfInterest(Integer.parseInt(coords[0]), Integer.parseInt(coords[1])));
                 }
             }
-    
+        
             @Override
             public void layer(String name, int gridCellWidth, int gridCellHeight, int offsetX, int offsetY) {
                 layerName = name;
             }
-    
+        
             @Override
             public void entity(String name, int id, int x, int y, int width, int height, boolean flippedX,
                                boolean flippedY, int originX, int originY, int rotation, Array<EntityNode> nodes,
@@ -144,53 +148,53 @@ public class GameScreen extends JamScreen {
                         wall.setPosition(x, y);
                         wall.width = 0;
                         wall.height = 0;
-                        
+                    
                         for (var node : nodes) {
                             var newWidth = node.x - x;
                             var newHeight = node.y - y;
-                            
+                        
                             if (newWidth > wall.width) wall.width = newWidth;
                             if (newHeight > wall.height) wall.height = newHeight;
                         }
-                        
+                    
                         entityController.add(wall);
                     } else if (name.equals("platform")) {
                         var platform = new PlatformEntity();
                         platform.setPosition(x, y);
                         platform.width = width;
                         platform.height = height;
-    
+                    
                         for (var node : nodes) {
                             var newWidth = node.x - x;
                             var newHeight = node.y - y;
-        
+                        
                             if (newWidth > platform.width) platform.width = newWidth;
                             if (newHeight > platform.height) platform.height = newHeight;
                         }
-                        
+                    
                         entityController.add(platform);
                     }
                 }
             }
-    
+        
             @Override
             public void grid(int col, int row, int x, int y, int width, int height, int id) {
             
             }
-    
+        
             @Override
             public void decal(int centerX, int centerY, float scaleX, float scaleY, int rotation, String texture, String folder) {
                 var decalEntity = new DecalEntity(centerX, centerY, folder + "/" + Utils.fileName(texture));
                 entityController.add(decalEntity);
             }
-    
+        
             @Override
             public void layerComplete() {
             
             }
         });
-        
-        ogmoReader.readFile(Gdx.files.internal("levels/space.json"));
+    
+        ogmoReader.readFile(Gdx.files.internal(levelPath));
     }
     
     @Override

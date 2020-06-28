@@ -1,6 +1,7 @@
 package com.ray3k.template.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -19,9 +20,13 @@ public class CharacterScreen extends JamScreen {
     private Stage stage;
     private final static Color BG_COLOR = new Color(Color.BLACK);
     public String title;
+    public int playerIndex;
+    public JamScreen nextScreen;
     
-    public CharacterScreen(String title) {
+    public CharacterScreen(String title, int playerIndex, JamScreen nextScreen) {
         this.title = title;
+        this.playerIndex = playerIndex;
+        this.nextScreen = nextScreen;
     }
     
     @Override
@@ -31,7 +36,7 @@ public class CharacterScreen extends JamScreen {
         final Music bgm = assetManager.get("bgm/music-test.mp3");
         if (!bgm.isPlaying()) {
             bgm.play();
-            bgm.setVolume(core.bgm);
+            bgm.setVolume(Core.bgm);
             bgm.setLooping(true);
         }
         
@@ -50,9 +55,15 @@ public class CharacterScreen extends JamScreen {
                 imageButton.addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
-                        GameScreen.player1Skin = SkinName.getByName(imageButton.getName());
-                        GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
-                        core.transition(new GameScreen());
+                        switch (playerIndex) {
+                            case 1:
+                                GameScreen.player1Skin = SkinName.getByName(imageButton.getName());
+                                break;
+                            case 2:
+                                GameScreen.player2Skin = SkinName.getByName(imageButton.getName());
+                                break;
+                        }
+                        core.transition(nextScreen);
                     }
                 });
             }

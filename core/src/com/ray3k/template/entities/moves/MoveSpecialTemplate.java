@@ -9,6 +9,9 @@ import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveSpecialTemplate implements Move {
+    public final static float H_SPEED = 800f;
+    public final static float H_ACCELERATION = 2400f;
+    
     public float airFriction = 500f;
     public float groundFriction = 1400f;
     public static float gravity = 2000f;
@@ -57,6 +60,10 @@ public class MoveSpecialTemplate implements Move {
             if (performer.animationState.getCurrent(0).isComplete()) performer.mode = STANDING;
         } else {
             performer.deltaX = Utils.approach(performer.deltaX, 0, airFriction * delta);
+            if (performer.animationState.getCurrent(0).isComplete()) {
+                if (performer.steering.left) performer.deltaX = Utils.approach(performer.deltaX, -H_SPEED, H_ACCELERATION * delta);
+                else if (performer.steering.right) performer.deltaX = Utils.approach(performer.deltaX, H_SPEED, H_ACCELERATION * delta);
+            }
         }
     }
     

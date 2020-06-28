@@ -7,7 +7,7 @@ import static com.ray3k.template.AnimationName.*;
 import static com.ray3k.template.entities.PerformerEntity.Mode.*;
 
 public class MoveJump implements Move {
-    public final static float H_SPEED = 400f;
+    public final static float H_SPEED = 800f;
     public final static float H_ACCELERATION = 2400f;
     public final static float JUMP_SPEED = 1200f;
     public final static float EXTRA_JUMP_SPEED = 900f;

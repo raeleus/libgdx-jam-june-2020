@@ -7,6 +7,7 @@ import com.dongbat.jbump.Collision;
 import com.dongbat.jbump.Item;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
+import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Event;
 import com.esotericsoftware.spine.Slot;
 import com.esotericsoftware.spine.attachments.BoundingBoxAttachment;
@@ -39,6 +40,12 @@ public class PerformerEntity extends Entity implements Bumpable {
     public HurtboxEntity hurtbox;
     public Slot hurtBoxSlot;
     public float health;
+    public float shield;
+    public Bone shieldBone;
+    public static float SHIELD_MAX = 100;
+    public static float SHIELD_DECAY = 50;
+    public static float SHIELD_RECHARGE = 15;
+    public static float SHIELD_PENALTY = -50;
     public int lives;
     public boolean onPlatform;
     public float platformTimer;
@@ -70,6 +77,8 @@ public class PerformerEntity extends Entity implements Bumpable {
         skeleton.setSkin(skinName.skin);
         hitBoxSlot = skeleton.findSlot("hitbox");
         hurtBoxSlot = skeleton.findSlot("bbox");
+        shieldBone = skeleton.findBone("shield");
+        shield = SHIELD_MAX;
         moveSet = skinName.moveSet;
         mode = Mode.STANDING;
         currentMove = moveSet.stance;
@@ -172,6 +181,14 @@ public class PerformerEntity extends Entity implements Bumpable {
                 newMode = ATTACKING;
                 newMove = moveSet.specialNeutral;
             }
+        }
+        
+        if (steering.shield) {
+            newMode = SHIELDING;
+            newMove = moveSet.shield;
+        } else {
+            shield += SHIELD_RECHARGE * delta;
+            if (shield > SHIELD_MAX) shield = SHIELD_MAX;
         }
         
         if (newMove != null && newMove != currentMove && newMove.canPerform(this)) {
@@ -304,12 +321,11 @@ public class PerformerEntity extends Entity implements Bumpable {
     }
     
     public void hurt(float damage, float force, float forceAngle) {
-        if (mode != HURTING) {
+        if (mode != HURTING && mode != SHIELDING) {
             health += damage;
             mode = HURTING;
             hurtableTimer = HURTABLE_DELAY;
             setMotion(force, forceAngle);
-            
         }
     }
 }

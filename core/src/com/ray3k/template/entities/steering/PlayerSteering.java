@@ -38,6 +38,6 @@ public class PlayerSteering extends Steering {
         special = gameScreen.isBindingJustPressed(bindingSpecial);
         jump = gameScreen.isBindingJustPressed(bindingJump);
         attack = gameScreen.isBindingJustPressed(bindingAttack);
-        shield = gameScreen.isBindingJustPressed(bindingShield);
+        shield = gameScreen.isBindingPressed(bindingShield);
     }
 }

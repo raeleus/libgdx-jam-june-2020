@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "6I4/6WYilqB4EvWsRMlaz1kPqgU",
+	"hash": "UE+DO4Zgn+dAP6SXFhuvmHJQ4qE",
 	"spine": "3.8.95",
-	"x": -52.02,
-	"y": -3.78,
-	"width": 105.2,
-	"height": 327.66,
+	"x": -43.47,
+	"y": -4.77,
+	"width": 139.51,
+	"height": 321.16,
 	"images": "../output/",
 	"audio": ""
 },
@@ -32,7 +32,8 @@
 	{ "name": "leg-left-target", "parent": "hip", "x": 22.9, "y": -129.15, "color": "ff3f00ff" },
 	{ "name": "prop", "parent": "root", "length": 102.2, "x": 128.51, "y": 213.35 },
 	{ "name": "weapon", "parent": "root", "length": 228.49, "rotation": 90, "x": 83.34, "y": 136.92 },
-	{ "name": "projectile-origin", "parent": "root", "x": 195.75, "y": 299.62 }
+	{ "name": "projectile-origin", "parent": "root", "x": 195.75, "y": 299.62 },
+	{ "name": "shield", "parent": "root", "length": 224.85, "x": 7.76, "y": 150.78 }
 ],
 "slots": [
 	{ "name": "arm-left", "bone": "arm-left", "attachment": "arm-left" },
@@ -54,7 +55,8 @@
 	{ "name": "prop", "bone": "prop" },
 	{ "name": "hat", "bone": "head", "attachment": "hat" },
 	{ "name": "bbox", "bone": "root", "attachment": "hurtbox" },
-	{ "name": "hitbox", "bone": "root" }
+	{ "name": "hitbox", "bone": "root" },
+	{ "name": "shield", "bone": "shield" }
 ],
 "ik": [
 	{
@@ -101,6 +103,9 @@
 					"vertices": [ 34.85, 240.96, 181.34, 240.96, 181.34, 188.29, 35.67, 191.58 ],
 					"color": "f00000ff"
 				}
+			},
+			"shield": {
+				"template/shield": { "x": 1.77, "y": 3.01, "width": 398, "height": 399 }
 			}
 		}
 	},
@@ -7586,6 +7591,147 @@
 						{ "time": 0.7333 }
 					]
 				}
+			}
+		}
+	},
+	"general/shield": {
+		"slots": {
+			"shield": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff70" },
+					{ "time": 0.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "template/shield" }
+				]
+			}
+		},
+		"bones": {
+			"body": {
+				"rotate": [
+					{ "angle": -20.21 }
+				]
+			},
+			"arm-left-target": {
+				"translate": [
+					{ "x": -3.06, "y": 33.09 }
+				]
+			},
+			"arm-right-target": {
+				"translate": [
+					{ "x": 52, "y": 88.41 }
+				]
+			},
+			"hip": {
+				"translate": [
+					{ "x": -35.67, "y": -25.94 }
+				]
+			},
+			"leg-left-target": {
+				"translate": [
+					{ "x": 35.67, "y": 25.94 }
+				]
+			},
+			"leg-right-target": {
+				"translate": [
+					{ "x": 35.67, "y": 25.94 }
+				]
+			}
+		}
+	},
+	"general/shield-end": {
+		"slots": {
+			"shield": {
+				"attachment": [
+					{ "name": "template/shield" },
+					{ "time": 0.1667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"body": {
+				"rotate": [
+					{ "angle": -20.21 },
+					{ "time": 0.1667 }
+				]
+			},
+			"arm-left-target": {
+				"translate": [
+					{ "x": -3.06, "y": 33.09 },
+					{ "time": 0.1667, "x": -18.2, "y": 6.07 }
+				]
+			},
+			"arm-right-target": {
+				"translate": [
+					{ "x": 52, "y": 88.41 },
+					{ "time": 0.1667, "x": 8.76, "y": 39.77 }
+				]
+			},
+			"hip": {
+				"translate": [
+					{ "x": -35.67, "y": -25.94 },
+					{ "time": 0.1667 }
+				]
+			},
+			"leg-left-target": {
+				"translate": [
+					{ "x": 35.67, "y": 25.94 },
+					{ "time": 0.1667 }
+				]
+			},
+			"leg-right-target": {
+				"translate": [
+					{ "x": 35.67, "y": 25.94 },
+					{ "time": 0.1667 }
+				]
+			}
+		}
+	},
+	"general/shield-start": {
+		"slots": {
+			"shield": {
+				"attachment": [
+					{ "time": 0.1667, "name": "template/shield" }
+				]
+			}
+		},
+		"bones": {
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": -20.21 }
+				]
+			},
+			"arm-left-target": {
+				"translate": [
+					{ "x": -18.2, "y": 6.07 },
+					{ "time": 0.1667, "x": -3.06, "y": 33.09 }
+				]
+			},
+			"arm-right-target": {
+				"translate": [
+					{ "x": 8.76, "y": 39.77 },
+					{ "time": 0.1667, "x": 52, "y": 88.41 }
+				]
+			},
+			"hip": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -35.67, "y": -25.94 }
+				]
+			},
+			"leg-left-target": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 35.67, "y": 25.94 }
+				]
+			},
+			"leg-right-target": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 35.67, "y": 25.94 }
+				]
 			}
 		}
 	},

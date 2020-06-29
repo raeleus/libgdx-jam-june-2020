@@ -20,6 +20,7 @@ public class MoveAceBone extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+        
     }
     
     @Override
@@ -38,6 +39,8 @@ public class MoveAceBone extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.ACE_BONE;
             projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
             projectile.parent = performer;
+            projectile.damage = 15f;
+            projectile.force = 2000f;
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

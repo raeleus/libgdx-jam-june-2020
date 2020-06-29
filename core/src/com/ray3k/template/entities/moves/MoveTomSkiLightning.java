@@ -14,6 +14,10 @@ public class MoveTomSkiLightning extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 10f;
+        force = 1500f;
+        forceAngle = -85f;
     }
     
     @Override

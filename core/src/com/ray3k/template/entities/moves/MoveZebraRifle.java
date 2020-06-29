@@ -31,6 +31,11 @@ public class MoveZebraRifle extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.ZEBRA_BULLET;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 10f;
+            projectile.force = 1800f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

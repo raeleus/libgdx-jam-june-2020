@@ -13,6 +13,10 @@ public class MoveTettingerCounter extends MoveSpecialTemplate {
         attackAnim = TETTINGER_COUNTER_ATTACK.animation;
         gravity = 2000f;
         vSpeed = 0f;
+    
+        damage = 2f;
+        force = 4000f;
+        forceAngle = 50f;
     }
     
     @Override

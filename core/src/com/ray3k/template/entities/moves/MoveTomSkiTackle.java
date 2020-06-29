@@ -12,6 +12,10 @@ public class MoveTomSkiTackle extends MoveSpecialTemplate {
     public MoveTomSkiTackle() {
         attackAnim = LYZE_TACKLE.animation;
         vSpeed = 1f;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override

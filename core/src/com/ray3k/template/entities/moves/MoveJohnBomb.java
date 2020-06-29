@@ -33,6 +33,11 @@ public class MoveJohnBomb extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.JOHN_BOMB;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 10f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 10f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180 - PROJECTILE_ANGLE);

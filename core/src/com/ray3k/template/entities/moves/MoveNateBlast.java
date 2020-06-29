@@ -31,6 +31,11 @@ public class MoveNateBlast extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.NATE_FIREBALL;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 12f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

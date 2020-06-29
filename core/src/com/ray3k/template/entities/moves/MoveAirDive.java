@@ -8,5 +8,9 @@ public class MoveAirDive extends MoveAttackAirTemplate {
         attackAnim = GENERAL_AIR_DIVE.animation;
         jumpDelay = 0f;
         gravity = 2000f;
+    
+        damage = 11f;
+        force = 2500f;
+        forceAngle = 10f;
     }
 }

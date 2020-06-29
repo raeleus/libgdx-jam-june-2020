@@ -14,6 +14,10 @@ public class MoveMarioUnblockablePunch extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 25f;
+        force = 2500f;
+        forceAngle = 30f;
     }
     
     @Override

@@ -8,5 +8,9 @@ public class MoveAirKick extends MoveAttackAirTemplate {
         attackAnim = GENERAL_AIR_KICK.animation;
         jumpDelay = 0f;
         gravity = 2000f;
+    
+        damage = 11f;
+        force = 2000f;
+        forceAngle = 10f;
     }
 }

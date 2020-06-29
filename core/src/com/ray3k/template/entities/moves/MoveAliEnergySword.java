@@ -14,6 +14,10 @@ public class MoveAliEnergySword extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 20f;
+        force = 2200f;
+        forceAngle = 25f;
     }
     
     @Override

@@ -14,6 +14,10 @@ public class MoveJohnWhirlwind extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 700f;
         vSpeed = 200f;
+    
+        damage = 12f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override

@@ -11,5 +11,9 @@ public class MoveSpinKick extends MoveAttackTemplate {
     public MoveSpinKick() {
         friction = 1400f;
         anim = GENERAL_SPIN_KICK.animation;
+    
+        damage = 12f;
+        force = 2300f;
+        forceAngle = 30f;
     }
 }

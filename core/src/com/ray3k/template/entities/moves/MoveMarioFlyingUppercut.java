@@ -15,6 +15,11 @@ public class MoveMarioFlyingUppercut extends MoveSpecialTemplate {
         gravity = 2000f;
         airFriction = 800f;
         groundFriction = 1400f;
+    
+        damage = 18f;
+        force = 2200f;
+        forceAngle = 70f;
+        
         super.execute(performer);
     }
     

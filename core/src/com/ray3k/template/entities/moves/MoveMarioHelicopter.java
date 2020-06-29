@@ -11,6 +11,10 @@ public class MoveMarioHelicopter extends MoveSpecialTemplate {
     public MoveMarioHelicopter() {
         attackAnim = MARIO_HELICOPTER.animation;
         vSpeed = 1f;
+    
+        damage = 10f;
+        force = 2200f;
+        forceAngle = 30f;
     }
     
     @Override

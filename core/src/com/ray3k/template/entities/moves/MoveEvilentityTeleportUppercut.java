@@ -16,6 +16,10 @@ public class MoveEvilentityTeleportUppercut extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 1200f;
+    
+        damage = 18f;
+        force = 2200f;
+        forceAngle = 70f;
     }
     
     @Override

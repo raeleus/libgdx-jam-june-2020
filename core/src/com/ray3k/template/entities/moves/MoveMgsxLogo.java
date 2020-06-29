@@ -28,6 +28,11 @@ public class MoveMgsxLogo extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.MGSX_LOGO;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 20f;
+            projectile.force = 3000f;
+            projectile.forceAngle = 75f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             projectile.lifeTimer = 1f;
             projectile.setPosition(performer.projectileX, performer.projectileY);

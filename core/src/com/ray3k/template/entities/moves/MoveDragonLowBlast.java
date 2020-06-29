@@ -31,6 +31,11 @@ public class MoveDragonLowBlast extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.DRAGON_FIREBALL;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 10f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 90f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

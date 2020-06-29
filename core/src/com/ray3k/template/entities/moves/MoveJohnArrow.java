@@ -28,6 +28,11 @@ public class MoveJohnArrow extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.JOHN_ARROW;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 8f;
+            projectile.force = 500f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 2000f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {

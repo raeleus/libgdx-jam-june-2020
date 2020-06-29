@@ -31,6 +31,11 @@ public class MoveStahlfelgeSpear extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.STAHLFELGE_SPEAR;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 2f;
+            projectile.force = 3000f;
+            projectile.forceAngle = 90f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

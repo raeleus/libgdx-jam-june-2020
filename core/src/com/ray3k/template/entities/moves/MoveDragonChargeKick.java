@@ -11,6 +11,10 @@ public class MoveDragonChargeKick extends MoveSpecialTemplate {
     public MoveDragonChargeKick() {
         attackAnim = DRAGON_CHARGE_KICK.animation;
         vSpeed = 1f;
+    
+        damage = 15f;
+        force = 2100f;
+        forceAngle = 0f;
     }
     
     @Override

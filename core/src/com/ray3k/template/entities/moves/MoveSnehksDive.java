@@ -15,6 +15,11 @@ public class MoveSnehksDive extends MoveSpecialTemplate {
         gravity = 8000f;
         airFriction = 800f;
         groundFriction = 1400f;
+    
+        damage = 20f;
+        force = 2500f;
+        forceAngle = 25f;
+        
         super.execute(performer);
     }
     

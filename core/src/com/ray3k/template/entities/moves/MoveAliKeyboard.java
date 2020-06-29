@@ -37,6 +37,11 @@ public class MoveAliKeyboard extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.ALI_KEYBAORD;
             projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
             projectile.parent = performer;
+    
+            projectile.damage = 10f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 10f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180 - PROJECTILE_ANGLE);

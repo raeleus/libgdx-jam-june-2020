@@ -8,5 +8,9 @@ public class MoveAirPunch extends MoveAttackAirTemplate {
         attackAnim = GENERAL_AIR_PUNCH.animation;
         jumpDelay = 0f;
         gravity = 2000f;
+    
+        damage = 12f;
+        force = 1800f;
+        forceAngle = 30f;
     }
 }

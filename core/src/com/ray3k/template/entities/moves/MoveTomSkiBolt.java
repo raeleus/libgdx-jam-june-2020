@@ -28,6 +28,11 @@ public class MoveTomSkiBolt extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.TOM_SKI_BOLT;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 10f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 1200f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {

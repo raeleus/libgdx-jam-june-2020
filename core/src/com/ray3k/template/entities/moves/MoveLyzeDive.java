@@ -15,6 +15,10 @@ public class MoveLyzeDive extends MoveSpecialTemplate {
         attackAnim = LYZE_DIVE.animation;
         gravity = 2000f;
         vSpeed = 600f;
+    
+        damage = 20f;
+        force = 2500f;
+        forceAngle = 25f;
     }
     
     @Override

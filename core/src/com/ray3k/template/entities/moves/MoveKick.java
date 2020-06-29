@@ -6,5 +6,9 @@ public class MoveKick extends MoveAttackTemplate {
     public MoveKick() {
         friction = 500f;
         anim = GENERAL_KICK.animation;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
 }

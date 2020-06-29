@@ -17,6 +17,11 @@ public class MoveSkincomposerTumble extends MoveSpecialTemplate {
         airFriction = 400f;
         gravity = 2000f;
         mode = 0;
+    
+        damage = 15f;
+        force = 2100f;
+        forceAngle = 40f;
+        
         super.execute(performer);
     }
     

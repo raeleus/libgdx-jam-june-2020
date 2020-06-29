@@ -14,6 +14,10 @@ public class MoveSnehksLunge extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override

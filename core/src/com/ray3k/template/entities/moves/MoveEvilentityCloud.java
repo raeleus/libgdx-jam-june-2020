@@ -38,6 +38,11 @@ public class MoveEvilentityCloud extends MoveSpecialTemplate {
             projectile.skinName = EVILENTITY_CLOUD;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 2f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 90f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             projectile.parentMove = this;
             projectile.lifeTimer = 1.5f;

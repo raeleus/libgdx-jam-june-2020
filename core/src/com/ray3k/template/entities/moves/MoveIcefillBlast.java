@@ -31,6 +31,11 @@ public class MoveIcefillBlast extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.ICEFILL_ICEBALL;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 0;
+            projectile.force = 0;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

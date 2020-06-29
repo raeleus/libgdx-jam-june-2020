@@ -11,5 +11,9 @@ public class MoveDoubleAxeHandle extends MoveAttackTemplate {
     public MoveDoubleAxeHandle() {
         friction = 500f;
         anim = GENERAL_DOUBLE_AXE_HANDLE.animation;
+    
+        damage = 15f;
+        force = 2000f;
+        forceAngle = 30f;
     }
 }

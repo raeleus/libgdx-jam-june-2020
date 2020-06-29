@@ -14,6 +14,10 @@ public class MoveLyzeForcePush extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 0f;
+        force = 3000f;
+        forceAngle = 30f;
     }
     
     @Override

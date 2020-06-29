@@ -28,6 +28,11 @@ public class MoveMgsxArrow extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.MGSX_ARROW;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+    
+            projectile.damage = 8f;
+            projectile.force = 500f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 1500f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {

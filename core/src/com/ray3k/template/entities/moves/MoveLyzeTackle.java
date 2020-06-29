@@ -20,13 +20,17 @@ public class MoveLyzeTackle extends MoveSpecialTemplate {
         airFriction = 400f;
         gravity = 0f;
         mode = 0;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override
     public void update(PerformerEntity performer, float delta) {
         super.update(performer, delta);
         
-        var tackleSpeed = 1000f;
+        var tackleSpeed = 1500f;
         if (performer.moveEvent) {
             switch (mode) {
                 case 0:

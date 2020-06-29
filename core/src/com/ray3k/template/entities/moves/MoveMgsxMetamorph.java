@@ -14,6 +14,10 @@ public class MoveMgsxMetamorph extends MoveSpecialTemplate {
         attackAnim = MGSX_METAMORPH.animation;
         gravity = 2000f;
         vSpeed = 0f;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override

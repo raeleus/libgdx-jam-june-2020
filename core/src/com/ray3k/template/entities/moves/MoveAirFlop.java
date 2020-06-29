@@ -8,5 +8,9 @@ public class MoveAirFlop extends MoveAttackAirTemplate {
         attackAnim = GENERAL_AIR_FLOP.animation;
         jumpDelay = 0f;
         gravity = 2000f;
+    
+        damage = 15f;
+        force = 2000f;
+        forceAngle = 30f;
     }
 }

@@ -14,6 +14,10 @@ public class MoveSkincomposerElectiricity extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 5f;
+        force = 2200f;
+        forceAngle = 30f;
     }
     
     @Override

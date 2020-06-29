@@ -6,5 +6,9 @@ public class MoveStraight extends MoveAttackTemplate {
     public MoveStraight() {
         friction = 500f;
         anim = GENERAL_STRAIGHT.animation;
+    
+        damage = 8f;
+        force = 2000f;
+        forceAngle = 30f;
     }
 }

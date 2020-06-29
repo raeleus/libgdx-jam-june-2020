@@ -14,6 +14,10 @@ public class MoveAliLaser extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 15f;
+        force = 2500f;
+        forceAngle = -50f;
     }
     
     @Override

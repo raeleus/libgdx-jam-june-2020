@@ -10,6 +10,10 @@ public class MoveRaeleusChargeKick extends MoveSpecialTemplate {
     public MoveRaeleusChargeKick() {
         attackAnim = RAELEUS_CHARGE_KICK.animation;
         vSpeed = 1f;
+    
+        damage = 20f;
+        force = 2100f;
+        forceAngle = 0f;
     }
     
     @Override

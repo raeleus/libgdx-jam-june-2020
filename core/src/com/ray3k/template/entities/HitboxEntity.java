@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Rectangle;
 import com.dongbat.jbump.Item;
 import com.dongbat.jbump.Response;
+import com.ray3k.template.*;
 import com.ray3k.template.entities.projectiles.*;
 
 import static com.ray3k.template.screens.GameScreen.*;
@@ -49,11 +50,12 @@ public class HitboxEntity extends Entity {
     
     @Override
     public void draw(float delta) {
-        if (active) {
+//        if (active) {
 //            var g = gameScreen.shapeDrawer;
 //            g.setColor(Color.RED);
-//            g.filledRectangle(rectangle);
-        }
+//            var rect = hitBoxWorld.getRect(item);
+//            g.filledRectangle(rect.x, rect.y, rect.w, rect.h);
+//        }
     }
     
     @Override

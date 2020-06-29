@@ -13,6 +13,10 @@ public class MovePandaCounter extends MoveSpecialTemplate {
         attackAnim = PANDA_COUNTER.animation;
         gravity = 2000f;
         vSpeed = 0f;
+    
+        damage = 2f;
+        force = 4000f;
+        forceAngle = 40f;
     }
     
     @Override

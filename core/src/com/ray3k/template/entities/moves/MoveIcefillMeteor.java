@@ -33,6 +33,10 @@ public class MoveIcefillMeteor extends MoveSpecialTemplate {
             GameScreen.gameScreen.entityController.add(projectile);
             projectile.lifeTimer = 1f;
             projectile.setPosition(performer.projectileX, performer.projectileY);
+    
+            projectile.damage = 0;
+            projectile.force = 0;
+            projectile.forceAngle = 30f;
         }
     
         if (performer.soundEvent) {

@@ -12,6 +12,10 @@ public class MoveMgsxShoulderDash extends MoveSpecialTemplate {
     public MoveMgsxShoulderDash() {
         attackAnim = MGSX_SHOULDER_DASH.animation;
         vSpeed = 1f;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
     }
     
     @Override

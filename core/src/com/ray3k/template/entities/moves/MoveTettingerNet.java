@@ -28,6 +28,11 @@ public class MoveTettingerNet extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.TETTINGER_NET;
             projectile.animationName = ProjectileAnimationName.STATIC;
             projectile.parent = performer;
+            
+            projectile.damage = 5f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 90f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 500f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {

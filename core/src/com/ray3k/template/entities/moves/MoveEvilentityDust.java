@@ -33,6 +33,11 @@ public class MoveEvilentityDust extends MoveSpecialTemplate {
             projectile.animationName = ProjectileAnimationName.EVILENTITY_DUST;
             projectile.killOnAnimationEnd = true;
             projectile.parent = performer;
+    
+            projectile.damage = 2f;
+            projectile.force = 1000f;
+            projectile.forceAngle = -70f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180);

@@ -14,6 +14,10 @@ public class MoveAcePunch extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+        
+        damage = 30f;
+        force = 3000f;
+        forceAngle = 40f;
     }
     
     @Override
@@ -21,5 +25,6 @@ public class MoveAcePunch extends MoveSpecialTemplate {
         super.execute(performer);
         Sound sound = assetManager.get("sfx/move-skeleton-punch.mp3");
         sound.play();
+    
     }
 }

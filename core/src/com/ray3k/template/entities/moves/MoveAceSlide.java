@@ -18,6 +18,9 @@ public class MoveAceSlide extends MoveSpecialTemplate {
     
     @Override
     public void execute(PerformerEntity performer) {
+        damage = 12f;
+        force = 2500;
+        forceAngle = 85;
         super.execute(performer);
         
         Sound sound = assetManager.get("sfx/slide.mp3");

@@ -17,6 +17,11 @@ public class MoveSkincomposerRoll extends MoveSpecialTemplate {
         airFriction = 400f;
         gravity = 0f;
         mode = 0;
+    
+        damage = 10f;
+        force = 2000f;
+        forceAngle = 30f;
+        
         super.execute(performer);
     }
     

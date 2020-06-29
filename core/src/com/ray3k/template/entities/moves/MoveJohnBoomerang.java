@@ -28,6 +28,11 @@ public class MoveJohnBoomerang extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.JOHN_BOOMERANG;
             projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
             projectile.parent = performer;
+    
+            projectile.damage = 12f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 70f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             var projectileSpeed = 1500f;
             if (performer.skeleton.getRootBone().getScaleX() < 0) {

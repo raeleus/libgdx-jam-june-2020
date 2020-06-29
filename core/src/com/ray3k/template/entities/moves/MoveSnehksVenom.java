@@ -18,6 +18,11 @@ public class MoveSnehksVenom extends MoveSpecialTemplate {
         gravity = 2000f;
         hSpeed = 0f;
         vSpeed = 0f;
+    
+        damage = 5f;
+        force = 2000f;
+        forceAngle = 30f;
+        
         super.execute(performer);
     }
     

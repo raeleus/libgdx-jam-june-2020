@@ -35,6 +35,11 @@ public class MoveTannAxe extends MoveSpecialTemplate {
             projectile.skinName = ProjectileSkinName.TANN_AXE;
             projectile.animationName = ProjectileAnimationName.JOHN_BOOMERANG;
             projectile.parent = performer;
+    
+            projectile.damage = 20f;
+            projectile.force = 2000f;
+            projectile.forceAngle = 30f;
+            
             GameScreen.gameScreen.entityController.add(projectile);
             if (performer.skeleton.getRootBone().getScaleX() < 0) {
                 projectile.setMotion(PROJECTILE_SPEED, 180 - PROJECTILE_ANGLE);

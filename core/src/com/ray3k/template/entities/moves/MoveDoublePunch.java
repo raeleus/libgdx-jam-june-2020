@@ -6,5 +6,9 @@ public class MoveDoublePunch extends MoveAttackTemplate {
     public MoveDoublePunch() {
         friction = 500f;
         anim = GENERAL_DOUBLE_PUNCH.animation;
+    
+        damage = 11f;
+        force = 1500f;
+        forceAngle = 30f;
     }
 }

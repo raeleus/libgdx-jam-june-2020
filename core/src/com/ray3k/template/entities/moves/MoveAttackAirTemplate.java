@@ -16,6 +16,9 @@ public class MoveAttackAirTemplate implements Move {
     public Animation attackAnim = GENERAL_AIR_PUNCH.animation;
     public float jumpDelay = 0f;
     public float jumpTime;
+    public float damage = 10;
+    public float force = 2000;
+    public float forceAngle = 30f;
     
     @Override
     public boolean canPerform(PerformerEntity performer) {
@@ -27,6 +30,10 @@ public class MoveAttackAirTemplate implements Move {
         performer.animationState.setAnimation(0, attackAnim, false);
         jumpTime = jumpDelay;
         performer.moveSet.soundWoosh.play();
+    
+        performer.damage = damage;
+        performer.force = force;
+        performer.forceAngle = forceAngle;
     }
     
     @Override

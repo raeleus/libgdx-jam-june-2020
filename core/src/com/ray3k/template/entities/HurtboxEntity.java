@@ -31,11 +31,12 @@ public class HurtboxEntity extends Entity {
     
     @Override
     public void draw(float delta) {
-        if (active) {
+//        if (active) {
 //            var g = gameScreen.shapeDrawer;
 //            g.setColor(Color.GREEN);
-//            g.filledRectangle(rectangle);
-        }
+//            var rect = hitBoxWorld.getRect(item);
+//            g.filledRectangle(rect.x, rect.y, rect.w, rect.h);
+//        }
     }
     
     @Override

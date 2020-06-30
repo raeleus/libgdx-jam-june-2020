@@ -76,7 +76,7 @@ project(":html") {
         api "com.badlogicgames.gdx:gdx-controllers-gwt:$gdxVersion:sources"
         api "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10"
         api "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10:sources"
-        api 'com.ray3k.stripe:stripe:0.0.2-SNAPSHOT:sources'
+        api 'com.ray3k.stripe:stripe:0.0.3-SNAPSHOT:sources'
         api 'com.github.implicit-invocation:jbump:0.0.1-SNAPSHOT:sources'
     }
 }
@@ -94,7 +94,7 @@ project(":core") {
         api 'com.crashinvaders.vfx:gdx-vfx-effects:0.4.3'
         api "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-        api 'com.ray3k.stripe:stripe:0.0.2-SNAPSHOT'
+        api 'com.ray3k.stripe:stripe:0.0.3-SNAPSHOT'
         api 'com.github.implicit-invocation:jbump:0.0.1-SNAPSHOT'
     }
 }

@@ -317,10 +317,10 @@ public class DialogEditKeyBindings extends Dialog {
                     hide();
                     return true;
                 }
-                
+
                 @Override
-                public boolean scrolled(InputEvent event, float x, float y, int amount) {
-                    fire(new ScrollBindingEvent(amount));
+                public boolean scrolled(InputEvent event, float x, float y, float amountX, float amountY) {
+                    fire(new ScrollBindingEvent(amountY));
                     hide();
                     return true;
                 }
@@ -411,8 +411,8 @@ public class DialogEditKeyBindings extends Dialog {
     private static class ScrollBindingEvent extends Event {
         private int scroll;
         
-        public ScrollBindingEvent(int scroll) {
-            this.scroll = scroll;
+        public ScrollBindingEvent(float scroll) {
+            this.scroll = Math.round(scroll * 10f);
         }
     }
     

@@ -5,7 +5,6 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerListener;
 import com.badlogic.gdx.controllers.Controllers;
-import com.badlogic.gdx.controllers.PovDirection;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.scenes.scene2d.*;
@@ -355,30 +354,6 @@ public class DialogEditKeyBindings extends Dialog {
                         fire(new ControllerAxisBindingEvent(controller, axisCode, MathUtils.round(value)));
                         hide();
                     }
-                    return false;
-                }
-        
-                @Override
-                public boolean povMoved(Controller controller, int povCode, PovDirection value) {
-                    if (value != PovDirection.center) {
-                        fire(new ControllerPovBindingEvent(controller, povCode, value.ordinal()));
-                        hide();
-                    }
-                    return false;
-                }
-        
-                @Override
-                public boolean xSliderMoved(Controller controller, int sliderCode, boolean value) {
-                    return false;
-                }
-        
-                @Override
-                public boolean ySliderMoved(Controller controller, int sliderCode, boolean value) {
-                    return false;
-                }
-        
-                @Override
-                public boolean accelerometerMoved(Controller controller, int accelerometerCode, Vector3 value) {
                     return false;
                 }
             };

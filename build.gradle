@@ -20,7 +20,7 @@ allprojects {
     version = '1.0'
     ext {
         appName = "libgdx-vs-ray3k"
-        gdxVersion = '1.9.12'
+        gdxVersion = '1.10.0'
         roboVMVersion = '2.3.7'
         box2DLightsVersion = '1.4'
         ashleyVersion = '1.7.0'
@@ -42,11 +42,11 @@ project(":desktop") {
     apply plugin: "java-library"
 
     dependencies {
-        api project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-        api "com.badlogicgames.gdx:gdx-controllers-lwjgl3:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+        implementation project(":core")
+        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:2.2.0"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
     }
 }
 
@@ -58,8 +58,8 @@ project(":html") {
 
     dependencies {
         implementation project(":core")
-        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.912.0'
-        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.912.0:sources'
+        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.100.0'
+        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.100.0:sources'
         implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
         implementation 'com.github.tommyettinger:regexodus:0.1.10:sources'
         implementation 'com.rafaskoberg.gdx:typing-label:1.2.0:sources'
@@ -71,9 +71,8 @@ project(":html") {
         implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-gwt:raeleus-SNAPSHOT:sources'
         implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-effects:raeleus-SNAPSHOT:sources'
         implementation 'org.wisepersist:gwt-gradle-plugin:1.0.9:sources'
-        implementation "com.badlogicgames.gdx:gdx-controllers:$gdxVersion:sources"
-        implementation "com.badlogicgames.gdx:gdx-controllers-gwt:$gdxVersion"
-        implementation "com.badlogicgames.gdx:gdx-controllers-gwt:$gdxVersion:sources"
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:2.2.0:sources"
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-gwt:2.2.0:sources"
         implementation "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10.1"
         implementation "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10.1:sources"
         implementation 'com.github.raeleus:stripe:0.0.3:sources'
@@ -92,7 +91,7 @@ project(":core") {
         api 'com.esotericsoftware.spine:spine-libgdx:3.8.55.1'
         api 'com.github.raeleus.gdx-vfx:gdx-vfx-core:raeleus-SNAPSHOT'
         api 'com.github.raeleus.gdx-vfx:gdx-vfx-effects:raeleus-SNAPSHOT'
-        api "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+        api "com.badlogicgames.gdx-controllers:gdx-controllers-core:2.2.0"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         api 'com.github.raeleus:stripe:0.0.3'
         api 'com.github.implicit-invocation:jbump:419fd2d928'

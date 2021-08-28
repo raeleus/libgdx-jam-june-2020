@@ -1,0 +1,202 @@
+{
+  "ogmoVersion": "3.3.0",
+  "width": 2000,
+  "height": 2000,
+  "offsetX": 0,
+  "offsetY": 0,
+  "values": {"background": "boat", "focals": "1000,600\n1000,1400"},
+  "layers": [
+    {
+      "name": "decals",
+      "_eid": "14586106",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "decals": [
+        {"x": 250, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 350, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 450, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 550, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 650, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 750, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 850, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 950, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1050, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1150, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1250, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1350, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1450, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1550, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1650, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 1750, "y": 1100, "texture": "platform-boat-small.png"},
+        {"x": 750, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 850, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 950, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 1050, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 1150, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 1250, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 650, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 1350, "y": 650, "texture": "platform-boat-small.png"},
+        {"x": 350, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 450, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 550, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 650, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 750, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 850, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 950, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1050, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1150, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1250, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1350, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1450, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1550, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 1650, "y": 200, "texture": "platform-boat-small.png"},
+        {"x": 700, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 800, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 900, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1000, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1100, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1200, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1300, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1700, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1800, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 1900, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 100, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 200, "y": 1500, "texture": "platform-boat.png"},
+        {"x": 300, "y": 1500, "texture": "platform-boat.png"}
+      ],
+      "folder": "level"
+    },
+    {
+      "name": "entities",
+      "_eid": "14741566",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "player-spawn",
+          "id": 0,
+          "_eid": "14620666",
+          "x": 300,
+          "y": 700,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "1"}
+        },
+        {
+          "name": "player-spawn",
+          "id": 1,
+          "_eid": "14620666",
+          "x": 1550,
+          "y": 700,
+          "originX": 0,
+          "originY": 0,
+          "values": {"index": "2"}
+        }
+      ]
+    },
+    {
+      "name": "bbox",
+      "_eid": "22160305",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 50,
+      "gridCellHeight": 50,
+      "gridCellsX": 40,
+      "gridCellsY": 40,
+      "entities": [
+        {
+          "name": "wall",
+          "id": 0,
+          "_eid": "22165194",
+          "x": 50,
+          "y": 1550,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 50, "y": 1450},
+            {"x": 350, "y": 1450},
+            {"x": 350, "y": 1550}
+          ]
+        },
+        {
+          "name": "wall",
+          "id": 1,
+          "_eid": "22165194",
+          "x": 650,
+          "y": 1550,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 650, "y": 1450},
+            {"x": 1350, "y": 1450},
+            {"x": 1350, "y": 1550}
+          ]
+        },
+        {
+          "name": "wall",
+          "id": 2,
+          "_eid": "22165194",
+          "x": 1650,
+          "y": 1550,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 1650, "y": 1450},
+            {"x": 1950, "y": 1450},
+            {"x": 1950, "y": 1550}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 3,
+          "_eid": "22172761",
+          "x": 200,
+          "y": 1150,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 200, "y": 1050},
+            {"x": 1800, "y": 1050},
+            {"x": 1800, "y": 1150}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 4,
+          "_eid": "22172761",
+          "x": 600,
+          "y": 700,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 600, "y": 600},
+            {"x": 1400, "y": 600},
+            {"x": 1400, "y": 700}
+          ]
+        },
+        {
+          "name": "platform",
+          "id": 5,
+          "_eid": "22172761",
+          "x": 300,
+          "y": 250,
+          "originX": 0,
+          "originY": 0,
+          "nodes": [
+            {"x": 300, "y": 150},
+            {"x": 1700, "y": 150},
+            {"x": 1700, "y": 250}
+          ]
+        }
+      ]
+    }
+  ]
+}

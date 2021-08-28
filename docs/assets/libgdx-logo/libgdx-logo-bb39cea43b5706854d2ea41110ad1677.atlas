@@ -1,0 +1,111 @@
+
+libgdx-logo.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+crane
+  rotate: true
+  xy: 1, 154
+  size: 414, 184
+  orig: 414, 184
+  offset: 0, 0
+  index: -1
+crane-arm
+  rotate: false
+  xy: 1, 570
+  size: 421, 453
+  orig: 421, 453
+  offset: 0, 0
+  index: -1
+crane-line
+  rotate: true
+  xy: 1, 12
+  size: 7, 263
+  orig: 7, 263
+  offset: 0, 0
+  index: -1
+crane-winch
+  rotate: false
+  xy: 266, 18
+  size: 46, 81
+  orig: 46, 81
+  offset: 0, 0
+  index: -1
+libgdx
+  rotate: false
+  xy: 1, 101
+  size: 300, 51
+  orig: 300, 51
+  offset: 0, 0
+  index: -1
+libgdx-b
+  rotate: false
+  xy: 160, 48
+  size: 39, 51
+  orig: 39, 51
+  offset: 0, 0
+  index: -1
+libgdx-d
+  rotate: true
+  xy: 54, 35
+  size: 64, 51
+  orig: 64, 51
+  offset: 0, 0
+  index: -1
+libgdx-g
+  rotate: true
+  xy: 107, 35
+  size: 64, 51
+  orig: 64, 51
+  offset: 0, 0
+  index: -1
+libgdx-i
+  rotate: true
+  xy: 266, 1
+  size: 15, 51
+  orig: 15, 51
+  offset: 0, 0
+  index: -1
+libgdx-l
+  rotate: true
+  xy: 160, 31
+  size: 15, 51
+  orig: 15, 51
+  offset: 0, 0
+  index: -1
+libgdx-x
+  rotate: true
+  xy: 1, 21
+  size: 78, 51
+  orig: 78, 51
+  offset: 0, 0
+  index: -1
+libgdx-x-part1
+  rotate: false
+  xy: 201, 49
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+libgdx-x-part2
+  rotate: false
+  xy: 303, 525
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+libgdx-x-part3
+  rotate: false
+  xy: 213, 28
+  size: 28, 19
+  orig: 28, 19
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 1, 9
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

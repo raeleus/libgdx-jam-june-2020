@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        jcenter()
+        gradlePluginPortal()
         google()
     }
     dependencies {
@@ -20,7 +20,7 @@ allprojects {
     version = '1.0'
     ext {
         appName = "libgdx-vs-ray3k"
-        gdxVersion = '1.9.11-SNAPSHOT'
+        gdxVersion = '1.10.0'
         roboVMVersion = '2.3.7'
         box2DLightsVersion = '1.4'
         ashleyVersion = '1.7.0'
@@ -30,7 +30,7 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
-        jcenter()
+        gradlePluginPortal()
         google()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
@@ -42,11 +42,11 @@ project(":desktop") {
     apply plugin: "java-library"
 
     dependencies {
-        api project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-        api "com.badlogicgames.gdx:gdx-controllers-lwjgl3:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+        implementation project(":core")
+        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:2.2.0"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
     }
 }
 
@@ -58,26 +58,25 @@ project(":html") {
 
     dependencies {
         implementation project(":core")
-        implementation 'com.badlogicgames.gdx:gdx-backend-gwt:1.910.2'
-        implementation 'com.badlogicgames.gdx:gdx-backend-gwt:1.910.2:sources'
-        api "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
-        api 'com.github.tommyettinger:regexodus:0.1.10:sources'
-        api 'com.rafaskoberg.gdx:typing-label:1.2.0:sources'
-        api 'space.earlygrey:shapedrawer:2.3.0:sources'
-        api 'com.github.raeleus.TenPatch:tenpatch:5.0.0:sources'
-        api 'com.esotericsoftware.spine:spine-libgdx:3.8.55.1:sources'
-        api 'com.crashinvaders.vfx:gdx-vfx-core:0.4.3:sources'
-        api 'com.crashinvaders.vfx:gdx-vfx-gwt:0.4.3'
-        api 'com.crashinvaders.vfx:gdx-vfx-gwt:0.4.3:sources'
-        api 'com.crashinvaders.vfx:gdx-vfx-effects:0.4.3:sources'
+        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.100.0'
+        implementation 'com.github.tommyettinger:gdx-backend-gwt:1.100.0:sources'
+        implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
+        implementation 'com.github.tommyettinger:regexodus:0.1.10:sources'
+        implementation 'com.rafaskoberg.gdx:typing-label:1.2.0:sources'
+        implementation 'space.earlygrey:shapedrawer:2.3.0:sources'
+        implementation 'com.github.raeleus.TenPatch:tenpatch:5.0.0:sources'
+        implementation 'com.esotericsoftware.spine:spine-libgdx:3.8.55.1:sources'
+        implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-core:raeleus-SNAPSHOT:sources'
+        implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-gwt:raeleus-SNAPSHOT'
+        implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-gwt:raeleus-SNAPSHOT:sources'
+        implementation 'com.github.raeleus.gdx-vfx:gdx-vfx-effects:raeleus-SNAPSHOT:sources'
         implementation 'org.wisepersist:gwt-gradle-plugin:1.0.9:sources'
-        api "com.badlogicgames.gdx:gdx-controllers:$gdxVersion:sources"
-        api "com.badlogicgames.gdx:gdx-controllers-gwt:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-controllers-gwt:$gdxVersion:sources"
-        api "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10"
-        api "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10:sources"
-        api 'com.ray3k.stripe:stripe:0.0.3-SNAPSHOT:sources'
-        api 'com.github.implicit-invocation:jbump:0.0.1-SNAPSHOT:sources'
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:2.2.0:sources"
+        implementation "com.badlogicgames.gdx-controllers:gdx-controllers-gwt:2.2.0:sources"
+        implementation "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10.1"
+        implementation "com.github.intrigus.gdx-freetype-gwt:gdx-freetype-gwt:1.9.10.1:sources"
+        implementation 'com.github.raeleus:stripe:0.0.3:sources'
+        implementation 'com.github.implicit-invocation:jbump:419fd2d928:sources'
     }
 }
 
@@ -90,11 +89,11 @@ project(":core") {
         api 'space.earlygrey:shapedrawer:2.3.0'
         api 'com.github.raeleus.TenPatch:tenpatch:5.0.0'
         api 'com.esotericsoftware.spine:spine-libgdx:3.8.55.1'
-        api 'com.crashinvaders.vfx:gdx-vfx-core:0.4.3'
-        api 'com.crashinvaders.vfx:gdx-vfx-effects:0.4.3'
-        api "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+        api 'com.github.raeleus.gdx-vfx:gdx-vfx-core:raeleus-SNAPSHOT'
+        api 'com.github.raeleus.gdx-vfx:gdx-vfx-effects:raeleus-SNAPSHOT'
+        api "com.badlogicgames.gdx-controllers:gdx-controllers-core:2.2.0"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-        api 'com.ray3k.stripe:stripe:0.0.3-SNAPSHOT'
-        api 'com.github.implicit-invocation:jbump:0.0.1-SNAPSHOT'
+        api 'com.github.raeleus:stripe:0.0.3'
+        api 'com.github.implicit-invocation:jbump:419fd2d928'
     }
 }

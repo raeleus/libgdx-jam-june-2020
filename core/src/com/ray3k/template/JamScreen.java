@@ -8,7 +8,6 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerListener;
 import com.badlogic.gdx.controllers.Controllers;
-import com.badlogic.gdx.controllers.PovDirection;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
@@ -137,8 +136,8 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
     }
     
     @Override
-    public boolean scrolled(int amount) {
-        scrollJustPressed.add(amount);
+    public boolean scrolled(float amountX, float amountY) {
+        scrollJustPressed.add(Math.round(amountY * 10f));
         return false;
     }
     
@@ -244,15 +243,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
         return false;
     }
     
-    public boolean isControllerPovJustPressed(ControllerValue... povCodes) {
-        for (ControllerHandler handler : controllerMap.values()) {
-            if (handler.isControllerPovJustPressed(povCodes)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
     public boolean isControllerButtonPressed(ControllerValue... buttonCodes) {
         for (ControllerHandler handler : controllerMap.values()) {
             if (handler.isControllerButtonPressed(buttonCodes)) {
@@ -270,16 +260,7 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
         }
         return false;
     }
-    
-    public boolean isControllerPovPressed(ControllerValue... povCodes) {
-        for (ControllerHandler handler : controllerMap.values()) {
-            if (handler.isControllerPovPressed(povCodes)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
+
     public boolean isAnyControllerButtonPressed() {
         for (ControllerHandler handler : controllerMap.values()) {
             if (handler.isAnyControllerButtonPressed()) {
@@ -315,25 +296,7 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
         }
         return false;
     }
-    
-    public boolean isAnyControllerPovPressed() {
-        for (ControllerHandler handler : controllerMap.values()) {
-            if (handler.isAnyControllerPovPressed()) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    public boolean isAnyControllerPovJustPressed() {
-        for (ControllerHandler handler : controllerMap.values()) {
-            if (handler.isAnyControllerPovJustPressed()) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
+
     public boolean areAllControllerButtonsPressed(ControllerValue... buttonCodes) {
         for (ControllerHandler handler : controllerMap.values()) {
             if (handler.areAllControllerButtonsPressed(buttonCodes)) {
@@ -346,15 +309,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
     public boolean areAllControllerAxisPressed(ControllerValue... axisCodes) {
         for (ControllerHandler handler : controllerMap.values()) {
             if (handler.areAllControllerAxisPressed(axisCodes)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    public boolean areAllControllerPovPressed(ControllerValue... povCodes) {
-        for (ControllerHandler handler : controllerMap.values()) {
-            if (handler.areAllControllerPovPressed(povCodes)) {
                 return true;
             }
         }
@@ -415,8 +369,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
             return isControllerButtonPressed(controllerButtonBindings.get(binding));
         } else if (controllerAxisBindings.containsKey(binding)) {
             return isControllerAxisPressed(controllerAxisBindings.get(binding, ANY_CONTROLLER_AXIS));
-        } else if (controllerPovBindings.containsKey(binding)) {
-            return isControllerPovPressed(controllerPovBindings.get(binding, ANY_CONTROLLER_POV));
         } else {
             return false;
         }
@@ -478,8 +430,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
             return isControllerButtonJustPressed(controllerButtonBindings.get(binding, ANY_CONTROLLER_BUTTON));
         } else if (controllerAxisBindings.containsKey(binding)) {
             return isControllerAxisJustPressed(controllerAxisBindings.get(binding, ANY_CONTROLLER_AXIS));
-        } else if (controllerPovBindings.containsKey(binding)) {
-            return isControllerPovJustPressed(controllerPovBindings.get(binding, ANY_CONTROLLER_POV));
         } else {
             return false;
         }
@@ -893,33 +843,7 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
         }
         return false;
     }
-    
-    @Override
-    public boolean povMoved(Controller controller, int povCode, PovDirection value) {
-        for (ControllerValue controllerValue : controllerPovBindings.values()) {
-            if (controllerValue.controller == null && povCode == controllerValue.axisCode && value.ordinal() == controllerValue.value) {
-                controllerValue.controller = controller;
-                break;
-            }
-        }
-        return false;
-    }
-    
-    @Override
-    public boolean xSliderMoved(Controller controller, int sliderCode, boolean value) {
-        return false;
-    }
-    
-    @Override
-    public boolean ySliderMoved(Controller controller, int sliderCode, boolean value) {
-        return false;
-    }
-    
-    @Override
-    public boolean accelerometerMoved(Controller controller, int accelerometerCode, Vector3 value) {
-        return false;
-    }
-    
+
     public static class ControllerHandler implements ControllerListener {
         public Array<ControllerValue> controllerButtonsJustPressed = new Array<>();
         public Array<ControllerValue> controllerButtonsPressed = new Array<>();
@@ -927,8 +851,7 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
         public Array<ControllerValue> controllerAxisPressed = new SnapshotArray<>();
         public Array<ControllerValue> controllerPovJustPressed = new Array<>();
         public Array<ControllerValue> controllerPovPressed = new Array<>();
-        private PovDirection previousPov = PovDirection.center;
-    
+
         //button
         
         public boolean isControllerButtonJustPressed(ControllerValue buttonCode) {
@@ -1019,101 +942,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
             return controllerAxisPressed.size > 0;
         }
     
-        //pov
-        
-        public boolean isControllerPovJustPressed(ControllerValue povCode) {
-            if (povCode == ANY_CONTROLLER_POV) {
-                return controllerPovJustPressed.size > 0;
-            } else {
-                boolean returnValue = controllerPovJustPressed.contains(povCode, false);
-                if (!returnValue) {
-                    if (povCode.value == PovDirection.west.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southWest.ordinal());
-                        returnValue = controllerPovJustPressed.contains(val1, false) || controllerPovJustPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.north.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northEast.ordinal());
-                        returnValue = controllerPovJustPressed.contains(val1, false) || controllerPovPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.west.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northEast.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southEast.ordinal());
-                        returnValue = controllerPovJustPressed.contains(val1, false) || controllerPovJustPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.south.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southEast.ordinal());
-                        returnValue = controllerPovJustPressed.contains(val1, false) || controllerPovJustPressed.contains(val2, false);
-                    }
-                }
-        
-                return returnValue;
-            }
-        }
-    
-        public boolean isControllerPovJustPressed(ControllerValue... povCodes) {
-            for (ControllerValue povCode : povCodes) {
-                if (isControllerPovJustPressed(povCode)) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        public boolean isAnyControllerPovJustPressed() {
-            return controllerPovJustPressed.size > 0;
-        }
-    
-        public boolean isControllerPovPressed(ControllerValue povCode) {
-            if (povCode == ANY_CONTROLLER_POV) {
-                return controllerPovPressed.size > 0;
-            } else {
-                boolean returnValue = controllerPovPressed.contains(povCode, false);
-                if (!returnValue) {
-                    if (povCode.value == PovDirection.west.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southWest.ordinal());
-                        returnValue = controllerPovPressed.contains(val1, false) || controllerPovPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.north.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northEast.ordinal());
-                        returnValue = controllerPovPressed.contains(val1, false) || controllerPovPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.west.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.northEast.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southEast.ordinal());
-                        returnValue = controllerPovPressed.contains(val1, false) || controllerPovPressed.contains(val2, false);
-                    } else if (povCode.value == PovDirection.south.ordinal()) {
-                        var val1 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southWest.ordinal());
-                        var val2 = new ControllerValue(povCode.controller, povCode.axisCode, PovDirection.southEast.ordinal());
-                        returnValue = controllerPovPressed.contains(val1, false) || controllerPovPressed.contains(val2, false);
-                    }
-                }
-                
-                return returnValue;
-            }
-        }
-    
-        public boolean isControllerPovPressed(ControllerValue... povCodes) {
-            for (ControllerValue povCode : povCodes) {
-                if (isControllerPovPressed(povCode)) {
-                    return true;
-                }
-            }
-            return false;
-        }
-    
-        public boolean areAllControllerPovPressed(ControllerValue... povCodes) {
-            for (ControllerValue povCode : povCodes) {
-                if (!isControllerPovPressed(povCode)) {
-                    return false;
-                }
-            }
-            return true;
-        }
-    
-        public boolean isAnyControllerPovPressed() {
-            return controllerPovPressed.size > 0;
-        }
-    
         @Override
         public void connected(Controller controller) {
         
@@ -1157,42 +985,6 @@ public abstract class JamScreen extends ScreenAdapter implements InputProcessor,
             if (roundedValue != 0) {
                 controllerAxisPressed.add(controllerValue);
             }
-            return false;
-        }
-    
-        @Override
-        public boolean povMoved(Controller controller, int povCode, PovDirection value) {
-            ControllerValue controllerValue = new ControllerValue(controller, povCode, value.ordinal());
-    
-            if (value == PovDirection.center || value != previousPov) {
-                Iterator<ControllerValue> iterator = controllerPovPressed.iterator();
-                while (iterator.hasNext()) {
-                    ControllerValue next = iterator.next();
-                    if (next.axisCode == povCode) iterator.remove();
-                }
-            }
-            
-            if (value != PovDirection.center) {
-                controllerPovJustPressed.add(controllerValue);
-                controllerPovPressed.add(controllerValue);
-            }
-            
-            previousPov = value;
-            return false;
-        }
-    
-        @Override
-        public boolean xSliderMoved(Controller controller, int sliderCode, boolean value) {
-            return false;
-        }
-    
-        @Override
-        public boolean ySliderMoved(Controller controller, int sliderCode, boolean value) {
-            return false;
-        }
-    
-        @Override
-        public boolean accelerometerMoved(Controller controller, int accelerometerCode, Vector3 value) {
             return false;
         }
     }

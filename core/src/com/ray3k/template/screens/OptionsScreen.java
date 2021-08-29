@@ -67,9 +67,9 @@ public class OptionsScreen extends JamScreen {
             }
         });
     
-        final Music sfx = assetManager.get("bgm/audio-test.mp3");
+        final Music sfx = assetManager.get("bgm/audio-test.mp3");//
         sfx.setLooping(true);
-        
+
         slider = stage.getRoot().findActor("sfx");
         slider.setValue(Core.sfx);
         slider.addListener(new ChangeListener() {

@@ -1,0 +1,119 @@
+{
+  "ogmoVersion": "3.3.0",
+  "width": 1024,
+  "height": 576,
+  "offsetX": 0,
+  "offsetY": 0,
+  "layers": [
+    {
+      "name": "images",
+      "_eid": "30926537",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 8,
+      "gridCellHeight": 8,
+      "gridCellsX": 128,
+      "gridCellsY": 72,
+      "decals": [
+        {"x": 512, "y": 288, "texture": "map.png"}
+      ],
+      "folder": ""
+    },
+    {
+      "name": "buttons",
+      "_eid": "30929640",
+      "offsetX": 0,
+      "offsetY": 0,
+      "gridCellWidth": 10,
+      "gridCellHeight": 10,
+      "gridCellsX": 104,
+      "gridCellsY": 59,
+      "entities": [
+        {
+          "name": "button",
+          "id": 7,
+          "_eid": "30922521",
+          "x": 40,
+          "y": 540,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "city"}
+        },
+        {
+          "name": "button",
+          "id": 8,
+          "_eid": "30922521",
+          "x": 326,
+          "y": 547,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "highway"}
+        },
+        {
+          "name": "button",
+          "id": 9,
+          "_eid": "30922521",
+          "x": 298,
+          "y": 287,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "boat"}
+        },
+        {
+          "name": "button",
+          "id": 10,
+          "_eid": "30922521",
+          "x": 480,
+          "y": 562,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "pupper"}
+        },
+        {
+          "name": "button",
+          "id": 11,
+          "_eid": "30922521",
+          "x": 915,
+          "y": 457,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "ocean"}
+        },
+        {
+          "name": "button",
+          "id": 12,
+          "_eid": "30922521",
+          "x": 761,
+          "y": 353,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "mountain"}
+        },
+        {
+          "name": "button",
+          "id": 13,
+          "_eid": "30922521",
+          "x": 546,
+          "y": 93,
+          "width": 80,
+          "height": 70,
+          "originX": 0,
+          "originY": 70,
+          "values": {"level": "space"}
+        }
+      ]
+    }
+  ]
+}

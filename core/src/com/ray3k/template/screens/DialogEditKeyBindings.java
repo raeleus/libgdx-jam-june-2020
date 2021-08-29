@@ -5,7 +5,6 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerListener;
 import com.badlogic.gdx.controllers.Controllers;
-import com.badlogic.gdx.controllers.PovDirection;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.scenes.scene2d.*;
@@ -317,10 +316,10 @@ public class DialogEditKeyBindings extends Dialog {
                     hide();
                     return true;
                 }
-                
+
                 @Override
-                public boolean scrolled(InputEvent event, float x, float y, int amount) {
-                    fire(new ScrollBindingEvent(amount));
+                public boolean scrolled(InputEvent event, float x, float y, float amountX, float amountY) {
+                    fire(new ScrollBindingEvent(amountY));
                     hide();
                     return true;
                 }
@@ -357,30 +356,6 @@ public class DialogEditKeyBindings extends Dialog {
                     }
                     return false;
                 }
-        
-                @Override
-                public boolean povMoved(Controller controller, int povCode, PovDirection value) {
-                    if (value != PovDirection.center) {
-                        fire(new ControllerPovBindingEvent(controller, povCode, value.ordinal()));
-                        hide();
-                    }
-                    return false;
-                }
-        
-                @Override
-                public boolean xSliderMoved(Controller controller, int sliderCode, boolean value) {
-                    return false;
-                }
-        
-                @Override
-                public boolean ySliderMoved(Controller controller, int sliderCode, boolean value) {
-                    return false;
-                }
-        
-                @Override
-                public boolean accelerometerMoved(Controller controller, int accelerometerCode, Vector3 value) {
-                    return false;
-                }
             };
             Controllers.addListener(controllerListener);
         }
@@ -411,8 +386,8 @@ public class DialogEditKeyBindings extends Dialog {
     private static class ScrollBindingEvent extends Event {
         private int scroll;
         
-        public ScrollBindingEvent(int scroll) {
-            this.scroll = scroll;
+        public ScrollBindingEvent(float scroll) {
+            this.scroll = Math.round(scroll * 10f);
         }
     }
     
